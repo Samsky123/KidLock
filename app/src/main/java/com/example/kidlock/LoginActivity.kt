@@ -39,7 +39,7 @@ class LoginActivity : AppCompatActivity() {
             tvTitle.text = "首次使用 · 创建家长账号"
             etPw2.visibility = View.VISIBLE
             btn.text = "创建并进入"
-            tvHint.text = "请设置一个只有您知道的账号密码"
+            tvHint.text = "账号密码只有您知道，密码至少 6 位"
         } else {
             tvTitle.text = "家长登录"
             etPw2.visibility = View.GONE
@@ -58,13 +58,20 @@ class LoginActivity : AppCompatActivity() {
         if (firstRun) {
             val p2 = etPw2.text.toString()
             if (p != p2) { toast("两次密码不一致"); return }
+            if (p.length < 6) { toast("密码至少 6 位"); return }
             if (!AuthStore.createAccount(this, u, p)) {
                 toast("该账号已存在，请直接登录"); return
             }
             goParent()
         } else {
-            if (AuthStore.login(this, u, p)) goParent()
-            else toast("账号或密码错误")
+            when (AuthStore.login(this, u, p)) {
+                AuthStore.LoginResult.SUCCESS -> goParent()
+                AuthStore.LoginResult.LOCKED -> {
+                    val sec = (AuthStore.lockRemainingMs(this) + 999) / 1000
+                    toast("密码错误次数过多，请 $sec 秒后再试")
+                }
+                AuthStore.LoginResult.BAD_CREDENTIALS -> toast("账号或密码错误")
+            }
         }
     }
 

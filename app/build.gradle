@@ -3,6 +3,14 @@ plugins {
     id 'org.jetbrains.kotlin.android'
 }
 
+// release 签名配置从仓库根目录的 keystore.properties 读取（该文件已被 .gitignore 排除）。
+// 没配置时 assembleRelease 仍可编译，但产物是未签名的，无法直接安装。
+def keystorePropsFile = rootProject.file('keystore.properties')
+def keystoreProps = new Properties()
+if (keystorePropsFile.exists()) {
+    keystorePropsFile.withInputStream { keystoreProps.load(it) }
+}
+
 android {
     namespace 'com.example.kidlock'
     compileSdk 34
@@ -11,13 +19,27 @@ android {
         applicationId 'com.example.kidlock'
         minSdk 24
         targetSdk 33
-        versionCode 5
-        versionName '1.4'
+        versionCode 6
+        versionName '1.4.1'
+    }
+
+    signingConfigs {
+        release {
+            if (keystorePropsFile.exists()) {
+                storeFile rootProject.file(keystoreProps['storeFile'])
+                storePassword keystoreProps['storePassword']
+                keyAlias keystoreProps['keyAlias']
+                keyPassword keystoreProps['keyPassword']
+            }
+        }
     }
 
     buildTypes {
         release {
             minifyEnabled false
+            if (keystorePropsFile.exists()) {
+                signingConfig signingConfigs.release
+            }
         }
     }
 
