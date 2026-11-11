@@ -12,7 +12,7 @@ KidLock 不做「一刀切没收手机」，而是把屏幕时间变成一项需
 孩子想玩，先做几道当前年级的题；做完才能解锁，时间一到自动回到答题页。
 题目范围、每轮时长、各科题量都由家长在本地设置，**没有服务器、没有账号云同步、不申请网络权限**。
 
-> 开源仓库：<https://gitee.com/yufeifly123/KidLock>
+> 开源仓库：<https://github.com/Samsky123/KidLock>
 > 适合家长在自己的手机上使用。请只用于自己家庭的设备，不要用于监控他人。
 
 ---
@@ -85,7 +85,7 @@ LaunchActivity（答题页）── 按科配额从题库抽题（可限定教�
 
 ## 安装（普通用户）
 
-1. 打开 [Releases](https://gitee.com/yufeifly123/KidLock/releases) 下载最新的 `KidLock-vX.Y.Z.apk`。
+1. 打开 [Releases](https://github.com/Samsky123/KidLock/releases) 下载最新的 `KidLock-vX.Y.Z.apk`。
 2. 在手机上点开 APK，按提示允许「安装未知应用」。
 3. 打开 App，首次进入会要求**创建家长账号**（密码至少 6 位）。
 4. 进入家长设置：设定每轮时长、教材版本、年级、各科题量，然后保存。

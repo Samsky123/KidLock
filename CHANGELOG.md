@@ -2,6 +2,12 @@
 
 格式参考 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.1.0/)，版本号遵循语义化版本。
 
+## [未发布]
+
+### 文档
+- 开源仓库主地址迁到 GitHub：<https://github.com/Samsky123/KidLock>，Gitee 保留镜像。
+  README 与安装教程里的仓库、Releases 链接同步更新。
+
 ## [1.4.1] - 2026-11-12
 
 开源发布前的安全加固，功能与 1.4 一致。
