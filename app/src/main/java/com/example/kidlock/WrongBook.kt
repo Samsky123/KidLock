@@ -30,6 +30,7 @@ object WrongBook {
         val subject: String,
         val grade: String,
         val unit: String,
+        val scopes: List<String> = emptyList(),
         val wrongCount: Int,
         val streak: Int,
         val lastTime: Long
@@ -42,7 +43,8 @@ object WrongBook {
             difficulty = 1,
             subject = subject,
             grade = grade,
-            unit = unit
+            unit = unit,
+            scopes = scopes
         )
 
         /** 是否已经掌握（连对达标）。 */
@@ -68,6 +70,9 @@ object WrongBook {
                         subject = o.optString("subject"),
                         grade = o.optString("grade"),
                         unit = o.optString("unit"),
+                        scopes = o.optJSONArray("scopes")?.let { a ->
+                            List(a.length()) { k -> a.getString(k) }
+                        } ?: emptyList(),
                         wrongCount = o.optInt("wrong", 1),
                         streak = o.optInt("streak", 0),
                         lastTime = o.optLong("time", 0)
@@ -91,6 +96,7 @@ object WrongBook {
             o.put("subject", it.subject)
             o.put("grade", it.grade)
             o.put("unit", it.unit)
+            o.put("scopes", JSONArray(it.scopes))
             o.put("wrong", it.wrongCount)
             o.put("streak", it.streak)
             o.put("time", it.lastTime)
@@ -131,6 +137,7 @@ object WrongBook {
                     subject = q.subject,
                     grade = q.grade,
                     unit = q.unit,
+                    scopes = q.scopes,
                     wrongCount = 1,
                     streak = 0,
                     lastTime = now

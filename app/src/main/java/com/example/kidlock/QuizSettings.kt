@@ -18,6 +18,7 @@ object QuizSettings {
     const val KEY_DIFFICULTY = "max_difficulty"
     const val KEY_WRONG_FIRST = "wrong_first"
     const val KEY_COUNT_PREFIX = "q_count_"
+    const val KEY_SCOPE_PREFIX = "scope_"
 
     const val DEFAULT_GRADE = "三年级"
     const val DEFAULT_EDITION = QuestionBank.EDITION_ANY
@@ -45,6 +46,25 @@ object QuizSettings {
     fun setCount(c: Context, subject: String, n: Int) {
         prefs(c).edit().putInt(KEY_COUNT_PREFIX + subject, n.coerceIn(0, 50)).apply()
     }
+
+    /**
+     * 某学科选定的教材范围（单元 id 集合）。空集 = 不限范围，全册都抽。
+     *
+     * 存成逗号分隔字符串：节点 id 用 `|` 分段，不会和逗号冲突。
+     */
+    fun scope(c: Context, subject: String): Set<String> {
+        val raw = prefs(c).getString(KEY_SCOPE_PREFIX + subject, "") ?: ""
+        if (raw.isBlank()) return emptySet()
+        return raw.split(",").filter { it.isNotBlank() }.toSet()
+    }
+
+    fun setScope(c: Context, subject: String, ids: Set<String>) {
+        prefs(c).edit().putString(KEY_SCOPE_PREFIX + subject, ids.joinToString(",")).apply()
+    }
+
+    /** 范围的文字摘要，用于设置页每科那一行。 */
+    fun scopeSummary(c: Context, subject: String): String =
+        Catalog.describeScope(grade(c), subject, scope(c, subject))
 
     /** 本轮总题量。 */
     fun totalCount(c: Context): Int = QuestionBank.SUBJECTS.sumOf { count(c, it) }

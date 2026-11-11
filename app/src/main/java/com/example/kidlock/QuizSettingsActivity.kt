@@ -39,9 +39,19 @@ class QuizSettingsActivity : AppCompatActivity() {
 
     private val editOf = mutableMapOf<String, EditText>()
     private val availOf = mutableMapOf<String, TextView>()
+    private val scopeOf = mutableMapOf<String, TextView>()
 
     /** 正在按预填值初始化控件，此时不触发校验与重算。 */
     private var initializing = true
+
+    override fun onResume() {
+        super.onResume()
+        // 从「选择范围」页返回后，题量与范围摘要都要重算
+        if (!initializing) {
+            refreshAvailability()
+            updateTotal()
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -53,6 +63,7 @@ class QuizSettingsActivity : AppCompatActivity() {
             return
         }
         QuestionBank.load(assets)
+        Catalog.load(assets)
 
         findViewById<TextView>(R.id.tvBack).setOnClickListener { finish() }
 
@@ -73,6 +84,21 @@ class QuizSettingsActivity : AppCompatActivity() {
         availOf["语文"] = findViewById(R.id.tvAvailCn)
         availOf["数学"] = findViewById(R.id.tvAvailMa)
         availOf["英语"] = findViewById(R.id.tvAvailEn)
+        scopeOf["语文"] = findViewById(R.id.tvScopeCn)
+        scopeOf["数学"] = findViewById(R.id.tvScopeMa)
+        scopeOf["英语"] = findViewById(R.id.tvScopeEn)
+
+        // 每科的「出题范围」入口：按教材目录选单元
+        listOf(
+            "语文" to R.id.rowScopeCn,
+            "数学" to R.id.rowScopeMa,
+            "英语" to R.id.rowScopeEn
+        ).forEach { (subject, rowId) ->
+            findViewById<android.view.View>(rowId).setOnClickListener {
+                startActivity(Intent(this, ScopePickerActivity::class.java)
+                    .putExtra(ScopePickerActivity.EXTRA_SUBJECT, subject))
+            }
+        }
 
         // 版本
         spEdition.adapter = makeAdapter(QuestionBank.editions())
@@ -167,8 +193,12 @@ class QuizSettingsActivity : AppCompatActivity() {
         val maxD = currentDifficulty()
         var total = 0
         for (subject in QuestionBank.SUBJECTS) {
-            val n = QuestionBank.count(grade, edition, subject, maxD)
+            val scope = QuizSettings.scope(this, subject)
+            // 题量必须按选定范围算：家长把范围圈到两个单元，这里还报全册题量，
+            // 保存时就会被静默封顶，看起来像「设了 10 道却只出 3 道」
+            val n = QuestionBank.count(grade, edition, subject, maxD, scope)
             total += n
+            scopeOf[subject]?.text = Catalog.describeScope(grade, subject, scope)
             val tv = availOf[subject] ?: continue
             if (n == 0) {
                 tv.text = "该年级暂无${subject}题，请把数量填 0"
@@ -221,7 +251,9 @@ class QuizSettingsActivity : AppCompatActivity() {
         var clamped = false
         for (subject in QuestionBank.SUBJECTS) {
             val want = countOf(subject)
-            val avail = QuestionBank.count(grade, edition, subject, maxD)
+            val avail = QuestionBank.count(
+                grade, edition, subject, maxD, QuizSettings.scope(this, subject)
+            )
             val real = if (want > avail) {
                 if (want > 0) clamped = true
                 avail

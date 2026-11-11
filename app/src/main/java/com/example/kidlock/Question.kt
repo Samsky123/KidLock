@@ -11,6 +11,9 @@ import org.json.JSONObject
  * @param difficulty 难度：1 易 / 2 中 / 3 难
  * @param subject 学科：语文 / 数学 / 英语
  * @param edition 教材版本：通用 / 人教版 / 苏教版 / 北师大版 / 外研版 / 译林版
+ * @param unit 知识点名（题库自己的组织单位，不是教材单元）
+ * @param scopes 对应的教材单元 id 列表，如 `三年级|数学|上册|4`；
+ *               未进教材目录的知识点是 `综合|数学`。由 tools/build_catalog.py 生成。
  */
 data class Question(
     val title: String,
@@ -20,10 +23,15 @@ data class Question(
     val subject: String = "",
     val grade: String = "",
     val unit: String = "",
-    val edition: String = EDITION_COMMON
+    val edition: String = EDITION_COMMON,
+    val scopes: List<String> = emptyList()
 ) {
     /** 全局唯一标识：同一道题在错题本里靠它定位。 */
     val key: String get() = "$subject|$grade|$title"
+
+    /** 是否落在家长选定的教材范围内。scopes 为空视为不限范围。 */
+    fun inScope(selected: Set<String>): Boolean =
+        selected.isEmpty() || scopes.isEmpty() || scopes.any { selected.contains(it) }
 
     companion object {
         const val EDITION_COMMON = "通用"
@@ -85,6 +93,11 @@ object QuestionBank {
             val subject = g.getString("subject")
             val edition = if (g.has("edition")) g.getString("edition") else Question.EDITION_COMMON
             val unit = if (g.has("unit")) g.getString("unit") else ""
+            val scopesArr = g.optJSONArray("scopes")
+            val groupScopes = ArrayList<String>()
+            if (scopesArr != null) {
+                for (k in 0 until scopesArr.length()) groupScopes.add(scopesArr.getString(k))
+            }
             val qArr = g.getJSONArray("questions")
             val list = ArrayList<Question>(qArr.length())
             for (j in 0 until qArr.length()) {
@@ -99,7 +112,8 @@ object QuestionBank {
                         subject = subject,
                         grade = grade,
                         unit = unit,
-                        edition = edition
+                        edition = edition,
+                        scopes = groupScopes
                     )
                 )
             }
@@ -130,26 +144,69 @@ object QuestionBank {
     /**
      * 某年级 + 版本 + 学科下的抽题池。
      * 版本为「通用」的题在任何版本下都会出现；标具体版本的题只在该版本下出现。
+     *
+     * @param scope 家长选定的教材单元 id 集合；空集表示不限范围（全册都抽）。
      */
     fun pool(
         grade: String,
         edition: String,
         subject: String,
-        maxDifficulty: Int = 3
+        maxDifficulty: Int = 3,
+        scope: Set<String> = emptySet()
     ): List<Question> =
         groups.asSequence()
             .filter { it.grade == grade && it.subject == subject }
             .filter { editionMatches(it.edition, edition) }
             .flatMap { it.questions.asSequence() }
-            .filter { it.difficulty <= maxDifficulty }
+            .filter { it.difficulty <= maxDifficulty && it.inScope(scope) }
             .toList()
 
-    fun count(grade: String, edition: String, subject: String, maxDifficulty: Int = 3): Int =
-        pool(grade, edition, subject, maxDifficulty).size
+    fun count(
+        grade: String,
+        edition: String,
+        subject: String,
+        maxDifficulty: Int = 3,
+        scope: Set<String> = emptySet()
+    ): Int = pool(grade, edition, subject, maxDifficulty, scope).size
 
     /** 某年级下各学科可用题量，用于设置页实时提示。 */
-    fun countsBySubject(grade: String, edition: String, maxDifficulty: Int = 3): Map<String, Int> =
-        SUBJECTS.associateWith { count(grade, edition, it, maxDifficulty) }
+    fun countsBySubject(
+        grade: String,
+        edition: String,
+        maxDifficulty: Int = 3,
+        scopeOf: (String) -> Set<String> = { emptySet() }
+    ): Map<String, Int> =
+        SUBJECTS.associateWith { count(grade, edition, it, maxDifficulty, scopeOf(it)) }
+
+    /** 某一册整册的题量（只统计挂在册上的题，不含单元级题）。 */
+    fun countInBook(bookId: String, maxDifficulty: Int = 3): Int =
+        groups.asSequence()
+            .flatMap { it.questions.asSequence() }
+            .count { q -> q.difficulty <= maxDifficulty && q.scopes.contains(bookId) }
+
+    /** 某个教材单元的题量，用于范围选择页显示「本单元 N 道」。 */
+    fun countInUnit(unitId: String, maxDifficulty: Int = 3): Int =
+        groups.asSequence()
+            .flatMap { it.questions.asSequence() }
+            .count { q -> q.difficulty <= maxDifficulty && q.scopes.contains(unitId) }
+
+    /** 归到「综合练习」的题量（新教材已删掉的知识点）。 */
+    fun countMisc(subject: String, maxDifficulty: Int = 3): Int {
+        val key = Catalog.MISC_PREFIX + subject
+        return groups.asSequence()
+            .filter { it.subject == subject }
+            .flatMap { it.questions.asSequence() }
+            .count { q -> q.difficulty <= maxDifficulty && q.scopes.contains(key) }
+    }
+
+    /**
+     * 按题干回查原题。错题本存的是快照，早期版本的快照没有 scopes 字段，
+     * 组卷时需要回查一次，否则这些题会绕过家长设的范围。
+     */
+    fun findByTitle(title: String): Question? {
+        for (g in groups) for (q in g.questions) if (q.title == title) return q
+        return null
+    }
 
     fun allGroups(): List<QuestionGroup> = groups
 }

@@ -62,6 +62,11 @@
             android:name=".WrongBookActivity"
             android:exported="false" />
 
+        <!-- 家长端：按教材目录选单元（册 → 单元 → 课） -->
+        <activity
+            android:name=".ScopePickerActivity"
+            android:exported="false" />
+
         <!-- 家长端：应用限时（抖音等）设置 -->
         <activity
             android:name=".AppLimitActivity"

@@ -230,16 +230,29 @@ class LaunchActivity : AppCompatActivity() {
             val want = QuizSettings.count(this, subject)
             if (want <= 0) continue
 
+            // 家长按教材目录圈定的范围（单元 id 集合）；空集表示全册都抽
+            val scope = QuizSettings.scope(this, subject)
+
             val taken = mutableSetOf<String>()
             if (wrongFirst) {
                 for (item in WrongBook.ofSubject(this, subject).filter { it.grade == grade }.shuffled()) {
                     if (taken.size >= want) break
+                    var q = item.toQuestion()
+                    // 旧版错题快照没有 scopes，回查题库补上，
+                    // 否则这些题会无视家长设的教材范围
+                    if (q.scopes.isEmpty()) {
+                        QuestionBank.findByTitle(q.title)?.let { q = q.copy(scopes = it.scopes) }
+                    }
+                    // 错题也要服从范围：家长把范围收到第 3 单元，
+                    // 却抽出一道第 8 单元的错题，孩子会觉得莫名其妙
+                    if (!q.inScope(scope)) continue
                     taken.add(item.key)
-                    picked.add(item.toQuestion())
+                    picked.add(q)
                 }
             }
             if (taken.size < want) {
-                for (q in QuestionBank.pool(grade, edition, subject, maxD).filter { it.key !in taken }.shuffled()) {
+                for (q in QuestionBank.pool(grade, edition, subject, maxD, scope)
+                    .filter { it.key !in taken }.shuffled()) {
                     if (taken.size >= want) break
                     taken.add(q.key)
                     picked.add(q)

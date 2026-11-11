@@ -271,6 +271,42 @@
                     android:layout_marginTop="4dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:id="@+id/rowScopeCn"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="52dp"
+                    android:layout_marginTop="2dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="出题范围  "
+                        style="@style/Text.Label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tvScopeCn"
+                        style="@style/Text.Label"
+                        android:textColor="@color/accent"
+                        android:text="全部单元"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:text="选择 ›"
+                        android:textSize="13sp"
+                        android:textColor="@color/accent"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
 
                 <!-- 数学 -->
                 <LinearLayout
@@ -324,6 +360,42 @@
                     android:layout_marginTop="4dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:id="@+id/rowScopeMa"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="52dp"
+                    android:layout_marginTop="2dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="出题范围  "
+                        style="@style/Text.Label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tvScopeMa"
+                        style="@style/Text.Label"
+                        android:textColor="@color/accent"
+                        android:text="全部单元"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:text="选择 ›"
+                        android:textSize="13sp"
+                        android:textColor="@color/accent"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
 
                 <!-- 英语 -->
                 <LinearLayout
@@ -377,6 +449,42 @@
                     android:layout_marginTop="4dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:id="@+id/rowScopeEn"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="52dp"
+                    android:layout_marginTop="2dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="出题范围  "
+                        style="@style/Text.Label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tvScopeEn"
+                        style="@style/Text.Label"
+                        android:textColor="@color/accent"
+                        android:text="全部单元"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:text="选择 ›"
+                        android:textSize="13sp"
+                        android:textColor="@color/accent"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
 
                 <View
                     android:background="@color/stroke"
