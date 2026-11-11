@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 家长登录 / 创建账号 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_screen">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:paddingTop="56dp"
+            android:paddingBottom="32dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- 图标徽标 -->
+            <FrameLayout
+                android:background="@drawable/bg_badge"
+                android:layout_width="76dp"
+                android:layout_height="76dp">
+
+                <ImageView
+                    android:src="@drawable/ic_shield"
+                    android:tint="@color/accent"
+                    android:layout_gravity="center"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:contentDescription="安全" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tvTitle"
+                style="@style/Text.PageTitle"
+                android:text="家长登录"
+                android:textSize="25sp"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvDesc"
+                android:text="仅家长可进入设置，孩子无法修改限时"
+                android:textSize="13sp"
+                android:textColor="@color/text_secondary"
+                android:gravity="center"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- 表单卡片 -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:background="@drawable/bg_card"
+                android:padding="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/Text.Label"
+                    android:text="家长账号"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/etUser"
+                    style="@style/Input"
+                    android:hint="请输入账号"
+                    android:inputType="text"
+                    android:layout_marginTop="8dp" />
+
+                <TextView
+                    style="@style/Text.Label"
+                    android:text="密码"
+                    android:layout_marginTop="18dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/etPw"
+                    style="@style/Input"
+                    android:hint="请输入密码"
+                    android:inputType="textPassword"
+                    android:layout_marginTop="8dp" />
+
+                <EditText
+                    android:id="@+id/etPw2"
+                    style="@style/Input"
+                    android:hint="再次输入密码"
+                    android:inputType="textPassword"
+                    android:layout_marginTop="14dp"
+                    android:visibility="gone" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnLogin"
+                    style="@style/Btn.Primary"
+                    android:text="登录"
+                    android:layout_marginTop="24dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvHint"
+                android:textSize="12.5sp"
+                android:textColor="@color/text_secondary"
+                android:gravity="center"
+                android:lineSpacingExtra="3dp"
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp" />
+
+            <TextView
+                android:text="密码经加盐哈希存储，本机不留明文"
+                android:textSize="11.5sp"
+                android:textColor="@color/text_tertiary"
+                android:gravity="center"
+                android:layout_marginTop="26dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

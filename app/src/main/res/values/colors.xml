@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 科技蓝 · 底色 -->
+    <color name="bg_top">#071528</color>
+    <color name="bg_mid">#0C2145</color>
+    <color name="bg_bottom">#061020</color>
+
+    <!-- 卡片与分割 -->
+    <color name="surface">#0F1E36</color>
+    <color name="surface_2">#13253F</color>
+    <color name="stroke">#1E3A5F</color>
+    <color name="stroke_strong">#2B4A73</color>
+
+    <!-- 强调色 -->
+    <color name="accent">#3B9EFF</color>
+    <color name="accent_2">#48C6FF</color>
+    <color name="accent_deep">#2E7DFF</color>
+    <color name="accent_soft">#1B3A66</color>
+
+    <!-- 文字 -->
+    <color name="text_primary">#EAF2FF</color>
+    <color name="text_secondary">#8FA8C8</color>
+    <color name="text_tertiary">#5E7799</color>
+
+    <!-- 语义色 -->
+    <color name="ok">#35D07F</color>
+    <color name="warn">#FFB020</color>
+    <color name="danger">#FF5C5C</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="transparent">#00000000</color>
+</resources>

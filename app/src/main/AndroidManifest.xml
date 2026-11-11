@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- 前台计时服务通知（Android 13+） -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <!-- 开机后强制先答题 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- 关键：到点从后台拉起答题页。Android 10+ 默认禁止后台启动界面，
+         持有「显示在其他应用上层」权限的应用才被豁免，否则到点弹不出题。 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- 兜底：锁屏状态下用全屏意图通知拉起答题页 -->
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+    <!-- M2 按 App 限时：使用情况访问（需家长在系统设置里授权） -->
+    <uses-permission
+        android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions" />
+    <!-- 回弹时把答题任务重新置前 -->
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.KidLock">
+
+        <!-- 答题锁屏（也是启动页）
+             showWhenLocked + turnScreenOn：屏幕锁着也直接把题目盖在锁屏上
+             excludeFromRecents：不出现在最近任务里，孩子无法从这个入口切回来 -->
+        <activity
+            android:name=".LaunchActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:excludeFromRecents="true"
+            android:showWhenLocked="true"
+            android:turnScreenOn="true"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            tools:targetApi="27">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 家长登录 / 首次创建账号（进入家长设置的前置闸门） -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+
+        <!-- 家长端：年级/学科/进度单元题库配置 -->
+        <activity
+            android:name=".ParentActivity"
+            android:exported="false" />
+
+        <!-- 家长端：应用限时（抖音等）设置 -->
+        <activity
+            android:name=".AppLimitActivity"
+            android:exported="false" />
+
+        <!-- 倒计时 + 逃逸守卫前台服务（划掉任务也不退出） -->
+        <service
+            android:name=".TimerService"
+            android:exported="false"
+            android:stopWithTask="false" />
+
+        <!-- 开机广播 -->
+        <receiver
+            android:name=".BootReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 设备管理器：用于设备所有者锁屏（dpm set-device-owner 后生效） -->
+        <receiver
+            android:name=".AdminReceiver"
+            android:exported="true"
+            android:permission="android.permission.BIND_DEVICE_ADMIN">
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/device_admin" />
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

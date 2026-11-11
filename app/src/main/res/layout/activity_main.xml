@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 答题锁屏：科技蓝 · 深空风 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_screen">
+
+    <!-- 底部留 76dp：沉浸模式下屏幕最下方约 48dp 是系统返回手势区，
+         触摸事件会被系统吞掉，按钮压在该区域里会「点不动」 -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:paddingLeft="22dp"
+        android:paddingRight="22dp"
+        android:paddingTop="40dp"
+        android:paddingBottom="76dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- 顶部状态胶囊 -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_chip"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/ic_shield"
+                android:tint="@color/accent"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:contentDescription="守护" />
+
+            <TextView
+                android:text="锁屏守护中"
+                android:textSize="12sp"
+                android:textColor="@color/accent"
+                android:letterSpacing="0.08"
+                android:layout_marginStart="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <Space
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+
+        <!-- 题目区 -->
+        <TextView
+            android:id="@+id/tvStatus"
+            android:textSize="13sp"
+            android:textColor="@color/text_secondary"
+            android:letterSpacing="0.02"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvQuestion"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:gravity="center"
+            android:lineSpacingExtra="6dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- 选项容器（选项按钮由代码动态生成并套科技蓝卡片样式） -->
+        <LinearLayout
+            android:id="@+id/layoutOptions"
+            android:orientation="vertical"
+            android:layout_marginTop="26dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Space
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+
+        <TextView
+            android:text="答对即可继续使用手机"
+            android:textSize="12sp"
+            android:textColor="@color/text_tertiary"
+            android:gravity="center"
+            android:layout_marginBottom="14dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnParent"
+            android:text="家长入口"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:minWidth="132dp"
+            android:paddingLeft="22dp"
+            android:paddingRight="22dp"
+            android:background="@drawable/bg_btn_ghost"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp"
+            android:textAllCaps="false"
+            android:stateListAnimator="@null" />
+    </LinearLayout>
+</FrameLayout>

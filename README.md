@@ -1,0 +1,250 @@
+# 儿童手机管控 · 整机答题解锁 + 按 App 限时（Android 原生 Kotlin）
+
+限制小孩玩手机时间：亮屏/开机先答题 → 答对发放 N 分钟使用时长 → 到期自动锁回再答。
+本工程实现 **M1（整机答题解锁）**，并在其上叠加 **M2（按抖音等指定 App 的每日时长限时）**。
+
+## 机制
+- `LaunchActivity`：答题锁屏（也是启动页）。答对 `requiredCount` 题即解锁；答错 `requiredCount+1`（加题）。
+- 解锁时把 `unlock_until` 写入 SharedPreferences，并启动 `TimerService`。
+- `TimerService`：前台秒级倒计时，到期拉起答题锁屏；设备所有者模式下由答题页 `startLockTask()` 钉死，小孩无法离开直到答对。
+- `BootReceiver`：开机强制先答题。
+- `LoginActivity`：家长账号登录 / 首次创建账号。密码以 **SHA-256 + 随机盐哈希**存储，明文不落盘；这是进入设置的唯一闸门。
+- `ParentActivity`：必须已登录才能进入。配置年级/学科/进度单元题库、难度上限、优先出错题、现场加时、应用限时入口；右上可「退出登录」。
+
+## 两种运行强度
+| 模式 | 是否需要配权 | 行为 |
+|------|------|------|
+| 普通安装（默认） | 只需「显示在其他应用上层」 | 答题页隐藏底部导航栏 + 拦截返回键 + 按 Home 后约 **0.15 秒自动拉回**，孩子体验上退不出去 |
+| 强力锁（设备所有者） | 执行一次 adb 命令 | `startLockTask()` + `setLockTaskFeatures(NONE)`，Home / 最近任务 / 通知栏被系统直接禁用，连"逃"这个动作都不存在 |
+
+### 防退出三层防御（2026-11-06）
+| 层 | 实现 | 说明 |
+|---|---|---|
+| ① 藏 | `WindowInsetsControllerCompat.hide(systemBars())` | 状态栏+导航栏一起隐藏，底部三个键不在屏幕上 |
+| ② 拦 | `onBackPressedDispatcher.addCallback` | 返回键/返回手势被吞，提示「答对题目后才能离开」 |
+| ③ 拉回 | `onUserLeaveHint()` 60ms → `onStop()` 220ms → `TimerService` 700ms 轮询 | 三级兜底，覆盖不同 ROM 的回调差异 |
+| ④ 硬锁 | `maybeLockTask()`（仅设备所有者） | 系统级 Lock Task |
+
+开启强力锁（可选，需手机未登录账号或已恢复出厂）：
+```bash
+adb shell dpm set-device-owner com.example.kidlock/.AdminReceiver
+# 成功返回：Success: Device owner set to package com.example.kidlock/.AdminReceiver
+```
+**前提：手机上不能有任何账号**——Google/小米/华为账号不算，抖音、小红书这类 App
+自己注册的账号也算。实测会报
+`Not allowed to set the device owner because there are already some accounts on the device`。
+最稳的顺序：恢复出厂 → 跳过账号登录 → 装本应用 → 执行命令。
+
+**解除**：家长页「防退出（强力锁）」卡片里点「解除强力锁」。
+设上之后 `adb shell dpm remove-active-admin` **会被系统拒绝**
+（`SecurityException: Attempt to remove non-test admin`）——这是 Android 的保护，
+防止别人拿电脑随手把家长设的限制解掉。所以 App 内必须留这个出口，否则只能恢复出厂。
+
+实测对比（Android 14 模拟器）：
+
+| 场景 | 普通模式 | 设备所有者模式 |
+|---|---|---|
+| Home 键 | 152ms 后拉回，会闪桌面 | **完全无效**，logcat 里连回弹日志都没有 |
+| 连按 Home ×5 | 每次被拉回 | **完全无效** |
+| 最近任务 | 被拉回 | **完全无效** |
+| 下拉通知栏 | 能拉下 | **拉不下来** |
+| `pm uninstall` | 可卸载 | **`DELETE_FAILED_INTERNAL_ERROR`** |
+
+### ⚠️ 上架应用商店与「硬锁」互斥
+
+Google Play 只允许 EMM / Android Enterprise 方案使用设备管理 API，普通 App 不得请求成为 device owner；
+国内商店对「设备管理器」类权限审核从严。也就是说：**商店下载的版本只能是普通模式（靠回弹）**，
+想要「按 Home 完全没反应」必须家长自己执行一次 adb，或走企业定制。
+资质与合规清单见 `../方案分析-儿童护眼答题锁.md` 第十六节。
+
+### 为什么 Home 键必须"事后拉回"
+Home 键是 Android 的系统保留键，第三方 App **收不到这个按键事件**，无法拦截。
+所以普通安装下只能"按下去之后立刻把界面拉回来"；只有设备所有者 + Lock Task 才能让 Home 键在系统层面失效。
+按最近任务的路径更特殊：部分机型只回调 `onPause`，既不回调 `onUserLeaveHint` 也不立即 `onStop`，
+因此后台服务必须常驻轮询（答题页一进入锁定态就 `TimerService.start()`）。
+
+## ⚠️ 必须开启「到点弹题」权限（否则管控失效）
+Android 10+ **默认禁止后台进程启动界面**。如果不开这个权限，时间到了系统会静默拦掉弹题（日志里表现为
+`Background activity launch blocked` / `BAL_BLOCK`），家长会以为"设了但没用"。
+
+- 在 `ParentActivity` 点 **「开启『到点弹题』权限（必需）」** → 系统「显示在其他应用上层」页面里打开本应用。
+- 该页会实时显示状态：`到点弹题权限：已开启 ✓` 才算配置完成。
+- 对应权限：`SYSTEM_ALERT_WINDOW`（持有它的应用被系统豁免后台启动限制）。
+- 另有兜底：屏幕锁着时，用 `USE_FULL_SCREEN_INTENT` 的全屏意图通知也能把答题页拉起来。
+
+## 界面风格（科技蓝 · 2026-11-05 改版）
+四个页面统一为深色科技蓝：**深海军蓝渐变打底 + 电光蓝强调**（参考 Material 3 深色金融类 App 配色），
+不使用阴影分层，靠 1dp 描边与圆角区分层级。
+
+- **色板**：背景 `#071528 → #0C2145 → #061020`；强调 `#3B9EFF`；渐变按钮 `#2E7DFF → #48C6FF`；
+  卡片 `#0F1E36` + 描边 `#1E3A5F`；文字 `#EAF2FF / #8FA8C8`；语义 成功 `#35D07F` · 警示 `#FFB020` · 危险 `#FF5C5C`。
+- **图形资源**：`res/values/colors.xml`（色板）、`res/values/styles.xml`（Text.Label / Text.CardTitle /
+  Btn.Primary / Btn.Ghost / Input / Select）、`res/drawable/bg_*.xml`（渐变、卡片、输入框、选项、胶囊、下拉）、
+  `res/drawable/ic_*.xml`（12 枚 Material 风格矢量图标）。
+- **结构**：家长设置页由“一长串控件”改为 5 张语义卡片（时长 / 出题范围 / 出题策略 / 到点弹题权限 / 现场加时）；
+  答题选项做成带 A/B/C/D 序号的卡片；下拉框统一带右侧箭头，避免“看不出能点”。
+- 主题改为 `Theme.MaterialComponents.NoActionBar`（**不用 DayNight**，防止浅色模式下深底浅字读不清），
+  并设置 `windowLayoutInDisplayCutoutMode=shortEdges` 让渐变铺满刘海区。
+- 改版前后对照见项目根目录 `界面改版-科技蓝.html`。
+
+## 如何构建
+本目录是源码包，推荐用 Android Studio 导入：
+
+**方式一（推荐，最稳）：新建项目后覆盖**
+1. Android Studio → New Project → Empty Views Activity（语言选 Kotlin）。
+2. 把本目录 `app/src/main/` 下的 `AndroidManifest.xml`、`java/`、`res/`、`assets/` 覆盖进新项目对应位置。
+3. 把根 `build.gradle`、`app/build.gradle`、`settings.gradle` 的依赖/插件版本对齐（见文件内注释）。
+4. 连接安卓手机 → Run。
+
+**方式二：直接以本目录为工程**
+需先生成 Gradle Wrapper（`gradle wrapper`），或用 Android Studio 打开后让其重新配置 Gradle。
+
+## 启用"真锁"（设备所有者）
+手机用 USB 调试连接电脑，执行一次：
+```
+adb shell dpm set-device-owner com.example.kidlock/.AdminReceiver
+```
+成功后 App 即为设备所有者，答题锁屏无法被 Home 键退出（按键在系统层被丢弃，不是"按了再拉回"），到期真正锁屏。
+撤销：**在 App 家长页点「解除强力锁」**。
+设上之后 `adb shell dpm remove-active-admin` 会被系统拒绝（`SecurityException: Attempt to remove non-test admin`）。
+
+## 家长账号与登录（防孩子改设置）
+- 首次打开 App（或点锁屏「家长」、通知栏「家长设置」）进入 `LoginActivity`：无账号时**创建家长账号**（两次密码一致），有账号时**登录**。
+- 密码经 SHA-256 + 随机盐哈希后存储，明文密码不写入手机，孩子拿到设备也读不出密码。
+- 未登录状态下任何入口都会挡回登录页，**孩子不知道密码就无法进入设置、无法修改限时**。
+- 登录态是「内存会话」：App 进程被销毁（重启/被杀）即失效，下次改设置需重新登录——这正好满足「家长退出登录后孩子进不去」。
+- 管控配置（时长/题库/App 限制）独立存储、**不依赖登录态**，因此孩子即使无法登录也改不了，只能按家长设的用。家长配完点「退出登录」把手机交给孩子即可。
+
+## 家长题库配置（按年级 / 学科 / 进度）
+家长点击锁屏上的「家长」按钮（或通知栏「家长设置」）→ 登录家长账号 → 进入 `ParentActivity`：
+1. 设**每次解锁时长**（分钟）。
+2. 选**孩子年级**（如 一年级）。
+3. 选**学科**（如 数学）。
+4. **勾选进度单元**（如 乘法、长度）——只给孩子做到这个进度的题。
+5. 点「保存配置」，勾选状态以 `年级|学科|单元` 为 key 存入 `active_groups`。
+孩子答题时只从已勾选单元的题里随机抽；若家长未勾选任何单元，锁屏会提示"家长尚未配置题库"。
+
+## 难度分级 / 错题本 / 家长加时
+- **难度分级**：每题带 `difficulty`（1 易 / 2 中 / 3 难）。家长在 `ParentActivity` 用「题目难度上限」下拉（简单/中等/困难）限制出题难度，孩子只抽到 ≤ 上限的题。
+- **错题本**：孩子答错的题自动记入 `wrong_questions`（SharedPreferences），家长端显示错题数；勾选「优先出错题」后，孩子先练做错的题，练会再回到正常池。
+- **家长现场加时**：家长登录进入后，输入分钟数点「立即加时」——延长本次解锁窗口并退出锁屏，孩子可继续使用。
+
+## 应用限时（M2，按抖音等 App）
+在 `ParentActivity` 点「应用限时设置（抖音等）」→ `AppLimitActivity`：
+1. 点「去授予『使用情况访问』权限」，在系统设置里开启（**必须**，否则 M2 不生效）。
+2. 勾选要限制的应用（抖音、快手、微信、王者荣耀、哔哩哔哩等预置 10 个），并设置每日时长（分钟）。
+3. 点「保存」。
+M2 在 `TimerService` 中通过 `UsageStatsManager` 每秒检测当前前台 App 的当日已用时长，超过上限即锁屏弹题（复用 M1 锁屏）。若家长未授权或无配置，M2 自动跳过，不影响 M1。
+
+## 题库覆盖
+`assets/questions.json` 已结构化覆盖 **一年级～六年级 × 语文/数学**，以及 **三年级～六年级 × 英语**，共 16 个「年级×学科」、32 单元、64 题，并标注难度。加题只需按分组往 JSON 添加，下拉与勾选列表自动出现。
+
+## 自定义
+- 改时长 / 题库范围：家长端界面直接操作（无需改代码）。
+- 加题目：编辑 `app/src/main/assets/questions.json`，按分组结构添加：
+  ```json
+  {
+    "grade": "四年级", "subject": "数学", "unit": "小数",
+    "questions": [ { "title": "...", "options": ["A","B","C","D"], "answer": 0, "difficulty": 2 } ]
+  }
+  ```
+  年级/学科/单元会出现在家长下拉与勾选列表里，无需改代码。每题可加 `difficulty`（1/2/3），受家长端「题目难度上限」控制。
+- 账号密码：本地账号，存于 `SharedPreferences`（key `kidlock_auth`），密码 SHA-256 + 盐哈希。改默认账号请在首次运行时创建；想改密码需删 App 数据重置账号（原型阶段）。
+- 改包名：全局替换 `com.example.kidlock`（Manifest、AdminReceiver 路径、dpm 命令需同步改）。
+
+## 已知边界
+- 未配设备所有者时，演示模式小孩可按 Home 绕过（仅用于验证交互，非真管控）。
+- 本原型未上架、未做儿童隐私合规，仅供个人/家庭使用。
+- 安卓 13+ 需授予"通知"权限，前台计时通知才显示。
+- iOS 不支持此种自研管控（只能靠系统"屏幕使用时间"）。
+
+## 已完成的迭代
+- M1 整机答题解锁；家长结构化题库（年级/学科/进度）；难度分级；错题本；家长现场加时；M2 按 App 限时（UsageStatsManager）。
+- **家长账号体系**：本地账号 + SHA-256 加盐哈希密码；`ParentActivity` 强制登录闸门；退出登录；锁屏/通知栏入口统一走登录；原硬编码 PIN 已移除。
+- **到点弹题权限闭环**（2026-11-05 真机/模拟器验证后补）：`SYSTEM_ALERT_WINDOW` + 全屏意图通知双通道，解决 Android 10+ 后台启动被拦导致"到点不弹题"的致命问题。
+
+## 运行验证结论（2026-11-05，Android 14 模拟器 Pixel 6 / 1080×2400）
+按真实使用链路跑通并截图留证（截图见 `验证报告.html`）：
+
+| # | 验证项 | 结果 |
+|---|--------|------|
+| 1 | 冷启动进入答题锁屏 | ✅ 正常渲染题目与选项 |
+| 2 | 家长入口 → 首次「创建账号」 | ✅ 账号 parent01 创建成功并进入设置 |
+| 3 | 家长配置：时长 1 分钟 / 一年级·数学·加减法 | ✅ 落盘 `grant_minutes=1`、`active_groups=一年级\|数学\|加减法` |
+| 4 | 退出登录 → 回到锁屏并出题 | ⚠️ 首版有 Bug（不刷新），**已修复** |
+| 5 | 答错加题 + 错题本记录 | ✅ 需答题数 1→2，错题写入 `wrong_questions` |
+| 6 | 答对解锁 → 回桌面 + 前台计时服务 | ✅ `unlock_until` 写入、通知栏显示倒计时 |
+| 7 | 到期自动弹回答题页 | ❌ 首版被系统 `BAL_BLOCK` 拦截；补权限后 ✅ 55 秒时自动弹出 |
+| 8 | 错误密码 / 未登录强闯家长页 | ✅ 均被拦（停留登录页；外部 `am start` 报 Permission Denial） |
+| 9 | 应用限时页（M2） | ✅ 权限状态、10 个预置应用、时长可配可保存 |
+
+**本轮修掉的 2 个真实缺陷**
+1. **家长改完配置返回，锁屏仍显示"家长尚未配置题库"** —— `LaunchActivity` 缺 `onResume` 刷新；已补：回到锁屏时若当前无题或题库变空则重新抽题。
+2. **时间到不弹题（管控形同虚设）** —— Android 10+ 后台启动限制；已补 `SYSTEM_ALERT_WINDOW` 权限入口 + 高优先级全屏意图通知兜底，实测到期 5 秒内自动弹题。
+
+**尚未在模拟器覆盖的**：M2 实际拦截效果（预置的抖音/微信等未安装在模拟器里，取不到真实前台用量），需在真机装抖音后验证；设备所有者真锁档（模拟器不宜设 device owner）。
+
+## 已构建出 APK（可直接安装）
+工程已在 macOS 上用 **JDK 17 + Android SDK(platform-34/build-tools-34.0.0) + Gradle 8.9** 成功编译：
+- 产物：`app/build/outputs/apk/debug/app-debug.apk`（约 5.5MB，debug 签名）。
+- 一键重编脚本：`bash build_apk.sh`（脚本内已写死本机工具链路径 `/home/user/android-build/.toolchain/`）。
+- 工具链与 Gradle 下载脚本所用的源：JDK/Gradle 经 GitHub/镜像、Android SDK 经 `dl.google.com`；本机工具链放在项目目录之外，便于保留复用。
+
+### 安装到手机
+方式一（USB + adb）：
+```
+adb install -r app/build/outputs/apk/debug/app-debug.apk
+```
+方式二：把 `app-debug.apk` 传到手机，在手机上点开安装（需在系统设置里允许「未知来源/安装未知应用」）。
+
+### 启用"真锁"（设备所有者，推荐）
+连上 USB 调试，执行一次（避免孩子按 Home 逃脱、且能防卸载）：
+```
+adb shell dpm set-device-owner com.example.kidlock/.AdminReceiver
+```
+撤销：**在 App 家长页点「解除强力锁」**（设上之后 adb 的 remove-active-admin 会被系统拒绝）。
+
+> 未配设备所有者时，app-debug 仍可安装体验全部交互，但锁屏可被 Home 键退出（演示档）。
+
+## 待做 / 设计预留
+- **家长远程加时（真·远程）**：当前「加时」需家长在场（手机上登录后加时）。真正远程需后端：建议用 Firebase Realtime Database 存 `unlock_until`，家长手机写、孩子手机 `TimerService` 每秒读并刷新；或自建轻量 API。代码层 `unlock_until` 已是单一真相源，接入后端只需在 `TimerService` 读取远端值替换本地值即可。
+- **题库云同步**：题目亦可放远端（同 Firebase），家长网页/另一台手机维护，孩子端拉取。
+- **观看时长统计**：`UsageStatsManager` 已能取各 App 时长，可做成家长端日报。
+- **iOS**：不支持自研管控，只能靠系统「屏幕使用时间」。
+
+---
+
+## 在电脑上用模拟器测（2026-11-06）
+
+不想反复插真机时，用项目根目录的 **`启动模拟器测试.command`**（双击运行）。
+
+### 它会做什么
+1. 检测模拟器是否已在跑，没跑就开窗口（快照恢复约 5 秒，冷启动约 30 秒）
+2. 安装 / 更新本 App
+3. 预授权「悬浮窗 + 使用情况访问 + 通知」，家长页不会一片红字
+4. 首次自动安装测试用第三方 App（抖音、小红书）
+5. 拉起 App 并把模拟器窗口置顶
+
+### 环境
+| 项 | 值 |
+|---|---|
+| 工具链 | `/home/user/android-build/.toolchain/sdk`（JDK 17 + SDK 34 + emulator） |
+| AVD | `kidlock_test`，Android 14（google_apis，arm64-v8a），1080×2400 @420dpi |
+| 系统语言 | 已设为 `zh-CN` |
+| 启动参数 | `-gpu swiftshader_indirect -scale 0.32 -no-audio` |
+| 测试 APK 存放 | `/home/user/android-build/apk/`（douyin.apk / xiaohongshu.apk） |
+
+> `-scale 0.32` 不能省：1080×2400 的 AVD 在 1280×800 逻辑屏上 1:1 会超出屏幕，底部「家长入口」点不到。
+
+### 模拟器里怎么操作
+| 电脑操作 | 手机动作 |
+|---|---|
+| 鼠标左键点击 | 手指点击 |
+| 按住拖动 | 滑动（上滑 = 返回 / 唤出导航栏） |
+| 窗口右侧工具栏 | 返回 / Home / 最近任务 / 旋转 / 截图 |
+| 点输入框后敲键盘 | 文字输入 |
+
+### 已知限制
+- **抖音必须手机号验证码登录**，模拟器里没法代登录；不登录停在前台也够验证「到点弹题」（UsageStats 只认前台包名）。
+- 模拟器无法验证「真锁」（Lock Task），那需要真机 `dpm set-device-owner`。
+- 软件渲染（swiftshader）下抖音视频会偏卡，只用于功能验证，不用于看画质。

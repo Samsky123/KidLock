@@ -1,0 +1,226 @@
+[
+  {
+    "grade": "一年级", "subject": "数学", "unit": "数与运算",
+    "questions": [
+      { "title": "15 里面有几个十和几个一？", "options": ["1个十5个一", "5个十1个一", "1个十1个一", "5个十5个一"], "answer": 0, "difficulty": 1 },
+      { "title": "比 9 大、比 12 小的数是？", "options": ["8", "10", "13", "7"], "answer": 1, "difficulty": 1 }
+    ]
+  },
+  {
+    "grade": "一年级", "subject": "数学", "unit": "加减法",
+    "questions": [
+      { "title": "8 + 7 = ？", "options": ["14", "15", "16", "13"], "answer": 1, "difficulty": 1 },
+      { "title": "17 - 9 = ？", "options": ["7", "8", "9", "6"], "answer": 1, "difficulty": 1 }
+    ]
+  },
+  {
+    "grade": "一年级", "subject": "语文", "unit": "拼音",
+    "questions": [
+      { "title": "下面哪个是声母？", "options": ["b", "a", "o", "e"], "answer": 0, "difficulty": 1 },
+      { "title": "“mā” 的声调是？", "options": ["一声", "二声", "三声", "四声"], "answer": 0, "difficulty": 1 }
+    ]
+  },
+  {
+    "grade": "一年级", "subject": "语文", "unit": "识字",
+    "questions": [
+      { "title": "“火” 一共有几画？", "options": ["3", "4", "5", "6"], "answer": 1, "difficulty": 1 },
+      { "title": "下面哪个字表示水？", "options": ["火", "水", "木", "土"], "answer": 1, "difficulty": 1 }
+    ]
+  },
+  {
+    "grade": "二年级", "subject": "数学", "unit": "乘法",
+    "questions": [
+      { "title": "3 × 4 = ？", "options": ["7", "12", "9", "15"], "answer": 1, "difficulty": 1 },
+      { "title": "表示 2 个 5 相加的算式是？", "options": ["2+5", "5+5", "2×2", "5×5"], "answer": 1, "difficulty": 2 }
+    ]
+  },
+  {
+    "grade": "二年级", "subject": "数学", "unit": "长度",
+    "questions": [
+      { "title": "1 米等于多少厘米？", "options": ["10", "100", "1000", "1"], "answer": 1, "difficulty": 1 },
+      { "title": "下面哪个最长？", "options": ["1厘米", "10厘米", "1米", "50厘米"], "answer": 2, "difficulty": 2 }
+    ]
+  },
+  {
+    "grade": "二年级", "subject": "语文", "unit": "词语",
+    "questions": [
+      { "title": "“高兴” 的近义词是？", "options": ["开心", "难过", "生气", "害怕"], "answer": 0, "difficulty": 1 },
+      { "title": "下面哪个是动词？", "options": ["红色", "跑", "桌子", "快速"], "answer": 1, "difficulty": 1 }
+    ]
+  },
+  {
+    "grade": "二年级", "subject": "语文", "unit": "阅读",
+    "questions": [
+      { "title": "阅读时应该？", "options": ["随便翻", "认真看", "闭眼", "说话"], "answer": 1, "difficulty": 1 },
+      { "title": "一个完整的故事一般有？", "options": ["开头和结尾", "只有开头", "只有结尾", "没有内容"], "answer": 0, "difficulty": 1 }
+    ]
+  },
+  {
+    "grade": "三年级", "subject": "数学", "unit": "除法",
+    "questions": [
+      { "title": "12 ÷ 3 = ？", "options": ["3", "4", "6", "9"], "answer": 1, "difficulty": 2 },
+      { "title": "把 10 个苹果平均分给 2 人，每人几个？", "options": ["2", "5", "10", "20"], "answer": 1, "difficulty": 2 }
+    ]
+  },
+  {
+    "grade": "三年级", "subject": "数学", "unit": "分数",
+    "questions": [
+      { "title": "一个蛋糕平均分成 4 份，取 1 份是？", "options": ["1/2", "1/4", "1/3", "1/5"], "answer": 1, "difficulty": 2 },
+      { "title": "下面哪个分数最大？", "options": ["1/2", "1/3", "1/4", "1/5"], "answer": 0, "difficulty": 3 }
+    ]
+  },
+  {
+    "grade": "三年级", "subject": "语文", "unit": "句子",
+    "questions": [
+      { "title": "下面哪句是完整的句子？", "options": ["小明。", "跑步", "在公园。", "快乐地"], "answer": 0, "difficulty": 2 },
+      { "title": "“他吃了一个苹果。” 的主语是？", "options": ["他", "苹果", "吃", "一个"], "answer": 0, "difficulty": 2 }
+    ]
+  },
+  {
+    "grade": "三年级", "subject": "语文", "unit": "古诗",
+    "questions": [
+      { "title": "“床前明月光” 的下一句是？", "options": ["疑是地上霜", "低头思故乡", "举头望明月", "春眠不觉晓"], "answer": 0, "difficulty": 1 },
+      { "title": "《静夜思》的作者是？", "options": ["李白", "杜甫", "白居易", "王维"], "answer": 0, "difficulty": 1 }
+    ]
+  },
+  {
+    "grade": "三年级", "subject": "英语", "unit": "基础词汇",
+    "questions": [
+      { "title": "“苹果”的英文是？", "options": ["apple", "banana", "orange", "pear"], "answer": 0, "difficulty": 1 },
+      { "title": "“红色”的英文是？", "options": ["red", "blue", "green", "yellow"], "answer": 0, "difficulty": 1 }
+    ]
+  },
+  {
+    "grade": "三年级", "subject": "英语", "unit": "日常用语",
+    "questions": [
+      { "title": "“谢谢”的英文是？", "options": ["thank you", "sorry", "hello", "goodbye"], "answer": 0, "difficulty": 1 },
+      { "title": "“早上好”的英文是？", "options": ["good morning", "good night", "goodbye", "hello"], "answer": 0, "difficulty": 1 }
+    ]
+  },
+  {
+    "grade": "四年级", "subject": "数学", "unit": "大数认识",
+    "questions": [
+      { "title": "10000 里面有几个千？", "options": ["10", "100", "1000", "1"], "answer": 0, "difficulty": 2 },
+      { "title": "比 9999 多 1 的数是？", "options": ["10000", "9998", "1000", "999"], "answer": 0, "difficulty": 2 }
+    ]
+  },
+  {
+    "grade": "四年级", "subject": "数学", "unit": "运算",
+    "questions": [
+      { "title": "25 × 4 = ？", "options": ["100", "80", "90", "120"], "answer": 0, "difficulty": 2 },
+      { "title": "360 ÷ 6 = ？", "options": ["60", "6", "600", "30"], "answer": 0, "difficulty": 2 }
+    ]
+  },
+  {
+    "grade": "四年级", "subject": "语文", "unit": "成语",
+    "questions": [
+      { "title": "“画蛇添足”比喻？", "options": ["多此一举", "勤快", "勇敢", "聪明"], "answer": 0, "difficulty": 2 },
+      { "title": "“守株待兔”告诉我们？", "options": ["不能靠运气", "要快跑", "要种树", "要睡觉"], "answer": 0, "difficulty": 2 }
+    ]
+  },
+  {
+    "grade": "四年级", "subject": "语文", "unit": "修辞",
+    "questions": [
+      { "title": "“太阳像个大火球”用了什么修辞？", "options": ["比喻", "拟人", "夸张", "排比"], "answer": 0, "difficulty": 3 },
+      { "title": "“花儿在笑”用了什么修辞？", "options": ["拟人", "比喻", "夸张", "设问"], "answer": 0, "difficulty": 3 }
+    ]
+  },
+  {
+    "grade": "四年级", "subject": "英语", "unit": "词汇",
+    "questions": [
+      { "title": "“学校”的英文是？", "options": ["school", "home", "park", "shop"], "answer": 0, "difficulty": 1 },
+      { "title": "“老师”的英文是？", "options": ["teacher", "student", "doctor", "friend"], "answer": 0, "difficulty": 1 }
+    ]
+  },
+  {
+    "grade": "四年级", "subject": "英语", "unit": "语法",
+    "questions": [
+      { "title": "“I ___ a student.” 填？", "options": ["am", "is", "are", "be"], "answer": 0, "difficulty": 2 },
+      { "title": "“He ___ tall.” 填？", "options": ["is", "am", "are", "be"], "answer": 0, "difficulty": 2 }
+    ]
+  },
+  {
+    "grade": "五年级", "subject": "数学", "unit": "小数",
+    "questions": [
+      { "title": "0.5 等于几分之几？", "options": ["1/2", "1/5", "5/1", "2/1"], "answer": 0, "difficulty": 2 },
+      { "title": "3.2 + 1.8 = ？", "options": ["5", "4.9", "5.1", "4"], "answer": 0, "difficulty": 2 }
+    ]
+  },
+  {
+    "grade": "五年级", "subject": "数学", "unit": "面积",
+    "questions": [
+      { "title": "长方形面积 = ？", "options": ["长×宽", "长+宽", "长×宽×2", "(长+宽)×2"], "answer": 0, "difficulty": 3 },
+      { "title": "边长 4 的正方形面积是？", "options": ["16", "8", "12", "4"], "answer": 0, "difficulty": 3 }
+    ]
+  },
+  {
+    "grade": "五年级", "subject": "语文", "unit": "古诗",
+    "questions": [
+      { "title": "“欲穷千里目”的下一句是？", "options": ["更上一层楼", "低头思故乡", "万径人踪灭", "春风花草香"], "answer": 0, "difficulty": 2 },
+      { "title": "《登鹳雀楼》作者是？", "options": ["王之涣", "李白", "杜甫", "王维"], "answer": 0, "difficulty": 2 }
+    ]
+  },
+  {
+    "grade": "五年级", "subject": "语文", "unit": "阅读",
+    "questions": [
+      { "title": "概括段落大意要？", "options": ["抓中心句", "数句子", "抄原文", "猜"], "answer": 0, "difficulty": 2 },
+      { "title": "说明文常用顺序是？", "options": ["时间/空间/逻辑", "随便", "倒序", "只写结论"], "answer": 0, "difficulty": 3 }
+    ]
+  },
+  {
+    "grade": "五年级", "subject": "英语", "unit": "词汇",
+    "questions": [
+      { "title": "“天气”的英文是？", "options": ["weather", "water", "wind", "week"], "answer": 0, "difficulty": 2 },
+      { "title": "“冬天”的英文是？", "options": ["winter", "summer", "spring", "autumn"], "answer": 0, "difficulty": 2 }
+    ]
+  },
+  {
+    "grade": "五年级", "subject": "英语", "unit": "语法",
+    "questions": [
+      { "title": "“They ___ playing.” 填？", "options": ["are", "is", "am", "be"], "answer": 0, "difficulty": 2 },
+      { "title": "“I have ___ apple.” 填？", "options": ["an", "a", "the", "/"], "answer": 0, "difficulty": 2 }
+    ]
+  },
+  {
+    "grade": "六年级", "subject": "数学", "unit": "比例",
+    "questions": [
+      { "title": "2:3 = 4:？", "options": ["6", "5", "8", "9"], "answer": 0, "difficulty": 3 },
+      { "title": "圆的周长公式 C = ？", "options": ["πd", "πr", "2π", "d/π"], "answer": 0, "difficulty": 3 }
+    ]
+  },
+  {
+    "grade": "六年级", "subject": "数学", "unit": "百分数",
+    "questions": [
+      { "title": "50% 等于几分之几？", "options": ["1/2", "1/5", "1/4", "1/3"], "answer": 0, "difficulty": 2 },
+      { "title": "八折就是百分之？", "options": ["80", "20", "8", "18"], "answer": 0, "difficulty": 2 }
+    ]
+  },
+  {
+    "grade": "六年级", "subject": "语文", "unit": "名著",
+    "questions": [
+      { "title": "《西游记》的作者是？", "options": ["吴承恩", "罗贯中", "施耐庵", "曹雪芹"], "answer": 0, "difficulty": 3 },
+      { "title": "“孙悟空”出自哪个故事？", "options": ["西游记", "红楼梦", "水浒传", "三国演义"], "answer": 0, "difficulty": 2 }
+    ]
+  },
+  {
+    "grade": "六年级", "subject": "语文", "unit": "文言",
+    "questions": [
+      { "title": "“学而时习之”出自？", "options": ["论语", "孟子", "庄子", "诗经"], "answer": 0, "difficulty": 3 },
+      { "title": "“之”常作什么词？", "options": ["代词/助词", "动词", "形容词", "副词"], "answer": 0, "difficulty": 3 }
+    ]
+  },
+  {
+    "grade": "六年级", "subject": "英语", "unit": "词汇",
+    "questions": [
+      { "title": "“博物馆”的英文是？", "options": ["museum", "library", "cinema", "station"], "answer": 0, "difficulty": 3 },
+      { "title": "“健康的”的英文是？", "options": ["healthy", "happy", "hungry", "heavy"], "answer": 0, "difficulty": 3 }
+    ]
+  },
+  {
+    "grade": "六年级", "subject": "英语", "unit": "语法",
+    "questions": [
+      { "title": "“She has ___ to school.” 填？", "options": ["gone", "went", "go", "going"], "answer": 0, "difficulty": 3 },
+      { "title": "一般过去时动词常加？", "options": ["-ed", "-s", "-ing", "-ly"], "answer": 0, "difficulty": 3 }
+    ]
+  }
+]

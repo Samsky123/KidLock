@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">儿童手机管控</string>
+    <string-array name="difficulty_labels">
+        <item>简单</item>
+        <item>中等</item>
+        <item>困难</item>
+    </string-array>
+</resources>

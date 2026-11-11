@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 家长设置：科技蓝卡片式布局 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_screen">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:paddingTop="42dp"
+            android:paddingBottom="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- 顶部：头像 + 标题 -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:background="@drawable/bg_badge"
+                    android:layout_width="54dp"
+                    android:layout_height="54dp">
+
+                    <ImageView
+                        android:src="@drawable/ic_person"
+                        android:tint="@color/accent"
+                        android:layout_gravity="center"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:contentDescription="家长" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginStart="14dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="家长设置"
+                        android:textSize="21sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"
+                        android:includeFontPadding="false"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tvUser"
+                        android:text="已登录：家长"
+                        android:textSize="12sp"
+                        android:textColor="@color/accent_2"
+                        android:layout_marginTop="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 卡片 1：本次可用时长 -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:background="@drawable/bg_card"
+                android:padding="18dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@drawable/ic_clock"
+                        android:tint="@color/accent"
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:contentDescription="时长" />
+
+                    <TextView
+                        style="@style/Text.CardTitle"
+                        android:text="每次解锁时长"
+                        android:layout_marginStart="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        style="@style/Text.Label"
+                        android:text="分钟"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/etMinutes"
+                    style="@style/Input"
+                    android:inputType="number"
+                    android:layout_marginTop="12dp" />
+            </LinearLayout>
+
+            <!-- 卡片 2：题库范围 -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:background="@drawable/bg_card"
+                android:padding="18dp"
+                android:layout_marginTop="14dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@drawable/ic_school"
+                        android:tint="@color/accent"
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:contentDescription="题库" />
+
+                    <TextView
+                        style="@style/Text.CardTitle"
+                        android:text="出题范围"
+                        android:layout_marginStart="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/Text.Label"
+                    android:text="孩子年级"
+                    android:layout_marginTop="14dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Spinner
+                    android:id="@+id/spGrade"
+                    style="@style/Select"
+                    android:layout_marginTop="6dp" />
+
+                <TextView
+                    style="@style/Text.Label"
+                    android:text="学科"
+                    android:layout_marginTop="14dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Spinner
+                    android:id="@+id/spSubject"
+                    style="@style/Select"
+                    android:layout_marginTop="6dp" />
+
+                <TextView
+                    style="@style/Text.Label"
+                    android:text="进度单元（只出孩子学过的）"
+                    android:layout_marginTop="14dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:id="@+id/containerUnits"
+                    android:orientation="vertical"
+                    android:layout_marginTop="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <!-- 卡片 3：出题策略 -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:background="@drawable/bg_card"
+                android:padding="18dp"
+                android:layout_marginTop="14dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@drawable/ic_tune"
+                        android:tint="@color/accent"
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:contentDescription="策略" />
+
+                    <TextView
+                        style="@style/Text.CardTitle"
+                        android:text="出题策略"
+                        android:layout_marginStart="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/Text.Label"
+                    android:text="题目难度上限"
+                    android:layout_marginTop="14dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Spinner
+                    android:id="@+id/spDifficulty"
+                    style="@style/Select"
+                    android:layout_marginTop="6dp" />
+
+                <CheckBox
+                    android:id="@+id/cbWrongFirst"
+                    android:text="优先出错题（先练做错的）"
+                    android:textColor="@color/text_primary"
+                    android:textSize="14sp"
+                    android:buttonTint="@color/accent"
+                    android:layout_marginTop="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <!-- 卡片 4：到点弹题权限 -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:background="@drawable/bg_card"
+                android:padding="18dp"
+                android:layout_marginTop="14dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@drawable/ic_bolt"
+                        android:tint="@color/warn"
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:contentDescription="权限" />
+
+                    <TextView
+                        style="@style/Text.CardTitle"
+                        android:text="到点弹题权限"
+                        android:layout_marginStart="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvPermState"
+                    android:text="到点弹题权限：未开启"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    android:lineSpacingExtra="3dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnOverlayPerm"
+                    style="@style/Btn.Ghost"
+                    android:text="去开启（必需）"
+                    android:layout_marginTop="12dp" />
+            </LinearLayout>
+
+            <!-- 卡片 4.5：防退出（强力锁） -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:background="@drawable/bg_card"
+                android:padding="18dp"
+                android:layout_marginTop="14dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@drawable/ic_shield"
+                        android:tint="@color/accent_2"
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:contentDescription="防退出" />
+
+                    <TextView
+                        style="@style/Text.CardTitle"
+                        android:text="防退出（强力锁）"
+                        android:layout_marginStart="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvHardLockState"
+                    android:text="状态：普通模式"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    android:lineSpacingExtra="3dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnHardLock"
+                    style="@style/Btn.Ghost"
+                    android:text="查看开启命令（可选）"
+                    android:layout_marginTop="12dp" />
+            </LinearLayout>
+
+            <!-- 卡片 5：现场加时 -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:background="@drawable/bg_card"
+                android:padding="18dp"
+                android:layout_marginTop="14dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@drawable/ic_hourglass"
+                        android:tint="@color/accent"
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:contentDescription="加时" />
+
+                    <TextView
+                        style="@style/Text.CardTitle"
+                        android:text="现场加时"
+                        android:layout_marginStart="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        style="@style/Text.Label"
+                        android:text="分钟"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/etAdd"
+                    style="@style/Input"
+                    android:hint="输入要给孩子的分钟数"
+                    android:inputType="number"
+                    android:layout_marginTop="12dp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnAddTime"
+                    style="@style/Btn.Ghost"
+                    android:text="立即加时"
+                    android:layout_marginTop="12dp" />
+            </LinearLayout>
+
+            <!-- 应用限时入口 -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnAppLimit"
+                style="@style/Btn.Ghost"
+                android:text="应用限时设置（抖音 / 微信 / 游戏）"
+                android:layout_marginTop="14dp" />
+
+            <TextView
+                android:id="@+id/tvSelInfo"
+                android:textSize="12sp"
+                android:textColor="@color/text_tertiary"
+                android:gravity="center"
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSave"
+                style="@style/Btn.Primary"
+                android:text="保存配置"
+                android:layout_marginTop="12dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnExit"
+                style="@style/Btn.Ghost"
+                android:text="退出登录"
+                android:layout_marginTop="12dp" />
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>
