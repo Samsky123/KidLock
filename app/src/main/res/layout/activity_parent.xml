@@ -116,7 +116,7 @@
                     android:layout_marginTop="12dp" />
             </LinearLayout>
 
-            <!-- 卡片 2：题库范围 -->
+            <!-- 卡片 2：题库与出题（跳转独立页面配置） -->
             <LinearLayout
                 android:orientation="vertical"
                 android:background="@drawable/bg_card"
@@ -140,52 +140,38 @@
 
                     <TextView
                         style="@style/Text.CardTitle"
-                        android:text="出题范围"
+                        android:text="题库与出题"
                         android:layout_marginStart="8dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
                 </LinearLayout>
 
                 <TextView
-                    style="@style/Text.Label"
-                    android:text="孩子年级"
-                    android:layout_marginTop="14dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-
-                <Spinner
-                    android:id="@+id/spGrade"
-                    style="@style/Select"
-                    android:layout_marginTop="6dp" />
-
-                <TextView
-                    style="@style/Text.Label"
-                    android:text="学科"
-                    android:layout_marginTop="14dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-
-                <Spinner
-                    android:id="@+id/spSubject"
-                    style="@style/Select"
-                    android:layout_marginTop="6dp" />
-
-                <TextView
-                    style="@style/Text.Label"
-                    android:text="进度单元（只出孩子学过的）"
-                    android:layout_marginTop="14dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-
-                <LinearLayout
-                    android:id="@+id/containerUnits"
-                    android:orientation="vertical"
-                    android:layout_marginTop="4dp"
+                    android:id="@+id/tvQuizSummary"
+                    android:text="三年级 · 不分版本 · 语文 1 · 数学 1 · 英语 1"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    android:lineSpacingExtra="3dp"
+                    android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
+
+                <TextView
+                    style="@style/Text.Label"
+                    android:text="教材版本、年级、语文/数学/英语各出几道题，都在这里设置"
+                    android:lineSpacingExtra="3dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnQuizSettings"
+                    style="@style/Btn.Ghost"
+                    android:text="去设置（人教版 / 苏教版 / 题量）"
+                    android:layout_marginTop="12dp" />
             </LinearLayout>
 
-            <!-- 卡片 3：出题策略 -->
+            <!-- 卡片 3：错题本 -->
             <LinearLayout
                 android:orientation="vertical"
                 android:background="@drawable/bg_card"
@@ -201,41 +187,43 @@
                     android:layout_height="wrap_content">
 
                     <ImageView
-                        android:src="@drawable/ic_tune"
-                        android:tint="@color/accent"
+                        android:src="@drawable/ic_warning"
+                        android:tint="@color/warn"
                         android:layout_width="17dp"
                         android:layout_height="17dp"
-                        android:contentDescription="策略" />
+                        android:contentDescription="错题本" />
 
                     <TextView
                         style="@style/Text.CardTitle"
-                        android:text="出题策略"
+                        android:text="错题本"
                         android:layout_marginStart="8dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
                 </LinearLayout>
 
                 <TextView
+                    android:id="@+id/tvWrongSummary"
+                    android:text="暂无错题"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    android:lineSpacingExtra="3dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
                     style="@style/Text.Label"
-                    android:text="题目难度上限"
-                    android:layout_marginTop="14dp"
-                    android:layout_width="wrap_content"
+                    android:text="答错的题会重新入库，连续答对 2 次才算掌握"
+                    android:lineSpacingExtra="3dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
-                <Spinner
-                    android:id="@+id/spDifficulty"
-                    style="@style/Select"
-                    android:layout_marginTop="6dp" />
-
-                <CheckBox
-                    android:id="@+id/cbWrongFirst"
-                    android:text="优先出错题（先练做错的）"
-                    android:textColor="@color/text_primary"
-                    android:textSize="14sp"
-                    android:buttonTint="@color/accent"
-                    android:layout_marginTop="12dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnWrongBook"
+                    style="@style/Btn.Ghost"
+                    android:text="查看错题本"
+                    android:layout_marginTop="12dp" />
             </LinearLayout>
 
             <!-- 卡片 4：到点弹题权限 -->

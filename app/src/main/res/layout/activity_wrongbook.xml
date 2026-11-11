@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 错题本：按学科分组展示，家长可单条移除或清空 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_screen">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:paddingTop="42dp"
+            android:paddingBottom="34dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- 顶部：返回 + 标题 -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvBack"
+                    android:text="‹"
+                    android:textSize="30sp"
+                    android:textColor="@color/accent"
+                    android:gravity="center"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/Text.PageTitle"
+                        android:text="错题本"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:text="同一道题连续答对 2 次才算掌握，自动移出"
+                        android:textSize="12sp"
+                        android:textColor="@color/accent_2"
+                        android:layout_marginTop="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 概览 -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:background="@drawable/bg_card"
+                android:padding="18dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@drawable/ic_warning"
+                        android:tint="@color/warn"
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:contentDescription="错题" />
+
+                    <TextView
+                        style="@style/Text.CardTitle"
+                        android:text="待突破"
+                        android:layout_marginStart="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvSummary"
+                    android:text="共 0 道错题"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvHint"
+                    style="@style/Text.Label"
+                    android:text=""
+                    android:lineSpacingExtra="3dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <!-- 列表容器：由代码按学科分组填充 -->
+            <LinearLayout
+                android:id="@+id/containerWrong"
+                android:orientation="vertical"
+                android:layout_marginTop="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvEmpty"
+                android:text="错题本是空的。\n孩子答错的题会自动收进来，并在他下次答题时重新出现。"
+                android:textSize="14sp"
+                android:textColor="@color/text_tertiary"
+                android:gravity="center"
+                android:lineSpacingExtra="4dp"
+                android:visibility="gone"
+                android:layout_marginTop="40dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnClearWrong"
+                style="@style/Btn.Ghost"
+                android:text="清空错题本"
+                android:layout_marginTop="20dp" />
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

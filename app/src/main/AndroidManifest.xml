@@ -52,6 +52,16 @@
             android:name=".ParentActivity"
             android:exported="false" />
 
+        <!-- 家长端：题库与出题（教材版本 / 年级 / 三科题量 / 难度） -->
+        <activity
+            android:name=".QuizSettingsActivity"
+            android:exported="false" />
+
+        <!-- 家长端：错题本 -->
+        <activity
+            android:name=".WrongBookActivity"
+            android:exported="false" />
+
         <!-- 家长端：应用限时（抖音等）设置 -->
         <activity
             android:name=".AppLimitActivity"

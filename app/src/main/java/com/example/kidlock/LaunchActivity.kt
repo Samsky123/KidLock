@@ -22,8 +22,8 @@ import androidx.core.view.WindowInsetsControllerCompat
  * 答题锁屏（也是 App 启动页）。
  *
  * 交互闭环：
- *  时间到 → 弹出题目 → 答对 requiredCount 题 → 发放 N 分钟 → 回到孩子原来在用的 App。
- *  答错 → requiredCount +1（加题惩罚），需从头累计答对。
+ *  时间到 → 按家长配置组卷（语文/数学/英语各 N 题）→ 全部答对 → 发放 N 分钟 → 回到孩子原来在用的 App。
+ *  答错 → 记入错题本，并把这道题重新排到队尾，直到答对才离开队列。
  *
  * 「孩子退不出去」在这里做了三层：
  *  1. 全屏沉浸：把底部导航栏（含 Home 键）直接藏起来，要先上滑才能唤出；
@@ -36,12 +36,21 @@ import androidx.core.view.WindowInsetsControllerCompat
 class LaunchActivity : AppCompatActivity() {
 
     private lateinit var tvQuestion: TextView
+    private lateinit var tvSubject: TextView
     private lateinit var layoutOptions: LinearLayout
     private lateinit var tvStatus: TextView
     private lateinit var btnParent: Button
 
-    private var requiredCount = 1
-    private var correctSoFar = 0
+    /** 本轮剩余题目队列：答错的题会重新排到队尾，直到答对才真正离开队列。 */
+    private val queue = ArrayDeque<Question>()
+
+    /** 本轮计划题量（建卷时的数量，用于显示进度）。 */
+    private var plannedTotal = 0
+    private var correctCount = 0
+
+    /** 同一道题在一轮内被答错的次数，只用于提示文案。 */
+    private val reentryCount = mutableMapOf<String, Int>()
+
     private var current: Question? = null
 
     /** 答对后正在主动收尾，此时不允许任何「回弹」逻辑把界面又拉回来。 */
@@ -60,11 +69,12 @@ class LaunchActivity : AppCompatActivity() {
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
 
         tvQuestion = findViewById(R.id.tvQuestion)
+        tvSubject = findViewById(R.id.tvSubject)
         layoutOptions = findViewById(R.id.layoutOptions)
         tvStatus = findViewById(R.id.tvStatus)
         btnParent = findViewById(R.id.btnParent)
 
-        if (QuestionBank.isEmpty()) QuestionBank.loadFromAssets(assets)
+        QuestionBank.load(assets)
 
         // 第 1 层：藏起底部导航栏（Home 键就不在屏幕上了）
         applyImmersiveMode()
@@ -102,6 +112,7 @@ class LaunchActivity : AppCompatActivity() {
         // 只靠 Activity 自己是拦不住的。
         if (LockGuard.isLocked(this)) TimerService.start(this)
 
+        buildRound()
         nextQuestion()
     }
 
@@ -113,14 +124,18 @@ class LaunchActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         // 回到家门口就说明「内部跳转」结束了，清掉标志，避免下次按 Home 时不回弹
+        val returningFromInternal = navigatingInternally
         navigatingInternally = false
         applyImmersiveMode()
         dismissAlarmBanner()
-        if (QuestionBank.isEmpty()) QuestionBank.loadFromAssets(assets)
-        if (current == null || activePool().isEmpty()) {
-            current = null
-            requiredCount = 1
-            correctSoFar = 0
+        QuestionBank.load(assets)
+
+        // 从家长设置页回来（改了年级/学科/题量）要重新组卷；
+        // 若这道题已经答完解锁了，就不能再组，否则会把孩子重新锁回去。
+        if (LockGuard.isLocked(this) &&
+            (returningFromInternal || current == null || queue.isEmpty())
+        ) {
+            buildRound()
             nextQuestion()
         }
 
@@ -193,39 +208,74 @@ class LaunchActivity : AppCompatActivity() {
         } catch (_: Exception) { }
     }
 
-    private fun activePool(): List<Question> {
-        val prefs = getSharedPreferences(PREFS, Context.MODE_PRIVATE)
-        val keys = prefs.getStringSet("active_groups", emptySet()) ?: emptySet()
-        val maxD = prefs.getInt("max_difficulty", 3)
-        val pool = QuestionBank.activePool(keys, maxD)
-        // 优先出错题：把错题单独成池，先练会再回到正常池
-        if (prefs.getBoolean("wrong_first", false)) {
-            val wrong = prefs.getStringSet("wrong_questions", emptySet()) ?: emptySet()
-            val wrongQs = pool.filter { wrong.contains(it.title) }
-            if (wrongQs.isNotEmpty()) return wrongQs
+    /**
+     * 组卷：按家长设定的「语文 / 数学 / 英语」题量配额，逐科抽题。
+     *
+     * 开启「优先出错题」时，每个学科的配额先由该学科的错题填满，
+     * 剩余名额再用普通题补齐 —— 这样错题会持续复现，直到连对达标才离开错题本。
+     */
+    private fun buildRound() {
+        queue.clear()
+        reentryCount.clear()
+        correctCount = 0
+        current = null
+
+        val grade = QuizSettings.grade(this)
+        val edition = QuizSettings.edition(this)
+        val maxD = QuizSettings.difficulty(this)
+        val wrongFirst = QuizSettings.wrongFirst(this)
+
+        val picked = mutableListOf<Question>()
+        for (subject in QuestionBank.SUBJECTS) {
+            val want = QuizSettings.count(this, subject)
+            if (want <= 0) continue
+
+            val taken = mutableSetOf<String>()
+            if (wrongFirst) {
+                for (item in WrongBook.ofSubject(this, subject).filter { it.grade == grade }.shuffled()) {
+                    if (taken.size >= want) break
+                    taken.add(item.key)
+                    picked.add(item.toQuestion())
+                }
+            }
+            if (taken.size < want) {
+                for (q in QuestionBank.pool(grade, edition, subject, maxD).filter { it.key !in taken }.shuffled()) {
+                    if (taken.size >= want) break
+                    taken.add(q.key)
+                    picked.add(q)
+                }
+            }
         }
-        return pool
+
+        // 打散学科顺序，避免连着做同一科
+        queue.addAll(picked.shuffled())
+        plannedTotal = queue.size
     }
 
-    private fun recordWrong() {
-        val prefs = getSharedPreferences(PREFS, Context.MODE_PRIVATE)
-        val set = HashSet(prefs.getStringSet("wrong_questions", emptySet()) ?: emptySet())
-        current?.title?.let { set.add(it) }
-        prefs.edit().putStringSet("wrong_questions", set).apply()
+    private fun showNoQuizConfigured() {
+        current = null
+        tvSubject.text = "未配置题目"
+        tvQuestion.text =
+            "家长还没有设置题目。\n\n请点击下方「家长入口」，进入「题库与出题」选择年级，并给语文 / 数学 / 英语分别填上题目数量。"
+        tvStatus.text = "至少有一个学科的数量要大于 0"
+        layoutOptions.removeAllViews()
     }
 
     private fun nextQuestion() {
-        val pool = activePool()
-        if (pool.isEmpty()) {
-            tvQuestion.text = "家长尚未配置题库。请家长点击「家长」按钮，选择孩子的年级、学科与进度单元。"
-            layoutOptions.removeAllViews()
+        if (queue.isEmpty()) {
+            if (plannedTotal == 0) showNoQuizConfigured() else unlock()
             return
         }
-        current = pool.random()
-        tvQuestion.text = current!!.title
-        tvStatus.text = "需连续答对 $requiredCount 题（已对 $correctSoFar）· 题库 ${pool.size} 道"
+
+        val q = queue.removeFirst()
+        current = q
+
+        tvSubject.text = "${q.subject} · ${q.grade}"
+        tvQuestion.text = q.title
+        tvStatus.text = "已答对 $correctCount 题 · 还剩 ${queue.size + 1} 题"
+
         layoutOptions.removeAllViews()
-        current!!.options.forEachIndexed { idx, text ->
+        q.options.forEachIndexed { idx, text ->
             val lp = LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.MATCH_PARENT, dp(58)
             ).apply { bottomMargin = dp(12) }
@@ -249,19 +299,26 @@ class LaunchActivity : AppCompatActivity() {
 
     private fun onAnswer(idx: Int) {
         val q = current ?: return
+
         if (idx == q.answerIndex) {
-            correctSoFar++
-            if (correctSoFar >= requiredCount) {
-                unlock()
-            } else {
-                Toast.makeText(this, "答对！继续下一题", Toast.LENGTH_SHORT).show()
-                nextQuestion()
-            }
+            correctCount++
+            val mastered = WrongBook.recordCorrect(this, q)
+            val msg = if (mastered) "答对！这道错题已掌握，移出错题本"
+            else "答对！继续下一题"
+            Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
+            nextQuestion()
         } else {
-            requiredCount++
-            correctSoFar = 0
-            recordWrong()
-            Toast.makeText(this, "答错，加一题！", Toast.LENGTH_SHORT).show()
+            // 答错：记入错题本，并把这道题重新排到队尾 ——
+            // 队列没清空就不会解锁，所以孩子必须把这题真正答对才能出去。
+            WrongBook.recordWrong(this, q)
+            val times = (reentryCount[q.key] ?: 0) + 1
+            reentryCount[q.key] = times
+            queue.addLast(q)
+            Toast.makeText(
+                this,
+                "答错了（这道题已错 $times 次），稍后还会出现",
+                Toast.LENGTH_SHORT
+            ).show()
             nextQuestion()
         }
     }
@@ -270,7 +327,7 @@ class LaunchActivity : AppCompatActivity() {
         unlocking = true
 
         val prefs = getSharedPreferences(PREFS, Context.MODE_PRIVATE)
-        val minutes = prefs.getInt("grant_minutes", 10)
+        val minutes = QuizSettings.minutes(this)
         val until = System.currentTimeMillis() + minutes * 60_000L
         prefs.edit().putLong(KEY_UNLOCK_UNTIL, until).apply()
 

@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 题库与出题设置：科技蓝卡片式布局，与家长页保持一致 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_screen">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:paddingTop="42dp"
+            android:paddingBottom="34dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- 顶部：返回 + 标题 -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvBack"
+                    android:text="‹"
+                    android:textSize="30sp"
+                    android:textColor="@color/accent"
+                    android:gravity="center"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/Text.PageTitle"
+                        android:text="题库与出题"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:text="决定每轮出几道题、出哪一科"
+                        android:textSize="12sp"
+                        android:textColor="@color/accent_2"
+                        android:layout_marginTop="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 卡片 1：每轮时长 -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:background="@drawable/bg_card"
+                android:padding="18dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@drawable/ic_clock"
+                        android:tint="@color/accent"
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:contentDescription="时长" />
+
+                    <TextView
+                        style="@style/Text.CardTitle"
+                        android:text="每轮可玩时长"
+                        android:layout_marginStart="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        style="@style/Text.Label"
+                        android:text="分钟"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/etMinutes"
+                    style="@style/Input"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:layout_marginTop="12dp" />
+
+                <TextView
+                    android:text="答对全部题目后，孩子可连续使用这么久；时间到会再次弹题。"
+                    style="@style/Text.Label"
+                    android:lineSpacingExtra="3dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <!-- 卡片 2：教材版本与年级 -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:background="@drawable/bg_card"
+                android:padding="18dp"
+                android:layout_marginTop="14dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@drawable/ic_school"
+                        android:tint="@color/accent"
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:contentDescription="教材" />
+
+                    <TextView
+                        style="@style/Text.CardTitle"
+                        android:text="教材版本与年级"
+                        android:layout_marginStart="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/Text.Label"
+                    android:text="教材版本"
+                    android:layout_marginTop="14dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Spinner
+                    android:id="@+id/spEdition"
+                    style="@style/Select"
+                    android:layout_marginTop="6dp" />
+
+                <TextView
+                    style="@style/Text.Label"
+                    android:text="孩子年级"
+                    android:layout_marginTop="14dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Spinner
+                    android:id="@+id/spGradeQuiz"
+                    style="@style/Select"
+                    android:layout_marginTop="6dp" />
+
+                <TextView
+                    android:id="@+id/tvBankInfo"
+                    style="@style/Text.Label"
+                    android:text=""
+                    android:lineSpacingExtra="3dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <!-- 卡片 3：本轮题量 -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:background="@drawable/bg_card"
+                android:padding="18dp"
+                android:layout_marginTop="14dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@drawable/ic_tune"
+                        android:tint="@color/accent"
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:contentDescription="题量" />
+
+                    <TextView
+                        style="@style/Text.CardTitle"
+                        android:text="本轮各科题量"
+                        android:layout_marginStart="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <TextView
+                    android:text="填 0 表示这一科不出题，可以只练一科，也可以三科都练。"
+                    style="@style/Text.Label"
+                    android:lineSpacingExtra="3dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <!-- 语文 -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="语文"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/accent_2"
+                        android:layout_width="52dp"
+                        android:layout_height="wrap_content" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnCnMinus"
+                        style="@style/Btn.Ghost"
+                        android:text="－"
+                        android:textSize="20sp"
+                        android:layout_width="48dp"
+                        android:layout_height="46dp" />
+
+                    <EditText
+                        android:id="@+id/etCn"
+                        style="@style/Input"
+                        android:inputType="number"
+                        android:gravity="center"
+                        android:textSize="18sp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnCnPlus"
+                        style="@style/Btn.Ghost"
+                        android:text="＋"
+                        android:textSize="20sp"
+                        android:layout_width="48dp"
+                        android:layout_height="46dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvAvailCn"
+                    style="@style/Text.Label"
+                    android:text="可用 0 道"
+                    android:layout_marginStart="52dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <!-- 数学 -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="14dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="数学"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/accent_2"
+                        android:layout_width="52dp"
+                        android:layout_height="wrap_content" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnMaMinus"
+                        style="@style/Btn.Ghost"
+                        android:text="－"
+                        android:textSize="20sp"
+                        android:layout_width="48dp"
+                        android:layout_height="46dp" />
+
+                    <EditText
+                        android:id="@+id/etMa"
+                        style="@style/Input"
+                        android:inputType="number"
+                        android:gravity="center"
+                        android:textSize="18sp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnMaPlus"
+                        style="@style/Btn.Ghost"
+                        android:text="＋"
+                        android:textSize="20sp"
+                        android:layout_width="48dp"
+                        android:layout_height="46dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvAvailMa"
+                    style="@style/Text.Label"
+                    android:text="可用 0 道"
+                    android:layout_marginStart="52dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <!-- 英语 -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="14dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="英语"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/accent_2"
+                        android:layout_width="52dp"
+                        android:layout_height="wrap_content" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnEnMinus"
+                        style="@style/Btn.Ghost"
+                        android:text="－"
+                        android:textSize="20sp"
+                        android:layout_width="48dp"
+                        android:layout_height="46dp" />
+
+                    <EditText
+                        android:id="@+id/etEn"
+                        style="@style/Input"
+                        android:inputType="number"
+                        android:gravity="center"
+                        android:textSize="18sp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnEnPlus"
+                        style="@style/Btn.Ghost"
+                        android:text="＋"
+                        android:textSize="20sp"
+                        android:layout_width="48dp"
+                        android:layout_height="46dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvAvailEn"
+                    style="@style/Text.Label"
+                    android:text="可用 0 道"
+                    android:layout_marginStart="52dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <View
+                    android:background="@color/stroke"
+                    android:layout_marginTop="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp" />
+
+                <TextView
+                    android:id="@+id/tvTotalPlan"
+                    android:text="本轮共 0 道题"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/accent"
+                    android:layout_marginTop="14dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <!-- 卡片 4：难度与错题策略 -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:background="@drawable/bg_card"
+                android:padding="18dp"
+                android:layout_marginTop="14dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@drawable/ic_shield"
+                        android:tint="@color/accent_2"
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:contentDescription="策略" />
+
+                    <TextView
+                        style="@style/Text.CardTitle"
+                        android:text="难度与错题策略"
+                        android:layout_marginStart="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/Text.Label"
+                    android:text="题目难度上限"
+                    android:layout_marginTop="14dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Spinner
+                    android:id="@+id/spDifficultyQuiz"
+                    style="@style/Select"
+                    android:layout_marginTop="6dp" />
+
+                <CheckBox
+                    android:id="@+id/cbWrongFirstQuiz"
+                    android:text="优先出错题（做错的先反复练）"
+                    android:textColor="@color/text_primary"
+                    android:textSize="14sp"
+                    android:buttonTint="@color/accent"
+                    android:layout_marginTop="14dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="开启后，每科的名额会先由错题填满；同一道题连续答对 2 次才算掌握，自动移出错题本。"
+                    style="@style/Text.Label"
+                    android:lineSpacingExtra="3dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSaveQuiz"
+                style="@style/Btn.Primary"
+                android:text="保存本轮配置"
+                android:layout_marginTop="20dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnWrongBook"
+                style="@style/Btn.Ghost"
+                android:text="查看错题本"
+                android:layout_marginTop="12dp" />
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

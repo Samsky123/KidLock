@@ -52,6 +52,23 @@
             android:layout_height="0dp" />
 
         <!-- 题目区 -->
+        <!-- 学科标签：让孩子知道这道题属于哪一科 -->
+        <TextView
+            android:id="@+id/tvSubject"
+            android:text="语文 · 三年级"
+            android:textSize="12sp"
+            android:textColor="@color/accent_2"
+            android:background="@drawable/bg_chip"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:letterSpacing="0.05"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
         <TextView
             android:id="@+id/tvStatus"
             android:textSize="13sp"

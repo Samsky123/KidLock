@@ -3,7 +3,6 @@ package com.example.kidlock
 import android.app.admin.DevicePolicyManager
 import android.content.ClipData
 import android.content.ClipboardManager
-import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
@@ -11,31 +10,30 @@ import android.net.Uri
 import android.os.Bundle
 import android.provider.Settings
 import android.view.View
-import android.widget.*
+import android.widget.EditText
+import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 
 /**
- * 家长端：配置解锁时长、年级/学科/进度单元、难度上限、优先出错题；并支持现场加时、应用限时设置。
- * 勾选状态以 "年级|学科|单元" 为 key 存入 active_groups；
- * 难度上限、优先出错题、错题本(wrong_questions) 同样存 SharedPreferences。
+ * 家长端首页。
+ *
+ * 只保留「常用动作」：改时长、进题库设置、看错题本、开权限、开强力锁、现场加时。
+ * 出题细则（教材版本 / 年级 / 三科题量 / 难度）全部收进 [QuizSettingsActivity]，
+ * 避免这一页越堆越长。
  */
 class ParentActivity : AppCompatActivity() {
 
     private val PREFS = "kidlock"
-    private val KEY_ACTIVE = "active_groups"
     private lateinit var prefs: SharedPreferences
 
-    private lateinit var spGrade: Spinner
-    private lateinit var spSubject: Spinner
-    private lateinit var spDifficulty: Spinner
-    private lateinit var containerUnits: LinearLayout
-    private lateinit var tvSelInfo: TextView
     private lateinit var etMinutes: EditText
     private lateinit var etAdd: EditText
-    private lateinit var cbWrongFirst: CheckBox
-    private val activeKeys = mutableSetOf<String>()
+    private lateinit var tvQuizSummary: TextView
+    private lateinit var tvWrongSummary: TextView
+    private lateinit var tvSelInfo: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,47 +46,35 @@ class ParentActivity : AppCompatActivity() {
             return
         }
 
-        if (QuestionBank.isEmpty()) QuestionBank.loadFromAssets(assets)
+        QuestionBank.load(assets)
         prefs = getSharedPreferences(PREFS, Context.MODE_PRIVATE)
-        activeKeys.addAll(prefs.getStringSet(KEY_ACTIVE, emptySet()) ?: emptySet())
+
         findViewById<TextView>(R.id.tvUser).text = "已登录：${AuthStore.currentUser() ?: "家长"}"
 
         etMinutes = findViewById(R.id.etMinutes)
-        etMinutes.setText(prefs.getInt("grant_minutes", 10).toString())
-        spGrade = findViewById(R.id.spGrade)
-        spSubject = findViewById(R.id.spSubject)
-        spDifficulty = findViewById(R.id.spDifficulty)
-        containerUnits = findViewById(R.id.containerUnits)
-        tvSelInfo = findViewById(R.id.tvSelInfo)
+        etMinutes.setText(QuizSettings.minutes(this).toString())
         etAdd = findViewById(R.id.etAdd)
-        cbWrongFirst = findViewById(R.id.cbWrongFirst)
+        tvQuizSummary = findViewById(R.id.tvQuizSummary)
+        tvWrongSummary = findViewById(R.id.tvWrongSummary)
+        tvSelInfo = findViewById(R.id.tvSelInfo)
 
-        spGrade.adapter = makeAdapter(QuestionBank.grades())
-        spGrade.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(p: AdapterView<*>, v: View?, pos: Int, id: Long) = onGradeChanged()
-            override fun onNothingSelected(p: AdapterView<*>) {}
-        }
-        spSubject.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(p: AdapterView<*>, v: View?, pos: Int, id: Long) = buildUnits()
-            override fun onNothingSelected(p: AdapterView<*>) {}
-        }
-        spDifficulty.adapter = ArrayAdapter.createFromResource(
-            this, R.array.difficulty_labels, android.R.layout.simple_spinner_item
-        ).also { it.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item) }
-        spDifficulty.setSelection((prefs.getInt("max_difficulty", 3) - 1).coerceIn(0, 2))
-        cbWrongFirst.isChecked = prefs.getBoolean("wrong_first", false)
+        findViewById<androidx.appcompat.widget.AppCompatButton>(R.id.btnSave)
+            .setOnClickListener { save() }
+        findViewById<androidx.appcompat.widget.AppCompatButton>(R.id.btnExit)
+            .setOnClickListener { logout() }
+        findViewById<androidx.appcompat.widget.AppCompatButton>(R.id.btnAddTime)
+            .setOnClickListener { addTime() }
+        findViewById<androidx.appcompat.widget.AppCompatButton>(R.id.btnOverlayPerm)
+            .setOnClickListener { requestOverlayPermission() }
+        findViewById<androidx.appcompat.widget.AppCompatButton>(R.id.btnAppLimit)
+            .setOnClickListener { startActivity(Intent(this, AppLimitActivity::class.java)) }
+        findViewById<androidx.appcompat.widget.AppCompatButton>(R.id.btnHardLock)
+            .setOnClickListener { showHardLockHelp() }
+        findViewById<androidx.appcompat.widget.AppCompatButton>(R.id.btnQuizSettings)
+            .setOnClickListener { startActivity(Intent(this, QuizSettingsActivity::class.java)) }
+        findViewById<androidx.appcompat.widget.AppCompatButton>(R.id.btnWrongBook)
+            .setOnClickListener { startActivity(Intent(this, WrongBookActivity::class.java)) }
 
-        findViewById<Button>(R.id.btnSave).setOnClickListener { save() }
-        findViewById<Button>(R.id.btnExit).setOnClickListener { logout() }
-        findViewById<Button>(R.id.btnAddTime).setOnClickListener { addTime() }
-        findViewById<Button>(R.id.btnOverlayPerm).setOnClickListener { requestOverlayPermission() }
-        findViewById<Button>(R.id.btnAppLimit).setOnClickListener {
-            startActivity(Intent(this, AppLimitActivity::class.java))
-        }
-        findViewById<Button>(R.id.btnHardLock).setOnClickListener { showHardLockHelp() }
-
-        onGradeChanged()
-        updateSelInfo()
         refreshStates()
     }
 
@@ -107,6 +93,42 @@ class ParentActivity : AppCompatActivity() {
     private fun refreshStates() {
         refreshOverlayState()
         refreshHardLockState()
+        refreshQuizSummary()
+    }
+
+    /** 题库与出题摘要 + 错题本数量，从设置页回来实时刷新。 */
+    private fun refreshQuizSummary() {
+        val grade = QuizSettings.grade(this)
+        val edition = QuizSettings.edition(this)
+        val parts = QuestionBank.SUBJECTS.map { it to QuizSettings.count(this, it) }
+            .filter { it.second > 0 }
+            .joinToString(" · ") { "${it.first} ${it.second} 题" }
+        val total = QuizSettings.totalCount(this)
+        tvQuizSummary.text = if (parts.isEmpty()) {
+            "尚未配置题目 —— 请点下方「去设置」"
+        } else {
+            "$grade · $edition\n$parts\n本轮共 $total 题，答完可用 ${QuizSettings.minutes(this)} 分钟"
+        }
+
+        val wrong = WrongBook.all(this)
+        tvWrongSummary.text = if (wrong.isEmpty()) {
+            "暂无错题"
+        } else {
+            val almost = wrong.count { it.streak > 0 }
+            "共 ${wrong.size} 道错题" +
+                    if (almost > 0) "，其中 $almost 道再答对 1 次就能移出" else ""
+        }
+
+        tvSelInfo.text = if (total == 0) {
+            "提醒：三科题量都是 0，孩子会卡在答题页无法解锁"
+        } else {
+            "当前出题池：${QuestionBank.count(grade, edition, "语文", QuizSettings.difficulty(this))} 语文 / " +
+                    "${QuestionBank.count(grade, edition, "数学", QuizSettings.difficulty(this))} 数学 / " +
+                    "${QuestionBank.count(grade, edition, "英语", QuizSettings.difficulty(this))} 英语"
+        }
+        tvSelInfo.setTextColor(
+            ContextCompat.getColor(this, if (total == 0) R.color.danger else R.color.text_tertiary)
+        )
     }
 
     /** 「显示在其他应用上层」是到点弹题的必需权限，否则系统会拦掉后台拉起界面。 */
@@ -119,7 +141,7 @@ class ParentActivity : AppCompatActivity() {
             ContextCompat.getColor(this, if (ok) R.color.ok else R.color.danger)
         )
         findViewById<androidx.appcompat.widget.AppCompatButton>(R.id.btnOverlayPerm)
-            .visibility = if (ok) android.view.View.GONE else android.view.View.VISIBLE
+            .visibility = if (ok) View.GONE else View.VISIBLE
     }
 
     /**
@@ -242,57 +264,16 @@ class ParentActivity : AppCompatActivity() {
         }
     }
 
-    private fun makeAdapter(items: List<String>): ArrayAdapter<String> =
-        ArrayAdapter(this, android.R.layout.simple_spinner_item, items).also {
-            it.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        }
-
-    private fun onGradeChanged() {
-        val grade = spGrade.selectedItem?.toString() ?: return
-        spSubject.adapter = makeAdapter(QuestionBank.subjectsForGrade(grade))
-        buildUnits()
-    }
-
-    private fun buildUnits() {
-        val grade = spGrade.selectedItem?.toString() ?: return
-        val subject = spSubject.selectedItem?.toString() ?: return
-        val units = QuestionBank.unitsForGradeSubject(grade, subject)
-        containerUnits.removeAllViews()
-        val accent = ContextCompat.getColor(this, R.color.accent)
-        units.forEach { unit ->
-            val key = "$grade|$subject|$unit"
-            val cb = CheckBox(this).apply {
-                text = unit
-                isChecked = activeKeys.contains(key)
-                setTextColor(ContextCompat.getColor(this@ParentActivity, R.color.text_primary))
-                textSize = 14f
-                buttonTintList = android.content.res.ColorStateList.valueOf(accent)
-                setPadding(0, dp(9), 0, dp(9))
-                setOnCheckedChangeListener { _, checked ->
-                    if (checked) activeKeys.add(key) else activeKeys.remove(key)
-                    updateSelInfo()
-                }
-            }
-            containerUnits.addView(cb)
-        }
-    }
-
-    private fun dp(v: Int): Int = (v * resources.displayMetrics.density).toInt()
-
-    private fun updateSelInfo() {
-        val maxD = spDifficulty.selectedItemPosition + 1
-        val count = QuestionBank.activePool(activeKeys, maxD).size
-        val wrong = prefs.getStringSet("wrong_questions", emptySet())?.size ?: 0
-        tvSelInfo.text = "已选进度单元 ${activeKeys.size} 个，题目共 $count 道（含错题 $wrong 道）"
-    }
-
+    /** 这一页只负责「每次解锁时长」，出题细则由题库设置页统一保存。 */
     private fun save() {
         val m = etMinutes.text.toString().toIntOrNull()
-        if (m != null && m > 0) prefs.edit().putInt("grant_minutes", m).apply()
-        prefs.edit().putStringSet(KEY_ACTIVE, activeKeys).apply()
-        prefs.edit().putInt("max_difficulty", spDifficulty.selectedItemPosition + 1).apply()
-        prefs.edit().putBoolean("wrong_first", cbWrongFirst.isChecked).apply()
-        Toast.makeText(this, "已保存题库配置", Toast.LENGTH_SHORT).show()
+        if (m == null || m <= 0) {
+            Toast.makeText(this, "时长要大于 0 分钟", Toast.LENGTH_SHORT).show()
+            return
+        }
+        prefs.edit().putInt(QuizSettings.KEY_MINUTES, m).apply()
+        refreshQuizSummary()
+        Toast.makeText(this, "已保存：每次可用 $m 分钟", Toast.LENGTH_SHORT).show()
     }
 
     /** 家长现场加时：延长本次解锁窗口，并退出锁屏让孩子继续使用。 */
@@ -306,6 +287,7 @@ class ParentActivity : AppCompatActivity() {
         val until = prefs.getLong("unlock_until", 0)
         val base = if (until > now) until else now
         prefs.edit().putLong("unlock_until", base + add * 60_000L).apply()
+        LockGuard.setLocked(this, false)
 
         try { stopService(Intent(this, TimerService::class.java)) } catch (_: Exception) { }
         ContextCompat.startForegroundService(this, Intent(this, TimerService::class.java))

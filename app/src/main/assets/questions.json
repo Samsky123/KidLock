@@ -1,226 +1,9527 @@
-[
+{
+ "version": 2,
+ "editions": [
+  "人教版",
+  "苏教版",
+  "北师大版",
+  "外研版",
+  "译林版"
+ ],
+ "grades": [
+  "一年级",
+  "二年级",
+  "三年级",
+  "四年级",
+  "五年级",
+  "六年级"
+ ],
+ "groups": [
   {
-    "grade": "一年级", "subject": "数学", "unit": "数与运算",
-    "questions": [
-      { "title": "15 里面有几个十和几个一？", "options": ["1个十5个一", "5个十1个一", "1个十1个一", "5个十5个一"], "answer": 0, "difficulty": 1 },
-      { "title": "比 9 大、比 12 小的数是？", "options": ["8", "10", "13", "7"], "answer": 1, "difficulty": 1 }
-    ]
+   "grade": "一年级",
+   "subject": "数学",
+   "edition": "通用",
+   "unit": "20以内加减法",
+   "questions": [
+    {
+     "title": "4 + 9 = ？",
+     "options": [
+      "16",
+      "13",
+      "14",
+      "10"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "9 + 4 = ？",
+     "options": [
+      "8",
+      "13",
+      "12",
+      "14"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "4 + 6 = ？",
+     "options": [
+      "8",
+      "13",
+      "11",
+      "10"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "8 + 3 = ？",
+     "options": [
+      "14",
+      "10",
+      "31",
+      "11"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "9 + 4 = ？",
+     "options": [
+      "33",
+      "11",
+      "13",
+      "14"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "3 + 4 = ？",
+     "options": [
+      "10",
+      "7",
+      "6",
+      "17"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "15 - 5 = ？",
+     "options": [
+      "5",
+      "20",
+      "30",
+      "10"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "20 - 9 = ？",
+     "options": [
+      "13",
+      "11",
+      "21",
+      "12"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "19 - 3 = ？",
+     "options": [
+      "17",
+      "18",
+      "16",
+      "11"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "13 - 4 = ？",
+     "options": [
+      "29",
+      "19",
+      "9",
+      "12"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "16 - 6 = ？",
+     "options": [
+      "9",
+      "5",
+      "10",
+      "12"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "14 - 5 = ？",
+     "options": [
+      "19",
+      "12",
+      "4",
+      "9"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    }
+   ]
   },
   {
-    "grade": "一年级", "subject": "数学", "unit": "加减法",
-    "questions": [
-      { "title": "8 + 7 = ？", "options": ["14", "15", "16", "13"], "answer": 1, "difficulty": 1 },
-      { "title": "17 - 9 = ？", "options": ["7", "8", "9", "6"], "answer": 1, "difficulty": 1 }
-    ]
+   "grade": "一年级",
+   "subject": "数学",
+   "edition": "通用",
+   "unit": "认识100以内的数",
+   "questions": [
+    {
+     "title": "15 里面有 1 个十和几个一？",
+     "options": [
+      "5",
+      "1",
+      "15",
+      "10"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "比 9 大、比 12 小的数是？",
+     "options": [
+      "10",
+      "8",
+      "7",
+      "13"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "一个数由 2 个十和 7 个一组成，这个数是？",
+     "options": [
+      "72",
+      "207",
+      "9",
+      "27"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "从右边起，第一位是？",
+     "options": [
+      "十位",
+      "百位",
+      "个位",
+      "千位"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "下面哪个数最大？",
+     "options": [
+      "89",
+      "90",
+      "19",
+      "78"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "和 30 相邻的两个数是？",
+     "options": [
+      "29 和 31",
+      "28 和 32",
+      "31 和 32",
+      "20 和 40"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "48 里面有几个十？",
+     "options": [
+      "4",
+      "8",
+      "5",
+      "48"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "10 个一是？",
+     "options": [
+      "100",
+      "11",
+      "10",
+      "1"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "63 读作？",
+     "options": [
+      "三十六",
+      "六十三",
+      "六十零三",
+      "六三"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "比 50 少 1 的数是？",
+     "options": [
+      "51",
+      "40",
+      "48",
+      "49"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "最大的一位数是？",
+     "options": [
+      "8",
+      "9",
+      "10",
+      "1"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "一个两位数，十位是 7，个位是 0，它是？",
+     "options": [
+      "70",
+      "17",
+      "7",
+      "07"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    }
+   ]
   },
   {
-    "grade": "一年级", "subject": "语文", "unit": "拼音",
-    "questions": [
-      { "title": "下面哪个是声母？", "options": ["b", "a", "o", "e"], "answer": 0, "difficulty": 1 },
-      { "title": "“mā” 的声调是？", "options": ["一声", "二声", "三声", "四声"], "answer": 0, "difficulty": 1 }
-    ]
+   "grade": "一年级",
+   "subject": "数学",
+   "edition": "通用",
+   "unit": "认识图形",
+   "questions": [
+    {
+     "title": "三角形有几条边？",
+     "options": [
+      "3",
+      "5",
+      "4",
+      "2"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "正方形有几条边？",
+     "options": [
+      "4",
+      "3",
+      "6",
+      "5"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "圆形的边是？",
+     "options": [
+      "曲线，没有直边",
+      "4 条直边",
+      "6 条直边",
+      "3 条直边"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "长方形对边的关系是？",
+     "options": [
+      "四边都相等",
+      "都不相等",
+      "对边相等",
+      "邻边相等"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "下面哪个图形没有角？",
+     "options": [
+      "圆",
+      "三角形",
+      "长方形",
+      "正方形"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "用小棒摆一个三角形，至少需要几根？",
+     "options": [
+      "4",
+      "3",
+      "6",
+      "5"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "正方形的四条边？",
+     "options": [
+      "对边不相等",
+      "都不相等",
+      "只有两条相等",
+      "都相等"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "球是什么形状？",
+     "options": [
+      "三角形",
+      "立体图形",
+      "平面图形",
+      "正方形"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "下面哪个是平面图形？",
+     "options": [
+      "球",
+      "圆柱",
+      "三角形",
+      "正方体"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "长方体有几个面？",
+     "options": [
+      "8",
+      "4",
+      "6",
+      "12"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "圆柱的上下两个面是？",
+     "options": [
+      "正方形",
+      "三角形",
+      "长方形",
+      "圆"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "一个正方形沿对角线折一次，得到两个？",
+     "options": [
+      "圆",
+      "三角形",
+      "长方形",
+      "正方形"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    }
+   ]
   },
   {
-    "grade": "一年级", "subject": "语文", "unit": "识字",
-    "questions": [
-      { "title": "“火” 一共有几画？", "options": ["3", "4", "5", "6"], "answer": 1, "difficulty": 1 },
-      { "title": "下面哪个字表示水？", "options": ["火", "水", "木", "土"], "answer": 1, "difficulty": 1 }
-    ]
+   "grade": "一年级",
+   "subject": "数学",
+   "edition": "通用",
+   "unit": "认识人民币",
+   "questions": [
+    {
+     "title": "1 元 = （  ）角",
+     "options": [
+      "5",
+      "10",
+      "100",
+      "1"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "1 角 = （  ）分",
+     "options": [
+      "100",
+      "5",
+      "10",
+      "1"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "1 元 = （  ）分",
+     "options": [
+      "10",
+      "100",
+      "50",
+      "1000"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "5 角 + 5 角 = ？",
+     "options": [
+      "5 角",
+      "1 元",
+      "10 元",
+      "50 分"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "买一支 8 角的笔，付 1 元，找回多少？",
+     "options": [
+      "1 角",
+      "2 角",
+      "8 角",
+      "2 元"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "2 元 3 角 = （  ）角",
+     "options": [
+      "23",
+      "203",
+      "32",
+      "5"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "下面哪个面值最大？",
+     "options": [
+      "5 角",
+      "1 元",
+      "5 分",
+      "1 角"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "3 元 = （  ）角",
+     "options": [
+      "3",
+      "300",
+      "13",
+      "30"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "一支笔 3 元，两支持多少？",
+     "options": [
+      "5 元",
+      "9 元",
+      "3 元",
+      "6 元"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "10 角 可以换成？",
+     "options": [
+      "1 分",
+      "100 元",
+      "10 元",
+      "1 元"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "7 角 5 分 = （  ）分",
+     "options": [
+      "75",
+      "12",
+      "57",
+      "705"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "买 1 元 2 角的东西，付 2 元，找回？",
+     "options": [
+      "8 角",
+      "2 角",
+      "1 元",
+      "1 元 2 角"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    }
+   ]
   },
   {
-    "grade": "二年级", "subject": "数学", "unit": "乘法",
-    "questions": [
-      { "title": "3 × 4 = ？", "options": ["7", "12", "9", "15"], "answer": 1, "difficulty": 1 },
-      { "title": "表示 2 个 5 相加的算式是？", "options": ["2+5", "5+5", "2×2", "5×5"], "answer": 1, "difficulty": 2 }
-    ]
+   "grade": "一年级",
+   "subject": "数学",
+   "edition": "通用",
+   "unit": "认识钟表",
+   "questions": [
+    {
+     "title": "钟面上短的针是？",
+     "options": [
+      "分针",
+      "时针",
+      "秒针",
+      "表针"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "钟面上长的针是？",
+     "options": [
+      "分针",
+      "钉子",
+      "秒针",
+      "时针"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "分针指 12，时针指 3，是几点？",
+     "options": [
+      "9 时",
+      "3 时",
+      "6 时",
+      "12 时"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "8 时整，分针指向？",
+     "options": [
+      "12",
+      "6",
+      "8",
+      "3"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "3 时半，分针指向？",
+     "options": [
+      "3",
+      "6",
+      "12",
+      "9"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "钟面上一共有多少个大格？",
+     "options": [
+      "12",
+      "10",
+      "6",
+      "60"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "分针走一圈，时针走？",
+     "options": [
+      "1 圈",
+      "2 大格",
+      "12 大格",
+      "1 大格"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "6 时整，时针和分针的关系？",
+     "options": [
+      "成直角",
+      "重合",
+      "平行",
+      "成一条直线"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "上午 9 时也可以写成？",
+     "options": [
+      "9:09",
+      "12:09",
+      "9:00",
+      "9:30"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "1 小时 = （  ）分",
+     "options": [
+      "30",
+      "24",
+      "60",
+      "100"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "时针走一圈是？",
+     "options": [
+      "1 小时",
+      "60 小时",
+      "24 小时",
+      "12 小时"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "4 时半用数字表示是？",
+     "options": [
+      "4:50",
+      "4:00",
+      "4:30",
+      "4:06"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    }
+   ]
   },
   {
-    "grade": "二年级", "subject": "数学", "unit": "长度",
-    "questions": [
-      { "title": "1 米等于多少厘米？", "options": ["10", "100", "1000", "1"], "answer": 1, "difficulty": 1 },
-      { "title": "下面哪个最长？", "options": ["1厘米", "10厘米", "1米", "50厘米"], "answer": 2, "difficulty": 2 }
-    ]
+   "grade": "一年级",
+   "subject": "数学",
+   "edition": "通用",
+   "unit": "比一比与解决问题",
+   "questions": [
+    {
+     "title": "8 比 5 多几？",
+     "options": [
+      "3",
+      "4",
+      "13",
+      "2"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "5 比 9 少几？",
+     "options": [
+      "3",
+      "14",
+      "4",
+      "5"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "一支铅笔比一把尺子长，说明？",
+     "options": [
+      "尺子长",
+      "不能比较",
+      "一样长",
+      "铅笔长"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "小红有 6 颗糖，小明有 9 颗，谁多？",
+     "options": [
+      "一样多",
+      "小明",
+      "小红",
+      "无法判断"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "把 4、8、2 从小到大排，正确的是？",
+     "options": [
+      "8、4、2",
+      "4、2、8",
+      "2、8、4",
+      "2、4、8"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "10 比 17 少多少？",
+     "options": [
+      "27",
+      "5",
+      "7",
+      "6"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "哪个数最接近 10？",
+     "options": [
+      "11",
+      "5",
+      "20",
+      "1"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "小明有 5 个苹果，吃了一个，还剩几个？",
+     "options": [
+      "6",
+      "4",
+      "1",
+      "5"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "哪组数是从大到小排列？",
+     "options": [
+      "3、9、6",
+      "9、6、3",
+      "6、9、3",
+      "3、6、9"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "树上有 7 只鸟，飞走 3 只，还剩几只？",
+     "options": [
+      "3",
+      "5",
+      "4",
+      "10"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "比 6 大又比 8 小的数是？",
+     "options": [
+      "7",
+      "6",
+      "8",
+      "9"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "12 和 15 之间有几个整数？",
+     "options": [
+      "1",
+      "3",
+      "2",
+      "4"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    }
+   ]
   },
   {
-    "grade": "二年级", "subject": "语文", "unit": "词语",
-    "questions": [
-      { "title": "“高兴” 的近义词是？", "options": ["开心", "难过", "生气", "害怕"], "answer": 0, "difficulty": 1 },
-      { "title": "下面哪个是动词？", "options": ["红色", "跑", "桌子", "快速"], "answer": 1, "difficulty": 1 }
-    ]
+   "grade": "二年级",
+   "subject": "数学",
+   "edition": "通用",
+   "unit": "100以内加减法",
+   "questions": [
+    {
+     "title": "45 + 20 = ？",
+     "options": [
+      "65",
+      "66",
+      "45",
+      "55"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "25 + 28 = ？",
+     "options": [
+      "53",
+      "54",
+      "63",
+      "52"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "26 + 31 = ？",
+     "options": [
+      "59",
+      "67",
+      "52",
+      "57"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "64 + 18 = ？",
+     "options": [
+      "79",
+      "81",
+      "82",
+      "92"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "46 + 21 = ？",
+     "options": [
+      "70",
+      "69",
+      "47",
+      "67"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "64 + 12 = ？",
+     "options": [
+      "75",
+      "78",
+      "73",
+      "76"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "52 - 20 = ？",
+     "options": [
+      "30",
+      "29",
+      "12",
+      "32"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "86 - 39 = ？",
+     "options": [
+      "45",
+      "50",
+      "27",
+      "47"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "57 - 29 = ？",
+     "options": [
+      "26",
+      "30",
+      "28",
+      "29"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "52 - 22 = ？",
+     "options": [
+      "35",
+      "32",
+      "30",
+      "33"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "72 - 31 = ？",
+     "options": [
+      "42",
+      "41",
+      "40",
+      "46"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "81 - 24 = ？",
+     "options": [
+      "60",
+      "57",
+      "59",
+      "54"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    }
+   ]
   },
   {
-    "grade": "二年级", "subject": "语文", "unit": "阅读",
-    "questions": [
-      { "title": "阅读时应该？", "options": ["随便翻", "认真看", "闭眼", "说话"], "answer": 1, "difficulty": 1 },
-      { "title": "一个完整的故事一般有？", "options": ["开头和结尾", "只有开头", "只有结尾", "没有内容"], "answer": 0, "difficulty": 1 }
-    ]
+   "grade": "二年级",
+   "subject": "数学",
+   "edition": "通用",
+   "unit": "表内乘法",
+   "questions": [
+    {
+     "title": "6 × 2 = ？",
+     "options": [
+      "9",
+      "12",
+      "11",
+      "10"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "5 × 8 = ？",
+     "options": [
+      "43",
+      "35",
+      "45",
+      "40"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "5 × 5 = ？",
+     "options": [
+      "30",
+      "15",
+      "25",
+      "24"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "7 × 8 = ？",
+     "options": [
+      "55",
+      "36",
+      "56",
+      "76"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "2 × 5 = ？",
+     "options": [
+      "12",
+      "10",
+      "0",
+      "5"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "2 × 6 = ？",
+     "options": [
+      "15",
+      "11",
+      "7",
+      "12"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "9 × 5 = ？",
+     "options": [
+      "50",
+      "45",
+      "25",
+      "40"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "5 × 5 = ？",
+     "options": [
+      "15",
+      "22",
+      "45",
+      "25"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "表示 3 个 4 相加的算式是？",
+     "options": [
+      "4+4",
+      "3×4",
+      "3+3+3",
+      "3+4"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "“五五二十五”对应的乘法算式是？",
+     "options": [
+      "5+5",
+      "5×2",
+      "2×5",
+      "5×5"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "4 × 6 读作？",
+     "options": [
+      "4 减 6",
+      "4 除以 6",
+      "4 乘 6",
+      "4 加 6"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "一个因数是 7，另一个是 8，积是？",
+     "options": [
+      "48",
+      "64",
+      "56",
+      "15"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    }
+   ]
   },
   {
-    "grade": "三年级", "subject": "数学", "unit": "除法",
-    "questions": [
-      { "title": "12 ÷ 3 = ？", "options": ["3", "4", "6", "9"], "answer": 1, "difficulty": 2 },
-      { "title": "把 10 个苹果平均分给 2 人，每人几个？", "options": ["2", "5", "10", "20"], "answer": 1, "difficulty": 2 }
-    ]
+   "grade": "二年级",
+   "subject": "数学",
+   "edition": "通用",
+   "unit": "表内除法",
+   "questions": [
+    {
+     "title": "40 ÷ 8 = ？",
+     "options": [
+      "15",
+      "7",
+      "3",
+      "5"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "12 ÷ 6 = ？",
+     "options": [
+      "0",
+      "2",
+      "3",
+      "22"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "24 ÷ 3 = ？",
+     "options": [
+      "8",
+      "6",
+      "11",
+      "18"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "48 ÷ 6 = ？",
+     "options": [
+      "8",
+      "13",
+      "28",
+      "11"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "81 ÷ 9 = ？",
+     "options": [
+      "19",
+      "14",
+      "9",
+      "12"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "56 ÷ 8 = ？",
+     "options": [
+      "7",
+      "2",
+      "10",
+      "4"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "36 ÷ 6 = ？",
+     "options": [
+      "5",
+      "4",
+      "26",
+      "6"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "42 ÷ 6 = ？",
+     "options": [
+      "7",
+      "4",
+      "8",
+      "27"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "把 12 个苹果平均分给 3 人，每人几个？",
+     "options": [
+      "12",
+      "6",
+      "4",
+      "3"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "18 ÷ 6 表示？",
+     "options": [
+      "18 个 6 相加",
+      "6 个 18 相加",
+      "把 18 平均分成 6 份",
+      "18 减 6"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "被除数是 24，除数是 4，商是？",
+     "options": [
+      "8",
+      "28",
+      "6",
+      "20"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "“三五十五”可以写出几道除法算式？",
+     "options": [
+      "2",
+      "1",
+      "3",
+      "4"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    }
+   ]
   },
   {
-    "grade": "三年级", "subject": "数学", "unit": "分数",
-    "questions": [
-      { "title": "一个蛋糕平均分成 4 份，取 1 份是？", "options": ["1/2", "1/4", "1/3", "1/5"], "answer": 1, "difficulty": 2 },
-      { "title": "下面哪个分数最大？", "options": ["1/2", "1/3", "1/4", "1/5"], "answer": 0, "difficulty": 3 }
-    ]
+   "grade": "二年级",
+   "subject": "数学",
+   "edition": "通用",
+   "unit": "长度单位",
+   "questions": [
+    {
+     "title": "1 米 = （  ）厘米",
+     "options": [
+      "100",
+      "1000",
+      "10",
+      "60"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "量教室的长，用哪个单位合适？",
+     "options": [
+      "厘米",
+      "毫米",
+      "米",
+      "千米"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "量铅笔的长，用哪个单位合适？",
+     "options": [
+      "千米",
+      "厘米",
+      "米",
+      "吨"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "5 米 = （  ）厘米",
+     "options": [
+      "500",
+      "50",
+      "15",
+      "5000"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "80 厘米 + 20 厘米 = ？",
+     "options": [
+      "100 米",
+      "2 米",
+      "1 米",
+      "80 厘米"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "1 米 - 30 厘米 = ？",
+     "options": [
+      "100 厘米",
+      "70 厘米",
+      "30 厘米",
+      "7 厘米"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "下面哪个最接近 1 米？",
+     "options": [
+      "铅笔的长",
+      "橡皮的宽",
+      "教室门的高",
+      "一枚硬币的厚"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "300 厘米 = （  ）米",
+     "options": [
+      "300",
+      "0.3",
+      "3",
+      "30"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "比 1 米短 40 厘米的是？",
+     "options": [
+      "140 厘米",
+      "40 厘米",
+      "60 厘米",
+      "1 米 40 厘米"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "小明身高 125 厘米，也就是？",
+     "options": [
+      "12 米 5 厘米",
+      "1 米 2 厘米",
+      "125 米",
+      "1 米 25 厘米"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "一支铅笔大约长？",
+     "options": [
+      "18 厘米",
+      "18 千米",
+      "18 米",
+      "18 毫米"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "2 米 30 厘米 = （  ）厘米",
+     "options": [
+      "23",
+      "203",
+      "2030",
+      "230"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    }
+   ]
   },
   {
-    "grade": "三年级", "subject": "语文", "unit": "句子",
-    "questions": [
-      { "title": "下面哪句是完整的句子？", "options": ["小明。", "跑步", "在公园。", "快乐地"], "answer": 0, "difficulty": 2 },
-      { "title": "“他吃了一个苹果。” 的主语是？", "options": ["他", "苹果", "吃", "一个"], "answer": 0, "difficulty": 2 }
-    ]
+   "grade": "二年级",
+   "subject": "数学",
+   "edition": "通用",
+   "unit": "角的初步认识",
+   "questions": [
+    {
+     "title": "一个角有几个顶点？",
+     "options": [
+      "0",
+      "1",
+      "3",
+      "2"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "一个角有几条边？",
+     "options": [
+      "2",
+      "3",
+      "4",
+      "1"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "比直角小的角叫？",
+     "options": [
+      "锐角",
+      "钝角",
+      "直角",
+      "平角"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "比直角大的角叫？",
+     "options": [
+      "钝角",
+      "周角",
+      "直角",
+      "锐角"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "三角尺上最大的角是？",
+     "options": [
+      "钝角",
+      "锐角",
+      "直角",
+      "平角"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "长方形有几个直角？",
+     "options": [
+      "4",
+      "2",
+      "3",
+      "1"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "角的大小与什么有关？",
+     "options": [
+      "两边张开的程度",
+      "边的粗细",
+      "边的长短",
+      "顶点位置"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "把直角的两条边延长，角的大小？",
+     "options": [
+      "不变",
+      "无法判断",
+      "变小",
+      "变大"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "钟面上 3 时整，时针与分针成？",
+     "options": [
+      "锐角",
+      "钝角",
+      "直角",
+      "平角"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "正方形的四个角都是？",
+     "options": [
+      "钝角",
+      "直角",
+      "锐角",
+      "平角"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "下面哪个角最大？",
+     "options": [
+      "钝角",
+      "都一样",
+      "锐角",
+      "直角"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "一张纸对折再对折，折出的角是？",
+     "options": [
+      "平角",
+      "直角",
+      "钝角",
+      "锐角"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    }
+   ]
   },
   {
-    "grade": "三年级", "subject": "语文", "unit": "古诗",
-    "questions": [
-      { "title": "“床前明月光” 的下一句是？", "options": ["疑是地上霜", "低头思故乡", "举头望明月", "春眠不觉晓"], "answer": 0, "difficulty": 1 },
-      { "title": "《静夜思》的作者是？", "options": ["李白", "杜甫", "白居易", "王维"], "answer": 0, "difficulty": 1 }
-    ]
+   "grade": "二年级",
+   "subject": "数学",
+   "edition": "通用",
+   "unit": "混合运算与解决问题",
+   "questions": [
+    {
+     "title": "12 + 3 × 4 = ？",
+     "options": [
+      "60",
+      "24",
+      "20",
+      "19"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "(12 + 3) × 4 = ？",
+     "options": [
+      "24",
+      "15",
+      "60",
+      "48"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "20 - 8 ÷ 2 = ？",
+     "options": [
+      "12",
+      "6",
+      "14",
+      "16"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "小明买 3 支笔，每支 4 元，付 20 元，找回多少？",
+     "options": [
+      "12 元",
+      "8 元",
+      "32 元",
+      "2 元"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "一盒有 6 个鸡蛋，4 盒一共多少个？",
+     "options": [
+      "10",
+      "12",
+      "18",
+      "24"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "有 24 个苹果，平均装 6 袋，每袋几个？",
+     "options": [
+      "18",
+      "4",
+      "6",
+      "30"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "先算乘法后算加减，这叫？",
+     "options": [
+      "先加减",
+      "都可以",
+      "先乘除后加减",
+      "从左往右"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "35 - 5 × 5 = ？",
+     "options": [
+      "25",
+      "150",
+      "30",
+      "10"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "6 × 6 + 4 = ？",
+     "options": [
+      "36",
+      "24",
+      "40",
+      "46"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "每排 7 人，站 3 排，一共多少人？",
+     "options": [
+      "24",
+      "21",
+      "14",
+      "10"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "42 ÷ 7 + 9 = ？",
+     "options": [
+      "15",
+      "16",
+      "6",
+      "13"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "一本 8 元，买 5 本要多少钱？",
+     "options": [
+      "35 元",
+      "40 元",
+      "45 元",
+      "13 元"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    }
+   ]
   },
   {
-    "grade": "三年级", "subject": "英语", "unit": "基础词汇",
-    "questions": [
-      { "title": "“苹果”的英文是？", "options": ["apple", "banana", "orange", "pear"], "answer": 0, "difficulty": 1 },
-      { "title": "“红色”的英文是？", "options": ["red", "blue", "green", "yellow"], "answer": 0, "difficulty": 1 }
-    ]
+   "grade": "三年级",
+   "subject": "数学",
+   "edition": "通用",
+   "unit": "多位数乘一位数",
+   "questions": [
+    {
+     "title": "85 × 6 = ？",
+     "options": [
+      "500",
+      "530",
+      "510",
+      "507"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "18 × 6 = ？",
+     "options": [
+      "98",
+      "110",
+      "108",
+      "109"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "49 × 3 = ？",
+     "options": [
+      "147",
+      "167",
+      "152",
+      "144"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "70 × 5 = ？",
+     "options": [
+      "360",
+      "350",
+      "355",
+      "349"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "56 × 8 = ？",
+     "options": [
+      "428",
+      "450",
+      "443",
+      "448"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "15 × 4 = ？",
+     "options": [
+      "70",
+      "61",
+      "65",
+      "60"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "38 × 8 = ？",
+     "options": [
+      "304",
+      "284",
+      "303",
+      "299"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "66 × 8 = ？",
+     "options": [
+      "530",
+      "528",
+      "518",
+      "525"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "25 × 4 = ？",
+     "options": [
+      "125",
+      "100",
+      "90",
+      "80"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "0 × 9 = ？",
+     "options": [
+      "0",
+      "9",
+      "90",
+      "1"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "一箱 24 瓶，3 箱一共多少瓶？",
+     "options": [
+      "27",
+      "96",
+      "72",
+      "48"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "□ × 6 = 54，□ 是？",
+     "options": [
+      "8",
+      "7",
+      "9",
+      "6"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    }
+   ]
   },
   {
-    "grade": "三年级", "subject": "英语", "unit": "日常用语",
-    "questions": [
-      { "title": "“谢谢”的英文是？", "options": ["thank you", "sorry", "hello", "goodbye"], "answer": 0, "difficulty": 1 },
-      { "title": "“早上好”的英文是？", "options": ["good morning", "good night", "goodbye", "hello"], "answer": 0, "difficulty": 1 }
-    ]
+   "grade": "三年级",
+   "subject": "数学",
+   "edition": "通用",
+   "unit": "除数是一位数的除法",
+   "questions": [
+    {
+     "title": "240 ÷ 8 = ？",
+     "options": [
+      "50",
+      "27",
+      "30",
+      "29"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "120 ÷ 3 = ？",
+     "options": [
+      "37",
+      "39",
+      "45",
+      "40"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "300 ÷ 5 = ？",
+     "options": [
+      "63",
+      "55",
+      "60",
+      "80"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "360 ÷ 4 = ？",
+     "options": [
+      "93",
+      "90",
+      "95",
+      "92"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "270 ÷ 3 = ？",
+     "options": [
+      "90",
+      "93",
+      "85",
+      "91"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "180 ÷ 6 = ？",
+     "options": [
+      "20",
+      "31",
+      "10",
+      "30"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "280 ÷ 7 = ？",
+     "options": [
+      "40",
+      "41",
+      "20",
+      "38"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "210 ÷ 3 = ？",
+     "options": [
+      "70",
+      "73",
+      "67",
+      "50"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "84 ÷ 4 = ？",
+     "options": [
+      "22",
+      "24",
+      "20",
+      "21"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "96 ÷ 8 = ？",
+     "options": [
+      "12",
+      "11",
+      "13",
+      "14"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "一个数的 5 倍是 65，这个数是？",
+     "options": [
+      "70",
+      "60",
+      "13",
+      "325"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "63 ÷ 7 的商是？",
+     "options": [
+      "7",
+      "8",
+      "6",
+      "9"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    }
+   ]
   },
   {
-    "grade": "四年级", "subject": "数学", "unit": "大数认识",
-    "questions": [
-      { "title": "10000 里面有几个千？", "options": ["10", "100", "1000", "1"], "answer": 0, "difficulty": 2 },
-      { "title": "比 9999 多 1 的数是？", "options": ["10000", "9998", "1000", "999"], "answer": 0, "difficulty": 2 }
-    ]
+   "grade": "三年级",
+   "subject": "数学",
+   "edition": "通用",
+   "unit": "分数的初步认识",
+   "questions": [
+    {
+     "title": "把一个饼平均分成 4 份，其中 1 份是它的？",
+     "options": [
+      "1/3",
+      "1/4",
+      "4/1",
+      "1/2"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "3/5 表示把整体平均分成几份？",
+     "options": [
+      "3 份",
+      "5 份",
+      "8 份",
+      "2 份"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "1/2 和 1/3 哪个大？",
+     "options": [
+      "一样大",
+      "1/2",
+      "1/3",
+      "无法比较"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "1/4 + 2/4 = ？",
+     "options": [
+      "3/4",
+      "2/4",
+      "3/8",
+      "1/4"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "1 - 3/7 = ？",
+     "options": [
+      "4/7",
+      "7/4",
+      "3/7",
+      "1/7"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "5/5 等于？",
+     "options": [
+      "5",
+      "1/5",
+      "0",
+      "1"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "把一个西瓜平均分成 8 份，吃了 3 份，还剩几分之几？",
+     "options": [
+      "5/8",
+      "3/8",
+      "1/8",
+      "8/5"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "分子是 2，分母是 6 的分数是？",
+     "options": [
+      "2/6",
+      "6/4",
+      "6/2",
+      "2/8"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "下面哪个分数最大？",
+     "options": [
+      "2/5",
+      "1/5",
+      "3/5",
+      "4/9"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "2/7 里面有几个 1/7？",
+     "options": [
+      "7",
+      "1",
+      "9",
+      "2"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "1/2 + 1/2 = ？",
+     "options": [
+      "1",
+      "1/4",
+      "2/4",
+      "2"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "把一根绳子平均剪成 3 段，每段是全长的？",
+     "options": [
+      "2/3",
+      "1/3",
+      "3",
+      "1/2"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    }
+   ]
   },
   {
-    "grade": "四年级", "subject": "数学", "unit": "运算",
-    "questions": [
-      { "title": "25 × 4 = ？", "options": ["100", "80", "90", "120"], "answer": 0, "difficulty": 2 },
-      { "title": "360 ÷ 6 = ？", "options": ["60", "6", "600", "30"], "answer": 0, "difficulty": 2 }
-    ]
+   "grade": "三年级",
+   "subject": "数学",
+   "edition": "通用",
+   "unit": "长方形和正方形的周长",
+   "questions": [
+    {
+     "title": "长 11 厘米、宽 4 厘米的长方形，周长是多少厘米？",
+     "options": [
+      "32",
+      "35",
+      "30",
+      "27"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "长 10 厘米、宽 7 厘米的长方形，周长是多少厘米？",
+     "options": [
+      "32",
+      "34",
+      "39",
+      "54"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "长 10 厘米、宽 8 厘米的长方形，周长是多少厘米？",
+     "options": [
+      "39",
+      "36",
+      "46",
+      "37"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "长 9 厘米、宽 2 厘米的长方形，周长是多少厘米？",
+     "options": [
+      "2",
+      "20",
+      "24",
+      "22"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "长 4 厘米、宽 4 厘米的长方形，周长是多少厘米？",
+     "options": [
+      "16",
+      "36",
+      "17",
+      "26"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "长 8 厘米、宽 8 厘米的长方形，周长是多少厘米？",
+     "options": [
+      "32",
+      "34",
+      "42",
+      "37"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "正方形边长 5 厘米，周长是？",
+     "options": [
+      "20 厘米",
+      "15 厘米",
+      "10 厘米",
+      "25 厘米"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "长方形周长公式是？",
+     "options": [
+      "长×宽",
+      "(长+宽)×2",
+      "长×宽×2",
+      "长+宽"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "周长 24 厘米的正方形，边长是？",
+     "options": [
+      "4 厘米",
+      "6 厘米",
+      "12 厘米",
+      "8 厘米"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "一个长方形长 8 米、宽 5 米，周长？",
+     "options": [
+      "18 米",
+      "40 米",
+      "13 米",
+      "26 米"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "周长相等的正方形和长方形，哪个面积大？",
+     "options": [
+      "正方形",
+      "一样大",
+      "无法比较",
+      "长方形"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "用 4 根 3 厘米的小棒围成正方形，周长？",
+     "options": [
+      "16 厘米",
+      "12 厘米",
+      "9 厘米",
+      "6 厘米"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    }
+   ]
   },
   {
-    "grade": "四年级", "subject": "语文", "unit": "成语",
-    "questions": [
-      { "title": "“画蛇添足”比喻？", "options": ["多此一举", "勤快", "勇敢", "聪明"], "answer": 0, "difficulty": 2 },
-      { "title": "“守株待兔”告诉我们？", "options": ["不能靠运气", "要快跑", "要种树", "要睡觉"], "answer": 0, "difficulty": 2 }
-    ]
+   "grade": "三年级",
+   "subject": "数学",
+   "edition": "通用",
+   "unit": "面积",
+   "questions": [
+    {
+     "title": "1 平方米 = （  ）平方分米",
+     "options": [
+      "10",
+      "1000",
+      "60",
+      "100"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "1 平方分米 = （  ）平方厘米",
+     "options": [
+      "10",
+      "100",
+      "1000",
+      "60"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "边长 4 厘米的正方形面积是？",
+     "options": [
+      "16 平方厘米",
+      "8 平方厘米",
+      "4 平方厘米",
+      "16 厘米"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "长方形面积公式是？",
+     "options": [
+      "长+宽",
+      "边长×4",
+      "长×宽",
+      "(长+宽)×2"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "长 6 米、宽 3 米的房间面积是？",
+     "options": [
+      "18 平方米",
+      "9 平方米",
+      "18 米",
+      "9 米"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "面积单位和长度单位的区别是？",
+     "options": [
+      "面积用平方单位",
+      "面积用米",
+      "完全相同",
+      "长度用平方"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "1 平方米大约相当于？",
+     "options": [
+      "一本书",
+      "一支笔",
+      "一张方桌桌面",
+      "一枚硬币"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "边长 10 分米的正方形面积是？",
+     "options": [
+      "10 平方米",
+      "1 平方米",
+      "100 平方米",
+      "1 米"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "面积 24 平方厘米、宽 4 厘米，长是？",
+     "options": [
+      "6 厘米",
+      "20 厘米",
+      "96 厘米",
+      "8 厘米"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "两个面积相等的长方形，周长一定相等吗？",
+     "options": [
+      "无法判断",
+      "不一定",
+      "一定不等",
+      "一定相等"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "1 公顷 = （  ）平方米",
+     "options": [
+      "100000",
+      "100",
+      "1000",
+      "10000"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "教室的面积大约是？",
+     "options": [
+      "50 米",
+      "50 平方米",
+      "50 平方厘米",
+      "50 公顷"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    }
+   ]
   },
   {
-    "grade": "四年级", "subject": "语文", "unit": "修辞",
-    "questions": [
-      { "title": "“太阳像个大火球”用了什么修辞？", "options": ["比喻", "拟人", "夸张", "排比"], "answer": 0, "difficulty": 3 },
-      { "title": "“花儿在笑”用了什么修辞？", "options": ["拟人", "比喻", "夸张", "设问"], "answer": 0, "difficulty": 3 }
-    ]
+   "grade": "三年级",
+   "subject": "数学",
+   "edition": "通用",
+   "unit": "时分秒",
+   "questions": [
+    {
+     "title": "1 时 = （  ）分",
+     "options": [
+      "100",
+      "60",
+      "30",
+      "24"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "1 分 = （  ）秒",
+     "options": [
+      "100",
+      "24",
+      "60",
+      "30"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "1 天 = （  ）时",
+     "options": [
+      "60",
+      "48",
+      "24",
+      "12"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "半小时 = （  ）分",
+     "options": [
+      "60",
+      "20",
+      "30",
+      "15"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "3 时 20 分 = （  ）分",
+     "options": [
+      "23",
+      "180",
+      "320",
+      "200"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "120 秒 = （  ）分",
+     "options": [
+      "20",
+      "2",
+      "12",
+      "1"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "8:15 到 8:45 经过了多长时间？",
+     "options": [
+      "15 分",
+      "45 分",
+      "30 分",
+      "60 分"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "秒针走一圈是？",
+     "options": [
+      "12 秒",
+      "60 秒",
+      "1 时",
+      "1 秒"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "小明 7:30 出发，走了 25 分钟，几点到？",
+     "options": [
+      "7:45",
+      "8:00",
+      "7:55",
+      "7:65"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "1 分 30 秒 = （  ）秒",
+     "options": [
+      "130",
+      "60",
+      "30",
+      "90"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "一节课 40 分钟，两节课共？",
+     "options": [
+      "60 分钟",
+      "100 分钟",
+      "80 分钟",
+      "40 分钟"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "一年中有几个月是 31 天？",
+     "options": [
+      "12",
+      "6",
+      "5",
+      "7"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    }
+   ]
   },
   {
-    "grade": "四年级", "subject": "英语", "unit": "词汇",
-    "questions": [
-      { "title": "“学校”的英文是？", "options": ["school", "home", "park", "shop"], "answer": 0, "difficulty": 1 },
-      { "title": "“老师”的英文是？", "options": ["teacher", "student", "doctor", "friend"], "answer": 0, "difficulty": 1 }
-    ]
+   "grade": "四年级",
+   "subject": "数学",
+   "edition": "通用",
+   "unit": "四则运算",
+   "questions": [
+    {
+     "title": "12 + 8 × 5 = ？",
+     "options": [
+      "100",
+      "20",
+      "60",
+      "52"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "(12 + 8) × 5 = ？",
+     "options": [
+      "100",
+      "60",
+      "20",
+      "52"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "100 - 36 ÷ 6 = ？",
+     "options": [
+      "64",
+      "94",
+      "90",
+      "36"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "25 × 4 + 75 × 4 = ？",
+     "options": [
+      "300",
+      "320",
+      "400",
+      "100"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "在四则运算中，有括号要先算？",
+     "options": [
+      "从左往右",
+      "括号里面的",
+      "乘法",
+      "加法"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "36 ÷ (9 - 3) = ？",
+     "options": [
+      "3",
+      "1",
+      "12",
+      "6"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "48 ÷ 6 × 2 = ？",
+     "options": [
+      "16",
+      "8",
+      "4",
+      "24"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "0 不能作？",
+     "options": [
+      "加数",
+      "因数",
+      "除数",
+      "被除数"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "(48 + 32) ÷ 8 = ？",
+     "options": [
+      "80",
+      "12",
+      "10",
+      "6"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "7 × 8 - 7 × 3 = ？",
+     "options": [
+      "35",
+      "56",
+      "21",
+      "77"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "125 × 8 = ？",
+     "options": [
+      "1200",
+      "925",
+      "100",
+      "1000"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "99 + 101 + 100 = ？",
+     "options": [
+      "200",
+      "300",
+      "299",
+      "301"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    }
+   ]
   },
   {
-    "grade": "四年级", "subject": "英语", "unit": "语法",
-    "questions": [
-      { "title": "“I ___ a student.” 填？", "options": ["am", "is", "are", "be"], "answer": 0, "difficulty": 2 },
-      { "title": "“He ___ tall.” 填？", "options": ["is", "am", "are", "be"], "answer": 0, "difficulty": 2 }
-    ]
+   "grade": "四年级",
+   "subject": "数学",
+   "edition": "通用",
+   "unit": "大数的认识",
+   "questions": [
+    {
+     "title": "10 个一万是？",
+     "options": [
+      "十万",
+      "一百",
+      "一百万",
+      "一千万"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "一亿是多少个万？",
+     "options": [
+      "10000",
+      "100",
+      "100000",
+      "1000"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "3050000 读作？",
+     "options": [
+      "三百零五万",
+      "三十万五千",
+      "三千零五十万",
+      "三百五十万"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "由 3 个百万、5 个万组成的数是？",
+     "options": [
+      "3050000",
+      "350000",
+      "3500000",
+      "3005000"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "从右边起，第五位是？",
+     "options": [
+      "十万位",
+      "千位",
+      "万位",
+      "百位"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "把 45678 四舍五入到万位约是？",
+     "options": [
+      "46 万",
+      "45 万",
+      "4 万",
+      "5 万"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "最大的六位数是？",
+     "options": [
+      "99999",
+      "999999",
+      "100000",
+      "1000000"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "1 亿 = （  ）万",
+     "options": [
+      "1000",
+      "100",
+      "10000",
+      "100000"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "下面哪个数最大？",
+     "options": [
+      "908000",
+      "980000",
+      "890000",
+      "899000"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "亿位的计数单位是？",
+     "options": [
+      "千万",
+      "亿",
+      "百万",
+      "十亿"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "4000000 + 50000 + 600 = ？",
+     "options": [
+      "4005600",
+      "4500600",
+      "4050600",
+      "4056000"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "把 1234 万写成以「万」为单位的数是？",
+     "options": [
+      "1234000",
+      "123400",
+      "1234 万",
+      "1234"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    }
+   ]
   },
   {
-    "grade": "五年级", "subject": "数学", "unit": "小数",
-    "questions": [
-      { "title": "0.5 等于几分之几？", "options": ["1/2", "1/5", "5/1", "2/1"], "answer": 0, "difficulty": 2 },
-      { "title": "3.2 + 1.8 = ？", "options": ["5", "4.9", "5.1", "4"], "answer": 0, "difficulty": 2 }
-    ]
+   "grade": "四年级",
+   "subject": "数学",
+   "edition": "通用",
+   "unit": "角的度量",
+   "questions": [
+    {
+     "title": "一个直角是多少度？",
+     "options": [
+      "45°",
+      "60°",
+      "90°",
+      "180°"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "一个平角是多少度？",
+     "options": [
+      "270°",
+      "360°",
+      "90°",
+      "180°"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "一个周角是多少度？",
+     "options": [
+      "270°",
+      "360°",
+      "180°",
+      "90°"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "量角器上 1 大格是多少度？",
+     "options": [
+      "10°",
+      "5°",
+      "1°",
+      "90°"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "45° 的角是？",
+     "options": [
+      "平角",
+      "直角",
+      "钝角",
+      "锐角"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "120° 的角是？",
+     "options": [
+      "直角",
+      "平角",
+      "锐角",
+      "钝角"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "两个 45° 的角拼起来是？",
+     "options": [
+      "平角",
+      "锐角",
+      "直角",
+      "钝角"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "一个角的两边张开得越大，这个角？",
+     "options": [
+      "不变",
+      "越大",
+      "先大后小",
+      "越小"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "三角尺上 30°、60°、90° 三个角，最大的是？",
+     "options": [
+      "30°",
+      "都一样",
+      "90°",
+      "60°"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "钟面上 6 时整，时针与分针成？",
+     "options": [
+      "周角",
+      "锐角",
+      "直角",
+      "平角"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "180° 的角叫做？",
+     "options": [
+      "直角",
+      "平角",
+      "钝角",
+      "周角"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "用一副三角尺可以拼出 75° 吗？",
+     "options": [
+      "可以",
+      "只能拼 60°",
+      "只能拼 90°",
+      "不可以"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    }
+   ]
   },
   {
-    "grade": "五年级", "subject": "数学", "unit": "面积",
-    "questions": [
-      { "title": "长方形面积 = ？", "options": ["长×宽", "长+宽", "长×宽×2", "(长+宽)×2"], "answer": 0, "difficulty": 3 },
-      { "title": "边长 4 的正方形面积是？", "options": ["16", "8", "12", "4"], "answer": 0, "difficulty": 3 }
-    ]
+   "grade": "四年级",
+   "subject": "数学",
+   "edition": "通用",
+   "unit": "小数的意义和性质",
+   "questions": [
+    {
+     "title": "0.5 表示？",
+     "options": [
+      "五",
+      "五个一",
+      "五个百分之一",
+      "五个十分之一"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "0.35 读作？",
+     "options": [
+      "零点零三五",
+      "三五",
+      "三十五",
+      "零点三五"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "小数点右边第一位是？",
+     "options": [
+      "百分位",
+      "个位",
+      "十分位",
+      "十位"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "3.6 里面有 3 个一和几个 0.1？",
+     "options": [
+      "3",
+      "60",
+      "6",
+      "36"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "小数末尾添上 0，小数的大小？",
+     "options": [
+      "无法确定",
+      "变小",
+      "不变",
+      "变大"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "0.7 和 0.70 的关系是？",
+     "options": [
+      "无法比较",
+      "0.7 大",
+      "相等",
+      "0.70 大"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "把 5.6 扩大到原来的 10 倍是？",
+     "options": [
+      "56",
+      "5.60",
+      "0.56",
+      "560"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "把 48 缩小到原来的 1/100 是？",
+     "options": [
+      "480",
+      "4.8",
+      "0.048",
+      "0.48"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "1.25 中的 2 在什么位上？",
+     "options": [
+      "百分位",
+      "十分位",
+      "个位",
+      "千分位"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "比 3.4 大、比 3.5 小的小数有多少个？",
+     "options": [
+      "10 个",
+      "无数个",
+      "1 个",
+      "0 个"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "0.09 + 0.01 = ？",
+     "options": [
+      "0.010",
+      "1",
+      "0.1",
+      "0.10"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "7 元 5 角用小数表示是？",
+     "options": [
+      "75 元",
+      "0.75 元",
+      "7.5 元",
+      "7.05 元"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    }
+   ]
   },
   {
-    "grade": "五年级", "subject": "语文", "unit": "古诗",
-    "questions": [
-      { "title": "“欲穷千里目”的下一句是？", "options": ["更上一层楼", "低头思故乡", "万径人踪灭", "春风花草香"], "answer": 0, "difficulty": 2 },
-      { "title": "《登鹳雀楼》作者是？", "options": ["王之涣", "李白", "杜甫", "王维"], "answer": 0, "difficulty": 2 }
-    ]
+   "grade": "四年级",
+   "subject": "数学",
+   "edition": "通用",
+   "unit": "平行与垂直",
+   "questions": [
+    {
+     "title": "同一平面内不相交的两条直线叫？",
+     "options": [
+      "线段",
+      "平行线",
+      "垂线",
+      "射线"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "两条直线相交成直角，这两条直线？",
+     "options": [
+      "无法判断",
+      "互相垂直",
+      "互相平行",
+      "重合"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "从直线外一点到这条直线所画的线段中，最短的是？",
+     "options": [
+      "都一样",
+      "曲线",
+      "斜线段",
+      "垂直线段"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "长方形相邻的两条边？",
+     "options": [
+      "互相垂直",
+      "重合",
+      "相交成锐角",
+      "互相平行"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "正方形对边的关系是？",
+     "options": [
+      "互相平行",
+      "重合",
+      "互相垂直",
+      "相交"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "过一点可以画几条直线与已知直线平行？",
+     "options": [
+      "2 条",
+      "1 条",
+      "无数条",
+      "0 条"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "两条平行线之间的距离？",
+     "options": [
+      "处处相等",
+      "越远越小",
+      "不一定",
+      "越远越大"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "黑板相邻两条边的关系是？",
+     "options": [
+      "互相平行",
+      "无法判断",
+      "互相垂直",
+      "重合"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "平行四边形对边的关系是？",
+     "options": [
+      "互相垂直",
+      "只有一组平行",
+      "都不相等",
+      "互相平行且相等"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "梯形有几组对边平行？",
+     "options": [
+      "0 组",
+      "1 组",
+      "3 组",
+      "2 组"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "过直线外一点画垂线，可以画几条？",
+     "options": [
+      "无数条",
+      "1 条",
+      "0 条",
+      "2 条"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "下面哪组线段一定平行？",
+     "options": [
+      "任意两条线段",
+      "正方形的对边",
+      "三角形的两条边",
+      "梯形的腰"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    }
+   ]
   },
   {
-    "grade": "五年级", "subject": "语文", "unit": "阅读",
-    "questions": [
-      { "title": "概括段落大意要？", "options": ["抓中心句", "数句子", "抄原文", "猜"], "answer": 0, "difficulty": 2 },
-      { "title": "说明文常用顺序是？", "options": ["时间/空间/逻辑", "随便", "倒序", "只写结论"], "answer": 0, "difficulty": 3 }
-    ]
+   "grade": "四年级",
+   "subject": "数学",
+   "edition": "通用",
+   "unit": "运算定律",
+   "questions": [
+    {
+     "title": "25 × 4 × 8 = ？",
+     "options": [
+      "400",
+      "200",
+      "100",
+      "800"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "a + b = b + a 是？",
+     "options": [
+      "乘法交换律",
+      "加法结合律",
+      "分配律",
+      "加法交换律"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "(a + b) + c = a + (b + c) 是？",
+     "options": [
+      "加法交换律",
+      "加法结合律",
+      "乘法结合律",
+      "分配律"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "a × (b + c) = a×b + a×c 是？",
+     "options": [
+      "乘法交换律",
+      "乘法结合律",
+      "乘法分配律",
+      "加法结合律"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "36 × 99 + 36 = ？",
+     "options": [
+      "3636",
+      "3564",
+      "360",
+      "3600"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "125 × 8 = ？",
+     "options": [
+      "1250",
+      "1000",
+      "100",
+      "800"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "45 × 2 × 5 = ？",
+     "options": [
+      "450",
+      "90",
+      "900",
+      "225"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "12 × 25 用简便算法可以写成？",
+     "options": [
+      "12 + 25",
+      "6 × 25",
+      "3 × (4×25)",
+      "12 × 100"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "a × b = b × a 是？",
+     "options": [
+      "乘法交换律",
+      "乘法结合律",
+      "分配律",
+      "加法交换律"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "47 + 58 + 53 = ？",
+     "options": [
+      "168",
+      "158",
+      "1580",
+      "148"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "99 × 15 = ？",
+     "options": [
+      "1495",
+      "1500",
+      "1385",
+      "1485"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "800 ÷ 25 ÷ 4 = ？",
+     "options": [
+      "8",
+      "32",
+      "80",
+      "200"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    }
+   ]
   },
   {
-    "grade": "五年级", "subject": "英语", "unit": "词汇",
-    "questions": [
-      { "title": "“天气”的英文是？", "options": ["weather", "water", "wind", "week"], "answer": 0, "difficulty": 2 },
-      { "title": "“冬天”的英文是？", "options": ["winter", "summer", "spring", "autumn"], "answer": 0, "difficulty": 2 }
-    ]
+   "grade": "五年级",
+   "subject": "数学",
+   "edition": "通用",
+   "unit": "小数乘法",
+   "questions": [
+    {
+     "title": "9 × 3.0 = ？",
+     "options": [
+      "25.0",
+      "26.0",
+      "22.0",
+      "27.0"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "4 × 2.8 = ？",
+     "options": [
+      "11.2",
+      "8.2",
+      "10.2",
+      "31.2"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "9 × 4.7 = ？",
+     "options": [
+      "52.3",
+      "42.3",
+      "22.299999999999997",
+      "62.3"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "8 × 4.2 = ？",
+     "options": [
+      "34.6",
+      "43.6",
+      "13.600000000000001",
+      "33.6"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "4 × 4.5 = ？",
+     "options": [
+      "20.0",
+      "18.0",
+      "13.0",
+      "21.0"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "9 × 2.9 = ？",
+     "options": [
+      "16.1",
+      "26.1",
+      "23.1",
+      "25.1"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "0.25 × 4 = ？",
+     "options": [
+      "1",
+      "10",
+      "0.01",
+      "0.1"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "1.2 × 0.5 = ？",
+     "options": [
+      "0.6",
+      "60",
+      "0.06",
+      "6"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "小数乘法中，积的小数位数等于？",
+     "options": [
+      "两个因数小数位数之和",
+      "固定两位",
+      "因数中较少的位数",
+      "因数中较多的位数"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "3.5 × 10 = ？",
+     "options": [
+      "35",
+      "3.5",
+      "0.35",
+      "350"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "2.4 × 0.3 = ？",
+     "options": [
+      "7.2",
+      "0.072",
+      "0.72",
+      "0.24"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "一支笔 2.5 元，买 4 支要多少元？",
+     "options": [
+      "12 元",
+      "8 元",
+      "10 元",
+      "6.5 元"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    }
+   ]
   },
   {
-    "grade": "五年级", "subject": "英语", "unit": "语法",
-    "questions": [
-      { "title": "“They ___ playing.” 填？", "options": ["are", "is", "am", "be"], "answer": 0, "difficulty": 2 },
-      { "title": "“I have ___ apple.” 填？", "options": ["an", "a", "the", "/"], "answer": 0, "difficulty": 2 }
-    ]
+   "grade": "五年级",
+   "subject": "数学",
+   "edition": "通用",
+   "unit": "小数除法",
+   "questions": [
+    {
+     "title": "18.0 ÷ 6 = ？",
+     "options": [
+      "6.0",
+      "4.0",
+      "3.0",
+      "23.0"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "21.6 ÷ 6 = ？",
+     "options": [
+      "13.6",
+      "3.6",
+      "6.6",
+      "2.6"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "20.3 ÷ 7 = ？",
+     "options": [
+      "3.9",
+      "2.9",
+      "5.9",
+      "22.9"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "5.4 ÷ 3 = ？",
+     "options": [
+      "1.8",
+      "2.8",
+      "3.8",
+      "0.8"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "10.8 ÷ 6 = ？",
+     "options": [
+      "21.8",
+      "2.8",
+      "1.8",
+      "3.8"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "11.2 ÷ 7 = ？",
+     "options": [
+      "11.6",
+      "1.6",
+      "2.6",
+      "0.6000000000000001"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "7.2 ÷ 0.8 = ？",
+     "options": [
+      "8",
+      "9",
+      "0.9",
+      "90"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "被除数和除数同时扩大 10 倍，商？",
+     "options": [
+      "扩大 10 倍",
+      "不变",
+      "变为 0",
+      "缩小 10 倍"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "4.5 ÷ 100 = ？",
+     "options": [
+      "45",
+      "0.045",
+      "0.45",
+      "0.0045"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "循环小数 0.333… 可以写成？",
+     "options": [
+      "0.33",
+      "0.3 循环",
+      "3.3",
+      "0.333 精确值"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "9.6 ÷ 4 = ？",
+     "options": [
+      "0.24",
+      "2.4",
+      "24",
+      "2.9"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "每千克 6.5 元，买 2 千克要多少元？",
+     "options": [
+      "8.5 元",
+      "12 元",
+      "13 元",
+      "6.5 元"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    }
+   ]
   },
   {
-    "grade": "六年级", "subject": "数学", "unit": "比例",
-    "questions": [
-      { "title": "2:3 = 4:？", "options": ["6", "5", "8", "9"], "answer": 0, "difficulty": 3 },
-      { "title": "圆的周长公式 C = ？", "options": ["πd", "πr", "2π", "d/π"], "answer": 0, "difficulty": 3 }
-    ]
+   "grade": "五年级",
+   "subject": "数学",
+   "edition": "通用",
+   "unit": "分数加减法",
+   "questions": [
+    {
+     "title": "1/2 + 1/3 = ？",
+     "options": [
+      "2/5",
+      "5/6",
+      "1/5",
+      "2/6"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "1/2 - 1/4 = ？",
+     "options": [
+      "1/4",
+      "0",
+      "2/4",
+      "1/2"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "3/4 + 1/4 = ？",
+     "options": [
+      "1",
+      "1/2",
+      "4/8",
+      "3/8"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "异分母分数相加减，要先？",
+     "options": [
+      "通分",
+      "相乘",
+      "约分",
+      "化简"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "5/6 - 1/6 = ？",
+     "options": [
+      "6/6",
+      "5/6",
+      "4/12",
+      "4/6"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "1 - 2/5 = ？",
+     "options": [
+      "3/5",
+      "1/5",
+      "2/5",
+      "5/3"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "2/3 + 1/6 = ？",
+     "options": [
+      "5/6",
+      "1/2",
+      "3/9",
+      "3/6"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "把 1/2 和 1/3 通分，公分母是？",
+     "options": [
+      "6",
+      "3",
+      "5",
+      "2"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "7/8 - 3/8 = ？",
+     "options": [
+      "1/2",
+      "10/8",
+      "3/8",
+      "4/16"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "2/5 + 2/5 = ？",
+     "options": [
+      "1",
+      "4/5",
+      "2/10",
+      "4/10"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "1/3 + 1/6 = ？",
+     "options": [
+      "2/9",
+      "1/9",
+      "2/6",
+      "1/2"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "分数加减法的结果，能约分的要？",
+     "options": [
+      "保留原样",
+      "约成最简分数",
+      "取整数",
+      "化成小数"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    }
+   ]
   },
   {
-    "grade": "六年级", "subject": "数学", "unit": "百分数",
-    "questions": [
-      { "title": "50% 等于几分之几？", "options": ["1/2", "1/5", "1/4", "1/3"], "answer": 0, "difficulty": 2 },
-      { "title": "八折就是百分之？", "options": ["80", "20", "8", "18"], "answer": 0, "difficulty": 2 }
-    ]
+   "grade": "五年级",
+   "subject": "数学",
+   "edition": "通用",
+   "unit": "简易方程",
+   "questions": [
+    {
+     "title": "x + 5 = 12，x = ？",
+     "options": [
+      "8",
+      "5",
+      "7",
+      "17"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "3x = 27，x = ？",
+     "options": [
+      "3",
+      "9",
+      "30",
+      "24"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "x - 8 = 15，x = ？",
+     "options": [
+      "7",
+      "23",
+      "15",
+      "8"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "2x + 3 = 11，x = ？",
+     "options": [
+      "5.5",
+      "8",
+      "7",
+      "4"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "含有未知数的等式叫？",
+     "options": [
+      "方程",
+      "不等式",
+      "代数式",
+      "算式"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "等式两边同时加同一个数，等式？",
+     "options": [
+      "无法确定",
+      "不成立",
+      "仍然成立",
+      "变成不等式"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "x ÷ 4 = 6，x = ？",
+     "options": [
+      "1.5",
+      "24",
+      "2",
+      "10"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "5x - 5 = 20，x = ？",
+     "options": [
+      "5",
+      "25",
+      "4",
+      "3"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "方程 6 + x = 6 的解是？",
+     "options": [
+      "6",
+      "无解",
+      "12",
+      "0"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "小明有 x 元，买 3 元的东西后剩 5 元，方程是？",
+     "options": [
+      "x - 3 = 5",
+      "3x = 5",
+      "x + 3 = 5",
+      "x ÷ 3 = 5"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "检验 x = 4 是不是 2x = 8 的解？",
+     "options": [
+      "是",
+      "无法判断",
+      "有两个解",
+      "不是"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "x 的 3 倍减去 6 等于 9，方程是？",
+     "options": [
+      "3x + 6 = 9",
+      "x - 6 = 9",
+      "3(x - 6) = 9",
+      "3x - 6 = 9"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    }
+   ]
   },
   {
-    "grade": "六年级", "subject": "语文", "unit": "名著",
-    "questions": [
-      { "title": "《西游记》的作者是？", "options": ["吴承恩", "罗贯中", "施耐庵", "曹雪芹"], "answer": 0, "difficulty": 3 },
-      { "title": "“孙悟空”出自哪个故事？", "options": ["西游记", "红楼梦", "水浒传", "三国演义"], "answer": 0, "difficulty": 2 }
-    ]
+   "grade": "五年级",
+   "subject": "数学",
+   "edition": "通用",
+   "unit": "多边形的面积",
+   "questions": [
+    {
+     "title": "平行四边形面积公式是？",
+     "options": [
+      "底×高÷2",
+      "边长×4",
+      "(上底+下底)×高÷2",
+      "底×高"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "三角形面积公式是？",
+     "options": [
+      "(上底+下底)×高÷2",
+      "底×高",
+      "底×高÷2",
+      "边长×边长"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "梯形面积公式是？",
+     "options": [
+      "(上底+下底)×高÷2",
+      "底×高",
+      "底×高÷2",
+      "上底×下底"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "底 8 厘米、高 5 厘米的三角形面积是？",
+     "options": [
+      "80 平方厘米",
+      "40 平方厘米",
+      "13 平方厘米",
+      "20 平方厘米"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "底 6 米、高 4 米的平行四边形面积是？",
+     "options": [
+      "10 平方米",
+      "12 平方米",
+      "24 平方米",
+      "20 平方米"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "上底 3、下底 5、高 4 的梯形面积是？",
+     "options": [
+      "16",
+      "32",
+      "20",
+      "12"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "两个完全一样的三角形可以拼成？",
+     "options": [
+      "圆",
+      "平行四边形",
+      "正方形",
+      "梯形"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "等底等高的三角形和平行四边形，面积关系是？",
+     "options": [
+      "无法比较",
+      "相等",
+      "三角形是两倍",
+      "三角形是平行四边形的一半"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "面积 36 平方厘米、底 9 厘米的三角形，高是？",
+     "options": [
+      "4 厘米",
+      "16 厘米",
+      "8 厘米",
+      "2 厘米"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "边长 6 厘米的正方形面积是？",
+     "options": [
+      "12 平方厘米",
+      "36 平方厘米",
+      "24 平方厘米",
+      "6 平方厘米"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "三角形有三条边，求面积时必须知道？",
+     "options": [
+      "三条边",
+      "周长",
+      "两个角",
+      "底和高"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "平行四边形有几条高？",
+     "options": [
+      "4 条",
+      "2 条",
+      "1 条",
+      "无数条"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    }
+   ]
   },
   {
-    "grade": "六年级", "subject": "语文", "unit": "文言",
-    "questions": [
-      { "title": "“学而时习之”出自？", "options": ["论语", "孟子", "庄子", "诗经"], "answer": 0, "difficulty": 3 },
-      { "title": "“之”常作什么词？", "options": ["代词/助词", "动词", "形容词", "副词"], "answer": 0, "difficulty": 3 }
-    ]
+   "grade": "五年级",
+   "subject": "数学",
+   "edition": "通用",
+   "unit": "因数与倍数",
+   "questions": [
+    {
+     "title": "12 的因数有几个？",
+     "options": [
+      "4",
+      "6",
+      "5",
+      "12"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "下面哪个是质数？",
+     "options": [
+      "21",
+      "27",
+      "17",
+      "33"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "下面哪个是合数？",
+     "options": [
+      "7",
+      "13",
+      "15",
+      "11"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "最小的质数是？",
+     "options": [
+      "1",
+      "0",
+      "3",
+      "2"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "既是质数又是偶数的数是？",
+     "options": [
+      "1",
+      "6",
+      "2",
+      "4"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "18 和 24 的最大公因数是？",
+     "options": [
+      "12",
+      "6",
+      "3",
+      "2"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "4 和 6 的最小公倍数是？",
+     "options": [
+      "12",
+      "2",
+      "6",
+      "24"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "一个数最小的因数是？",
+     "options": [
+      "0",
+      "1",
+      "2",
+      "它本身"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "个位是 0 或 5 的数一定是？",
+     "options": [
+      "3 的倍数",
+      "2 的倍数",
+      "5 的倍数",
+      "质数"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "2、3、5 都是？",
+     "options": [
+      "合数",
+      "偶数",
+      "质数",
+      "奇数"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "36 的因数中最大的是？",
+     "options": [
+      "18",
+      "12",
+      "6",
+      "36"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "9 和 15 的最大公因数是？",
+     "options": [
+      "3",
+      "1",
+      "45",
+      "9"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    }
+   ]
   },
   {
-    "grade": "六年级", "subject": "英语", "unit": "词汇",
-    "questions": [
-      { "title": "“博物馆”的英文是？", "options": ["museum", "library", "cinema", "station"], "answer": 0, "difficulty": 3 },
-      { "title": "“健康的”的英文是？", "options": ["healthy", "happy", "hungry", "heavy"], "answer": 0, "difficulty": 3 }
-    ]
+   "grade": "六年级",
+   "subject": "数学",
+   "edition": "通用",
+   "unit": "分数乘除法",
+   "questions": [
+    {
+     "title": "2/3 × 3/4 = ？",
+     "options": [
+      "1/2",
+      "5/12",
+      "2/4",
+      "6/7"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "1/2 ÷ 1/4 = ？",
+     "options": [
+      "1/8",
+      "1/2",
+      "4",
+      "2"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "分数除法可以转化为？",
+     "options": [
+      "乘除数的倒数",
+      "除以分子",
+      "直接相除",
+      "乘被除数"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "3/5 × 10 = ？",
+     "options": [
+      "3/50",
+      "6",
+      "30",
+      "50/3"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "4/9 ÷ 2 = ？",
+     "options": [
+      "4/18",
+      "2/9",
+      "1/9",
+      "8/9"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "一根绳子长 12 米，用去 1/3，用去多少米？",
+     "options": [
+      "36 米",
+      "4 米",
+      "3 米",
+      "8 米"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "5/6 × 6/5 = ？",
+     "options": [
+      "1",
+      "25/36",
+      "30/30",
+      "0"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "求一个数的几分之几是多少，用？",
+     "options": [
+      "减法",
+      "乘法",
+      "除法",
+      "加法"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "已知一个数的 2/3 是 8，这个数是？",
+     "options": [
+      "12",
+      "24",
+      "5",
+      "16"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "2/5 ÷ 4 = ？",
+     "options": [
+      "2/20",
+      "8/5",
+      "4/10",
+      "1/10"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "7/8 × 0 = ？",
+     "options": [
+      "1",
+      "0",
+      "8/7",
+      "7/8"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "3/4 的倒数是？",
+     "options": [
+      "4/3",
+      "1",
+      "3/4",
+      "0"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    }
+   ]
   },
   {
-    "grade": "六年级", "subject": "英语", "unit": "语法",
-    "questions": [
-      { "title": "“She has ___ to school.” 填？", "options": ["gone", "went", "go", "going"], "answer": 0, "difficulty": 3 },
-      { "title": "一般过去时动词常加？", "options": ["-ed", "-s", "-ing", "-ly"], "answer": 0, "difficulty": 3 }
-    ]
+   "grade": "六年级",
+   "subject": "数学",
+   "edition": "通用",
+   "unit": "比和比例",
+   "questions": [
+    {
+     "title": "比的前项相当于除法中的？",
+     "options": [
+      "被除数",
+      "除数",
+      "余数",
+      "商"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "比的后项不能是？",
+     "options": [
+      "1",
+      "2",
+      "100",
+      "0"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "化简 12:18 的结果是？",
+     "options": [
+      "12:18",
+      "2:3",
+      "3:2",
+      "6:9"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "甲:乙 = 3:4，甲是乙的？",
+     "options": [
+      "3/7",
+      "3/4",
+      "4/3",
+      "4/7"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "比例 2:3 = 4:6 中，内项是？",
+     "options": [
+      "2 和 3",
+      "4 和 6",
+      "2 和 6",
+      "3 和 4"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "比例的基本性质是？",
+     "options": [
+      "两个外项之积等于两个内项之积",
+      "外项相等",
+      "内项相等",
+      "内项相加等于外项相加"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "图上距离:实际距离 = ？",
+     "options": [
+      "比例尺",
+      "比值",
+      "周长",
+      "面积"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "比例尺 1:1000 表示图上 1 厘米代表实际？",
+     "options": [
+      "1 米",
+      "10 米",
+      "1000 米",
+      "100 米"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "20:25 化成最简整数比是？",
+     "options": [
+      "2:2.5",
+      "4:5",
+      "5:4",
+      "20:25"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "已知 3:x = 6:8，x = ？",
+     "options": [
+      "2",
+      "4",
+      "6",
+      "16"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "把 5:8 的后项扩大到原来的 2 倍，要使比值不变，前项应？",
+     "options": [
+      "缩小一半",
+      "也扩大到 2 倍",
+      "加 2",
+      "不变"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "男生 20 人、女生 25 人，男女生人数比是？",
+     "options": [
+      "45:20",
+      "20:45",
+      "4:5",
+      "5:4"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "六年级",
+   "subject": "数学",
+   "edition": "通用",
+   "unit": "圆",
+   "questions": [
+    {
+     "title": "圆的直径是半径的？",
+     "options": [
+      "2 倍",
+      "π 倍",
+      "4 倍",
+      "一半"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "同一个圆内，所有的半径都？",
+     "options": [
+      "相等",
+      "是直径",
+      "不相等",
+      "成倍数"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "圆的周长公式是？",
+     "options": [
+      "C = πr²",
+      "C = 2πr²",
+      "C = πd",
+      "C = πr"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "圆的面积公式是？",
+     "options": [
+      "S = πr²",
+      "S = 2πr²",
+      "S = 2πr",
+      "S = πd"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "半径 3 厘米的圆，直径是？",
+     "options": [
+      "6 厘米",
+      "9 厘米",
+      "3 厘米",
+      "1.5 厘米"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "半径 2 厘米的圆，周长（π取3.14）是？",
+     "options": [
+      "12.56 平方厘米",
+      "6.28 厘米",
+      "4 厘米",
+      "12.56 厘米"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "半径 1 厘米的圆，面积（π取3.14）是？",
+     "options": [
+      "6.28 平方厘米",
+      "1 平方厘米",
+      "3.14 厘米",
+      "3.14 平方厘米"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "圆的对称轴有几条？",
+     "options": [
+      "2 条",
+      "4 条",
+      "无数条",
+      "1 条"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "圆周率 π 的近似值是？",
+     "options": [
+      "22/7 精确值",
+      "3.41",
+      "3.14",
+      "1.34"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "直径 10 厘米的圆，半径是？",
+     "options": [
+      "5 厘米",
+      "3.14 厘米",
+      "10 厘米",
+      "20 厘米"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "圆环的面积等于？",
+     "options": [
+      "两个圆的周长差",
+      "内外半径相加",
+      "外圆面积减内圆面积",
+      "半径之差乘 π"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "周长相等的正方形和圆，面积更大的是？",
+     "options": [
+      "无法比较",
+      "正方形",
+      "圆",
+      "一样大"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "六年级",
+   "subject": "数学",
+   "edition": "通用",
+   "unit": "百分数",
+   "questions": [
+    {
+     "title": "50% 化成小数是？",
+     "options": [
+      "0.5",
+      "50",
+      "5",
+      "0.05"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "0.25 化成百分数是？",
+     "options": [
+      "0.25%",
+      "25%",
+      "250%",
+      "2.5%"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "一件商品打八折，就是按原价的？",
+     "options": [
+      "8% 出售",
+      "88% 出售",
+      "20% 出售",
+      "80% 出售"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "100 元打七折是？",
+     "options": [
+      "7 元",
+      "70 元",
+      "93 元",
+      "30 元"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "某班 40 人，男生 24 人，男生占全班的？",
+     "options": [
+      "50%",
+      "24%",
+      "60%",
+      "40%"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "比 50 多 20% 的数是？",
+     "options": [
+      "60",
+      "70",
+      "52",
+      "55"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "80 比 100 少？",
+     "options": [
+      "20",
+      "20%",
+      "25%",
+      "80%"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "利率 = 利息 ÷ ？",
+     "options": [
+      "本金",
+      "税率",
+      "时间",
+      "本息和"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "1/4 化成百分数是？",
+     "options": [
+      "14%",
+      "40%",
+      "4%",
+      "25%"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "商品先涨 10% 再降 10%，现价与原价比？",
+     "options": [
+      "变低了",
+      "无法确定",
+      "不变",
+      "变高了"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "60 的 25% 是？",
+     "options": [
+      "150",
+      "30",
+      "24",
+      "15"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "合格率 = 合格数 ÷ 总数 × ？",
+     "options": [
+      "10%",
+      "1",
+      "100",
+      "100%"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "六年级",
+   "subject": "数学",
+   "edition": "通用",
+   "unit": "圆柱与圆锥",
+   "questions": [
+    {
+     "title": "圆柱有几个底面？",
+     "options": [
+      "无数个",
+      "3 个",
+      "1 个",
+      "2 个"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "圆柱的侧面展开后是？",
+     "options": [
+      "三角形",
+      "梯形",
+      "圆",
+      "长方形"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "圆锥有几个顶点？",
+     "options": [
+      "2 个",
+      "1 个",
+      "3 个",
+      "0 个"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "圆柱的体积公式是？",
+     "options": [
+      "底面积×高÷2",
+      "底面积×高",
+      "底面积×高÷3",
+      "底面周长×高"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "圆锥的体积公式是？",
+     "options": [
+      "底面积×高÷3",
+      "底面积×高×3",
+      "底面积×高",
+      "底面积×高÷2"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "等底等高的圆柱和圆锥，体积关系是？",
+     "options": [
+      "相等",
+      "圆锥是圆柱的 3 倍",
+      "无法比较",
+      "圆柱是圆锥的 3 倍"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "底面积 10 平方厘米、高 6 厘米的圆柱，体积是？",
+     "options": [
+      "30 立方厘米",
+      "36 立方厘米",
+      "20 立方厘米",
+      "60 立方厘米"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "底面积 9 平方厘米、高 4 厘米的圆锥，体积是？",
+     "options": [
+      "18 立方厘米",
+      "36 立方厘米",
+      "12 立方厘米",
+      "9 立方厘米"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "圆柱的侧面展开图的长等于？",
+     "options": [
+      "高",
+      "半径",
+      "底面直径",
+      "底面周长"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "圆锥有几个底面？",
+     "options": [
+      "1 个",
+      "3 个",
+      "0 个",
+      "2 个"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "圆柱的高有？",
+     "options": [
+      "无数条",
+      "4 条",
+      "2 条",
+      "1 条"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "圆柱的表面积包括？",
+     "options": [
+      "只有底面积",
+      "只有侧面积",
+      "侧面积和一个底面积",
+      "侧面积和两个底面积"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "六年级",
+   "subject": "数学",
+   "edition": "通用",
+   "unit": "负数",
+   "questions": [
+    {
+     "title": "比 0 小的数叫？",
+     "options": [
+      "整数",
+      "自然数",
+      "负数",
+      "正数"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "-5 读作？",
+     "options": [
+      "五减",
+      "正五",
+      "五",
+      "负五"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "0 是正数还是负数？",
+     "options": [
+      "都是",
+      "正数",
+      "负数",
+      "既不是正数也不是负数"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "-3 和 -7 哪个大？",
+     "options": [
+      "一样大",
+      "-3",
+      "无法比较",
+      "-7"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "温度 -8℃ 比 -3℃？",
+     "options": [
+      "低",
+      "无法比较",
+      "高",
+      "一样"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "-2 的绝对值是？",
+     "options": [
+      "-2",
+      "0",
+      "1",
+      "2"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "数轴上，越往右的数？",
+     "options": [
+      "无法判断",
+      "不变",
+      "越小",
+      "越大"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "+5 和 -5 的关系是？",
+     "options": [
+      "相等",
+      "前者小",
+      "无法比较",
+      "互为相反数"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "存入 500 元记作 +500，取出 300 元记作？",
+     "options": [
+      "0",
+      "-300",
+      "300",
+      "+300"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "-4 + 6 = ？",
+     "options": [
+      "10",
+      "-2",
+      "-10",
+      "2"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "-3 - 2 = ？",
+     "options": [
+      "-5",
+      "5",
+      "-1",
+      "1"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "零上 5℃ 与零下 5℃ 相差多少？",
+     "options": [
+      "10℃",
+      "无法计算",
+      "5℃",
+      "0℃"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "一年级",
+   "subject": "语文",
+   "edition": "通用",
+   "unit": "拼音",
+   "questions": [
+    {
+     "title": "下面哪个是声母？",
+     "options": [
+      "o",
+      "e",
+      "b",
+      "a"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "“mā” 的声调是第几声？",
+     "options": [
+      "第四声",
+      "第三声",
+      "第一声",
+      "第二声"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "下面哪个是复韵母？",
+     "options": [
+      "b",
+      "ai",
+      "e",
+      "zh"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "“爸”的拼音是？",
+     "options": [
+      "bǎi",
+      "pà",
+      "bā",
+      "bà"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "拼音 sh 是？",
+     "options": [
+      "韵母",
+      "平舌音",
+      "翘舌音",
+      "声调"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "“鱼”的拼音是？",
+     "options": [
+      "yū",
+      "yú",
+      "yǔ",
+      "yù"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "一年级",
+   "subject": "语文",
+   "edition": "通用",
+   "unit": "识字与笔画",
+   "questions": [
+    {
+     "title": "“火”字一共有几画？",
+     "options": [
+      "3 画",
+      "5 画",
+      "4 画",
+      "6 画"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "“水”字一共有几画？",
+     "options": [
+      "6 画",
+      "4 画",
+      "5 画",
+      "3 画"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "“山”字一共有几画？",
+     "options": [
+      "5 画",
+      "2 画",
+      "4 画",
+      "3 画"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "下面哪个字是上下结构？",
+     "options": [
+      "们",
+      "树",
+      "湖",
+      "早"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "“日”字的第一笔是？",
+     "options": [
+      "横折",
+      "撇",
+      "竖",
+      "横"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "下面哪个字是“木”加一笔变成的？",
+     "options": [
+      "森",
+      "林",
+      "本",
+      "树"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "一年级",
+   "subject": "语文",
+   "edition": "通用",
+   "unit": "词语搭配",
+   "questions": [
+    {
+     "title": "一（　）马",
+     "options": [
+      "朵",
+      "棵",
+      "条",
+      "匹"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "一（　）鱼",
+     "options": [
+      "匹",
+      "把",
+      "座",
+      "条"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "一（　）树",
+     "options": [
+      "条",
+      "朵",
+      "匹",
+      "棵"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "弯弯的（　）",
+     "options": [
+      "石头",
+      "月儿",
+      "大树",
+      "太阳"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "雪白的（　）",
+     "options": [
+      "棉花",
+      "石头",
+      "苹果",
+      "树叶"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "（　）的太阳",
+     "options": [
+      "红红",
+      "白白",
+      "黑黑",
+      "绿绿"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "一年级",
+   "subject": "语文",
+   "edition": "通用",
+   "unit": "反义词",
+   "questions": [
+    {
+     "title": "“大”的反义词是？",
+     "options": [
+      "长",
+      "多",
+      "小",
+      "高"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "“上”的反义词是？",
+     "options": [
+      "前",
+      "里",
+      "左",
+      "下"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "“来”的反义词是？",
+     "options": [
+      "回",
+      "去",
+      "停",
+      "走"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "“多”的反义词是？",
+     "options": [
+      "长",
+      "少",
+      "高",
+      "大"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "“冷”的反义词是？",
+     "options": [
+      "暖",
+      "冰",
+      "凉",
+      "热"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "“黑”的反义词是？",
+     "options": [
+      "暗",
+      "白",
+      "红",
+      "灰"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "一年级",
+   "subject": "语文",
+   "edition": "通用",
+   "unit": "古诗启蒙",
+   "questions": [
+    {
+     "title": "《咏鹅》中“白毛浮绿水”的下一句是？",
+     "options": [
+      "鹅鹅鹅",
+      "绿水青山",
+      "红掌拨清波",
+      "曲项向天歌"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "《静夜思》中“举头望明月”的下一句是？",
+     "options": [
+      "低头思故乡",
+      "床前明月光",
+      "疑是地上霜",
+      "月是故乡明"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "《春晓》中“春眠不觉晓”的下一句是？",
+     "options": [
+      "处处闻啼鸟",
+      "夜来风雨声",
+      "花落知多少",
+      "春风吹又生"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "《悯农》中“锄禾日当午”的下一句是？",
+     "options": [
+      "春种一粒粟",
+      "粒粒皆辛苦",
+      "谁知盘中餐",
+      "汗滴禾下土"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "《咏鹅》的作者是？",
+     "options": [
+      "骆宾王",
+      "王维",
+      "杜甫",
+      "李白"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "《静夜思》的作者是？",
+     "options": [
+      "白居易",
+      "杜甫",
+      "李白",
+      "孟浩然"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "一年级",
+   "subject": "语文",
+   "edition": "苏教版",
+   "unit": "古诗（苏教版）",
+   "questions": [
+    {
+     "title": "《江南》中“江南可采莲”的下一句是？",
+     "options": [
+      "采莲南塘秋",
+      "莲叶何田田",
+      "鱼戏莲叶间",
+      "江南好风景"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "《江南》描写的是哪个季节？",
+     "options": [
+      "冬季",
+      "春季",
+      "秋季",
+      "夏季"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "二年级",
+   "subject": "语文",
+   "edition": "通用",
+   "unit": "多音字",
+   "questions": [
+    {
+     "title": "“长大”的“长”读作？",
+     "options": [
+      "cháng",
+      "cháng zhǎng",
+      "zhǎng",
+      "zhàng"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "“银行”的“行”读作？",
+     "options": [
+      "xìng",
+      "hàng",
+      "xíng",
+      "háng"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "“种子”的“种”读作？",
+     "options": [
+      "zhōng",
+      "zhǒng",
+      "chóng",
+      "zhòng"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "“好奇”的“好”读作？",
+     "options": [
+      "hǎo",
+      "hào",
+      "hāo",
+      "háo"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "“音乐”的“乐”读作？",
+     "options": [
+      "yào",
+      "yuè",
+      "luò",
+      "lè"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "“发现”的“发”读作？",
+     "options": [
+      "fā",
+      "fà",
+      "fá",
+      "fǎ"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "二年级",
+   "subject": "语文",
+   "edition": "通用",
+   "unit": "量词",
+   "questions": [
+    {
+     "title": "一（　）桥",
+     "options": [
+      "匹",
+      "座",
+      "把",
+      "条"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "一（　）伞",
+     "options": [
+      "匹",
+      "朵",
+      "把",
+      "座"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "一（　）花",
+     "options": [
+      "棵",
+      "把",
+      "朵",
+      "条"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "一（　）小鸟",
+     "options": [
+      "条",
+      "匹",
+      "只",
+      "座"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "一（　）叶子",
+     "options": [
+      "片",
+      "朵",
+      "把",
+      "棵"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "一（　）大象",
+     "options": [
+      "匹",
+      "只",
+      "条",
+      "头"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "二年级",
+   "subject": "语文",
+   "edition": "通用",
+   "unit": "近义词",
+   "questions": [
+    {
+     "title": "“美丽”的近义词是？",
+     "options": [
+      "难看",
+      "丑陋",
+      "漂亮",
+      "平淡"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "“高兴”的近义词是？",
+     "options": [
+      "难过",
+      "紧张",
+      "生气",
+      "快乐"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "“仔细”的近义词是？",
+     "options": [
+      "随便",
+      "粗心",
+      "认真",
+      "马虎"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "“立刻”的近义词是？",
+     "options": [
+      "慢慢",
+      "逐渐",
+      "马上",
+      "缓缓"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "“著名”的近义词是？",
+     "options": [
+      "平常",
+      "普通",
+      "无名",
+      "有名"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "“温暖”的近义词是？",
+     "options": [
+      "凉爽",
+      "冰凉",
+      "暖和",
+      "寒冷"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "二年级",
+   "subject": "语文",
+   "edition": "通用",
+   "unit": "反义词",
+   "questions": [
+    {
+     "title": "“粗”的反义词是？",
+     "options": [
+      "宽",
+      "长",
+      "厚",
+      "细"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "“深”的反义词是？",
+     "options": [
+      "浅",
+      "高",
+      "远",
+      "重"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "“容易”的反义词是？",
+     "options": [
+      "轻松",
+      "简单",
+      "方便",
+      "困难"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "“危险”的反义词是？",
+     "options": [
+      "小心",
+      "安全",
+      "紧张",
+      "害怕"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "“诚实”的反义词是？",
+     "options": [
+      "虚伪",
+      "真诚",
+      "老实",
+      "善良"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "“快乐”的反义词是？",
+     "options": [
+      "欢喜",
+      "悲伤",
+      "高兴",
+      "愉快"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "二年级",
+   "subject": "语文",
+   "edition": "通用",
+   "unit": "古诗",
+   "questions": [
+    {
+     "title": "《村居》中“草长莺飞二月天”的下一句是？",
+     "options": [
+      "忙趁东风放纸鸢",
+      "拂堤杨柳醉春烟",
+      "儿童散学归来早",
+      "春风吹又生"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "《咏柳》中“碧玉妆成一树高”的下一句是？",
+     "options": [
+      "不知细叶谁裁出",
+      "绿树村边合",
+      "万条垂下绿丝绦",
+      "二月春风似剪刀"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "“接天莲叶无穷碧”的下一句是？",
+     "options": [
+      "早有蜻蜓立上头",
+      "映日荷花别样红",
+      "小荷才露尖尖角",
+      "荷叶罗裙一色裁"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "《村居》的作者是？",
+     "options": [
+      "杨万里",
+      "李白",
+      "贺知章",
+      "高鼎"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "《咏柳》的作者是？",
+     "options": [
+      "贺知章",
+      "苏轼",
+      "高鼎",
+      "杜甫"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "“桃花潭水深千尺”的下一句是？",
+     "options": [
+      "疑是银河落九天",
+      "不及汪伦送我情",
+      "孤帆远影碧空尽",
+      "唯见长江天际流"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "三年级",
+   "subject": "语文",
+   "edition": "通用",
+   "unit": "成语",
+   "questions": [
+    {
+     "title": "下面哪个成语是描写春天的？",
+     "options": [
+      "白雪皑皑",
+      "秋高气爽",
+      "烈日炎炎",
+      "春暖花开"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "与“坚持不懈”意思相近的成语是？",
+     "options": [
+      "持之以恒",
+      "三心二意",
+      "见异思迁",
+      "半途而废"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "“亡羊补牢”告诉我们？",
+     "options": [
+      "要团结互助",
+      "出了问题及时补救还不晚",
+      "不要贪心",
+      "做事要有耐心"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "“守株待兔”比喻？",
+     "options": [
+      "死守经验、不劳而获",
+      "勤劳肯干",
+      "虚心求教",
+      "随机应变"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "“画蛇添足”比喻？",
+     "options": [
+      "锦上添花",
+      "雪中送炭",
+      "画龙点睛",
+      "多此一举"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "“井底之蛙”比喻？",
+     "options": [
+      "心地善良的人",
+      "勤奋好学的人",
+      "目光远大的人",
+      "见识短浅的人"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "三年级",
+   "subject": "语文",
+   "edition": "通用",
+   "unit": "修改病句",
+   "questions": [
+    {
+     "title": "下面哪句没有语病？",
+     "options": [
+      "他穿着一件红上衣和一顶蓝帽子。",
+      "他穿戴着红上衣和蓝帽子。",
+      "他穿着一顶蓝帽子。",
+      "他穿着一件红上衣，戴着一顶蓝帽子。"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "“我们要养成讲卫生。”应该改为？",
+     "options": [
+      "我们要讲卫生养成。",
+      "我们要养成讲卫生的人。",
+      "我们养成要讲卫生。",
+      "我们要养成讲卫生的好习惯。"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "“我的家乡是江苏人。”应该改为？",
+     "options": [
+      "我的家乡是江苏。",
+      "我的家乡在江苏。",
+      "我是江苏家乡。",
+      "我的家乡很江苏。"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "下面哪句是正确的？",
+     "options": [
+      "昨天下午下了一场大风。",
+      "昨天下午刮了一场大雨。",
+      "昨天下午下了一场大雨。",
+      "昨天下午发生了一场大雨。"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "“他的写作水平明显改进了。”应把“改进”改为？",
+     "options": [
+      "改正",
+      "改善",
+      "改变",
+      "提高"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "“我们要防止不发生安全事故。”应删去？",
+     "options": [
+      "防止",
+      "要",
+      "不",
+      "发生"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "三年级",
+   "subject": "语文",
+   "edition": "通用",
+   "unit": "的地得",
+   "questions": [
+    {
+     "title": "高兴（　）说",
+     "options": [
+      "着",
+      "地",
+      "得",
+      "的"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "慢慢（　）走",
+     "options": [
+      "的",
+      "地",
+      "着",
+      "得"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "鲜艳（　）红旗",
+     "options": [
+      "着",
+      "地",
+      "的",
+      "得"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "跑（　）飞快",
+     "options": [
+      "的",
+      "着",
+      "地",
+      "得"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "认真（　）听讲",
+     "options": [
+      "着",
+      "的",
+      "地",
+      "得"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "红（　）发亮",
+     "options": [
+      "得",
+      "的",
+      "地",
+      "着"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "三年级",
+   "subject": "语文",
+   "edition": "通用",
+   "unit": "古诗",
+   "questions": [
+    {
+     "title": "《山行》中“远上寒山石径斜”的下一句是？",
+     "options": [
+      "停车坐爱枫林晚",
+      "霜叶红于二月花",
+      "白云生处有人家",
+      "寒山寺外钟声远"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "《山行》中“停车坐爱枫林晚”的下一句是？",
+     "options": [
+      "远上寒山石径斜",
+      "霜叶红于二月花",
+      "枫桥夜泊",
+      "白云生处有人家"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "“荷尽已无擎雨盖”的下一句是？",
+     "options": [
+      "一年好景君须记",
+      "接天莲叶无穷碧",
+      "菊残犹有傲霜枝",
+      "最是橙黄橘绿时"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "“萧萧梧叶送寒声”的下一句是？",
+     "options": [
+      "知有儿童挑促织",
+      "独在异乡为异客",
+      "江上秋风动客情",
+      "夜深篱落一灯明"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "《山行》的作者是？",
+     "options": [
+      "李白",
+      "苏轼",
+      "王维",
+      "杜牧"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "《赠刘景文》的作者是？",
+     "options": [
+      "苏轼",
+      "王安石",
+      "杜牧",
+      "陆游"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "三年级",
+   "subject": "语文",
+   "edition": "通用",
+   "unit": "标点符号",
+   "questions": [
+    {
+     "title": "表示疑问语气用什么标点？",
+     "options": [
+      "叹号",
+      "逗号",
+      "句号",
+      "问号"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "表示句子中间的停顿用什么？",
+     "options": [
+      "句号",
+      "分号",
+      "问号",
+      "逗号"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "表示一句话说完用什么？",
+     "options": [
+      "逗号",
+      "句号",
+      "顿号",
+      "冒号"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "表示强烈感情用什么？",
+     "options": [
+      "逗号",
+      "问号",
+      "叹号",
+      "句号"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "引号的主要作用是？",
+     "options": [
+      "表示疑问",
+      "引用别人的话",
+      "表示停顿",
+      "表示列举"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "冒号常用于？",
+     "options": [
+      "表示疑问",
+      "表示并列",
+      "提示下文",
+      "表示省略"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "四年级",
+   "subject": "语文",
+   "edition": "通用",
+   "unit": "修辞手法",
+   "questions": [
+    {
+     "title": "“太阳像个大火球。”用了什么修辞？",
+     "options": [
+      "比喻",
+      "拟人",
+      "排比",
+      "夸张"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "“小鸟在枝头唱歌。”用了什么修辞？",
+     "options": [
+      "反问",
+      "比喻",
+      "拟人",
+      "夸张"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "“飞流直下三千尺。”用了什么修辞？",
+     "options": [
+      "夸张",
+      "比喻",
+      "拟人",
+      "排比"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "“桂林的山真奇啊，真秀啊，真险啊。”用了什么修辞？",
+     "options": [
+      "排比",
+      "拟人",
+      "比喻",
+      "设问"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "“难道这不是你的错吗？”用了什么修辞？",
+     "options": [
+      "反问",
+      "夸张",
+      "比喻",
+      "设问"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "“红的像火，粉的像霞，白的像雪。”主要用了？",
+     "options": [
+      "对偶和借代",
+      "比喻和排比",
+      "拟人和夸张",
+      "反问和设问"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "四年级",
+   "subject": "语文",
+   "edition": "通用",
+   "unit": "古诗",
+   "questions": [
+    {
+     "title": "《题西林壁》中“横看成岭侧成峰”的下一句是？",
+     "options": [
+      "远近高低各不同",
+      "不识庐山真面目",
+      "飞流直下三千尺",
+      "只缘身在此山中"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "《题西林壁》中“不识庐山真面目”的下一句是？",
+     "options": [
+      "疑是银河落九天",
+      "横看成岭侧成峰",
+      "只缘身在此山中",
+      "远近高低各不同"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "“梅须逊雪三分白”的下一句是？",
+     "options": [
+      "日暮苍山远",
+      "雪却输梅一段香",
+      "骚人阁笔费评章",
+      "凌寒独自开"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "“秦时明月汉时关”的下一句是？",
+     "options": [
+      "但使龙城飞将在",
+      "不教胡马度阴山",
+      "万里长征人未还",
+      "大漠孤烟直"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "《题西林壁》的作者是？",
+     "options": [
+      "杜牧",
+      "王昌龄",
+      "李白",
+      "苏轼"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "《出塞》的作者是？",
+     "options": [
+      "王之涣",
+      "杜甫",
+      "苏轼",
+      "王昌龄"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "四年级",
+   "subject": "语文",
+   "edition": "通用",
+   "unit": "成语典故",
+   "questions": [
+    {
+     "title": "“胸有成竹”最初形容谁画竹？",
+     "options": [
+      "吴道子",
+      "文与可",
+      "王羲之",
+      "齐白石"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "“闻鸡起舞”形容一个人？",
+     "options": [
+      "勤奋刻苦",
+      "贪图安逸",
+      "骄傲自大",
+      "胆小怕事"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "“程门立雪”形容？",
+     "options": [
+      "尊敬师长、求学诚恳",
+      "站立很久",
+      "天气寒冷",
+      "等待朋友"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "“凿壁偷光”形容？",
+     "options": [
+      "邻居友善",
+      "读书刻苦",
+      "偷盗行为",
+      "房屋破旧"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "“三顾茅庐”与谁有关？",
+     "options": [
+      "孙权",
+      "刘备",
+      "诸葛亮自己",
+      "曹操"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "“精卫填海”比喻？",
+     "options": [
+      "自不量力",
+      "勤劳节俭",
+      "徒劳无功",
+      "意志坚定、不畏艰难"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "四年级",
+   "subject": "语文",
+   "edition": "通用",
+   "unit": "关联词",
+   "questions": [
+    {
+     "title": "（　）下雨了，（　）我们没去公园。",
+     "options": [
+      "不但……而且……",
+      "因为……所以……",
+      "只要……就……",
+      "虽然……但是……"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "（　）很累，（　）他还是坚持跑完了。",
+     "options": [
+      "不但……而且……",
+      "如果……就……",
+      "因为……所以……",
+      "虽然……但是……"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "（　）努力，（　）会有进步。",
+     "options": [
+      "不但……而且……",
+      "只要……就……",
+      "因为……所以……",
+      "虽然……但是……"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "（　）明天下雨，我们（　）不去。",
+     "options": [
+      "不但……而且……",
+      "只有……才……",
+      "如果……就……",
+      "虽然……但是……"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "这件衣服（　）好看，（　）便宜。",
+     "options": [
+      "虽然……但是……",
+      "不但……而且……",
+      "如果……就……",
+      "因为……所以……"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "（　）多读多写，作文（　）会进步。",
+     "options": [
+      "不但……而且……",
+      "只有……才……",
+      "只要……就……",
+      "虽然……但是……"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "五年级",
+   "subject": "语文",
+   "edition": "通用",
+   "unit": "古诗",
+   "questions": [
+    {
+     "title": "《示儿》中“死去元知万事空”的下一句是？",
+     "options": [
+      "但悲不见九州同",
+      "南望王师又一年",
+      "家祭无忘告乃翁",
+      "王师北定中原日"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "《示儿》中“王师北定中原日”的下一句是？",
+     "options": [
+      "死去元知万事空",
+      "铁马冰河入梦来",
+      "家祭无忘告乃翁",
+      "但悲不见九州同"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "“山外青山楼外楼”的下一句是？",
+     "options": [
+      "水光潋滟晴方好",
+      "暖风熏得游人醉",
+      "西湖歌舞几时休",
+      "直把杭州作汴州"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "“九州生气恃风雷”的下一句是？",
+     "options": [
+      "不拘一格降人才",
+      "落红不是无情物",
+      "万马齐喑究可哀",
+      "我劝天公重抖擞"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "《示儿》的作者是？",
+     "options": [
+      "陆游",
+      "辛弃疾",
+      "龚自珍",
+      "林升"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "《题临安邸》的作者是？",
+     "options": [
+      "苏轼",
+      "陆游",
+      "龚自珍",
+      "林升"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "五年级",
+   "subject": "语文",
+   "edition": "通用",
+   "unit": "歇后语",
+   "questions": [
+    {
+     "title": "竹篮打水——",
+     "options": [
+      "各显神通",
+      "没安好心",
+      "一场空",
+      "节节高"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "芝麻开花——",
+     "options": [
+      "七上八下",
+      "功到自然成",
+      "一场空",
+      "节节高"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "八仙过海——",
+     "options": [
+      "没安好心",
+      "各显神通",
+      "节节高",
+      "一场空"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "铁杵磨成针——",
+     "options": [
+      "一场空",
+      "七上八下",
+      "各显神通",
+      "功到自然成"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "十五个吊桶打水——",
+     "options": [
+      "节节高",
+      "七上八下",
+      "一场空",
+      "各显神通"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "黄鼠狼给鸡拜年——",
+     "options": [
+      "节节高",
+      "各显神通",
+      "一场空",
+      "没安好心"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "五年级",
+   "subject": "语文",
+   "edition": "通用",
+   "unit": "说明方法",
+   "questions": [
+    {
+     "title": "“地球的表面积约 5.1 亿平方千米。”用了什么说明方法？",
+     "options": [
+      "举例子",
+      "列数字",
+      "作比较",
+      "打比方"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "“鲸的一条舌头就有十几头大肥猪那么重。”用了什么说明方法？",
+     "options": [
+      "分类别",
+      "列数字",
+      "作比较",
+      "下定义"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "“太阳会发光，会发热，是个大火球。”用了什么说明方法？",
+     "options": [
+      "列数字",
+      "打比方",
+      "作比较",
+      "分类别"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "“鲸的种类很多，总的来说可以分为须鲸和齿鲸两类。”用了什么说明方法？",
+     "options": [
+      "列数字",
+      "打比方",
+      "举例子",
+      "分类别"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "“举例子”常见的标志词是？",
+     "options": [
+      "等于、相当于",
+      "总之、因此",
+      "好像、仿佛",
+      "例如、比如"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "“打比方”常见的标志词是？",
+     "options": [
+      "据统计",
+      "分为",
+      "像、好像",
+      "例如"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "五年级",
+   "subject": "语文",
+   "edition": "通用",
+   "unit": "病句辨析",
+   "questions": [
+    {
+     "title": "“经过老师的帮助，使我进步很大。”这句的毛病是？",
+     "options": [
+      "缺少宾语",
+      "前后矛盾",
+      "缺少主语",
+      "用词不当"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "“我们要养成认真读书。”这句的毛病是？",
+     "options": [
+      "缺少宾语",
+      "搭配不当",
+      "缺少主语",
+      "语序不当"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "“他的意见基本完全正确。”这句的毛病是？",
+     "options": [
+      "缺少主语",
+      "语序不当",
+      "重复罗嗦",
+      "前后矛盾"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "“教室里非常安静，只有几个同学在小声说话。”这句？",
+     "options": [
+      "搭配不当",
+      "前后矛盾",
+      "没有毛病",
+      "缺少主语"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "“我估计他一定会来。”这句的毛病是？",
+     "options": [
+      "前后矛盾",
+      "用词不当",
+      "语序不当",
+      "缺少宾语"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "“这次活动，同学们基本上都参加了。”这句的毛病是？",
+     "options": [
+      "前后矛盾",
+      "缺少主语",
+      "语序不当",
+      "缺少宾语"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "五年级",
+   "subject": "语文",
+   "edition": "通用",
+   "unit": "近反义词",
+   "questions": [
+    {
+     "title": "“顽强”的近义词是？",
+     "options": [
+      "坚强",
+      "软弱",
+      "脆弱",
+      "胆怯"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "“珍惜”的近义词是？",
+     "options": [
+      "珍视",
+      "浪费",
+      "抛弃",
+      "忽略"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "“崎岖”的反义词是？",
+     "options": [
+      "弯曲",
+      "狭窄",
+      "平坦",
+      "陡峭"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "“慷慨”的反义词是？",
+     "options": [
+      "热情",
+      "豪爽",
+      "吝啬",
+      "大方"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "“宽阔”的近义词是？",
+     "options": [
+      "狭窄",
+      "拥挤",
+      "短小",
+      "宽广"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "“熟悉”的反义词是？",
+     "options": [
+      "了解",
+      "陌生",
+      "熟悉不过",
+      "亲切"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "六年级",
+   "subject": "语文",
+   "edition": "通用",
+   "unit": "古诗",
+   "questions": [
+    {
+     "title": "《石灰吟》中“千锤万凿出深山”的下一句是？",
+     "options": [
+      "烈火焚烧若等闲",
+      "只留清气满乾坤",
+      "粉骨碎身浑不怕",
+      "要留清白在人间"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "《石灰吟》中“粉骨碎身浑不怕”的下一句是？",
+     "options": [
+      "任尔东西南北风",
+      "烈火焚烧若等闲",
+      "要留清白在人间",
+      "千锤万凿出深山"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "《竹石》中“咬定青山不放松”的下一句是？",
+     "options": [
+      "立根原在破岩中",
+      "只留清气满乾坤",
+      "千磨万击还坚劲",
+      "任尔东西南北风"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "“大漠沙如雪”的下一句是？",
+     "options": [
+      "快走踏清秋",
+      "何当金络脑",
+      "燕山月似钩",
+      "长河落日圆"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "《石灰吟》的作者是？",
+     "options": [
+      "于谦",
+      "李贺",
+      "郑燮",
+      "王冕"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "《竹石》的作者是？",
+     "options": [
+      "于谦",
+      "郑燮",
+      "李贺",
+      "龚自珍"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "六年级",
+   "subject": "语文",
+   "edition": "通用",
+   "unit": "文言文常识",
+   "questions": [
+    {
+     "title": "《学弈》的作者是？",
+     "options": [
+      "孔子",
+      "韩非子",
+      "孟子",
+      "庄子"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "“弈”的意思是？",
+     "options": [
+      "射箭",
+      "写字",
+      "读书",
+      "下棋"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "《两小儿辩日》出自哪部书？",
+     "options": [
+      "《论语》",
+      "《列子》",
+      "《孟子》",
+      "《史记》"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "“日初出大如车盖”中“盖”指的是？",
+     "options": [
+      "盖子",
+      "车篷",
+      "覆盖",
+      "大概"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "《学弈》告诉我们的道理是？",
+     "options": [
+      "要谦虚好学",
+      "要孝敬父母",
+      "要善于观察",
+      "学习必须专心致志"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "“虽与之俱学，弗若之矣”的意思是？",
+     "options": [
+      "虽然分开学习，成绩很好",
+      "虽然一起学习，成绩一样",
+      "虽然一起学习，成绩却不如他",
+      "虽然努力，仍然失败"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "六年级",
+   "subject": "语文",
+   "edition": "通用",
+   "unit": "修辞与句式",
+   "questions": [
+    {
+     "title": "“地球，这位人类的母亲。”用了什么修辞？",
+     "options": [
+      "比喻",
+      "拟人",
+      "排比",
+      "夸张"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "“他家的房子小得只能容下一只脚。”用了什么修辞？",
+     "options": [
+      "比喻",
+      "拟人",
+      "对偶",
+      "夸张"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "“风儿清唱着歌，唤醒了沉睡的大地。”用了什么修辞？",
+     "options": [
+      "夸张",
+      "拟人",
+      "比喻",
+      "排比"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "“什么是幸福？幸福就是付出。”这是什么句式？",
+     "options": [
+      "疑问",
+      "反问",
+      "祈使",
+      "设问"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "“你是去呢，还是不去？”这是什么问句？",
+     "options": [
+      "反问",
+      "设问",
+      "选择问",
+      "是非问"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "“这难道不是奇迹吗？”这是什么句式？",
+     "options": [
+      "祈使",
+      "设问",
+      "反问",
+      "疑问"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "六年级",
+   "subject": "语文",
+   "edition": "通用",
+   "unit": "成语运用",
+   "questions": [
+    {
+     "title": "形容画得像真的一样，用哪个成语？",
+     "options": [
+      "张冠李戴",
+      "栩栩如生",
+      "画蛇添足",
+      "面目全非"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "形容说话写文章简明扼要，用？",
+     "options": [
+      "言简意赅",
+      "废话连篇",
+      "夸夸其谈",
+      "长篇大论"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "形容人非常多，用？",
+     "options": [
+      "寥寥无几",
+      "人迹罕至",
+      "人山人海",
+      "门可罗雀"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "形容学习非常刻苦，用？",
+     "options": [
+      "无所事事",
+      "游手好闲",
+      "饱食终日",
+      "废寝忘食"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "形容技艺达到纯熟完美的境界，用？",
+     "options": [
+      "半途而废",
+      "一知半解",
+      "炉火纯青",
+      "浅尝辄止"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "形容声势浩大，用？",
+     "options": [
+      "风平浪静",
+      "排山倒海",
+      "悄无声息",
+      "微不足道"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "六年级",
+   "subject": "语文",
+   "edition": "通用",
+   "unit": "标点与句子",
+   "questions": [
+    {
+     "title": "引号里再引用别人的话，要用？",
+     "options": [
+      "括号",
+      "书名号",
+      "双引号",
+      "单引号"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "省略号的主要作用是？",
+     "options": [
+      "表示省略",
+      "表示停顿",
+      "表示疑问",
+      "表示强调"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "破折号常用于？",
+     "options": [
+      "解释说明",
+      "表示疑问",
+      "表示引用",
+      "表示并列"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "分号一般用在？",
+     "options": [
+      "一句话末尾",
+      "并列分句之间",
+      "标题中",
+      "词语之间"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "书名号用于？",
+     "options": [
+      "人名",
+      "时间",
+      "书刊、文章的名称",
+      "地名"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "顿号表示？",
+     "options": [
+      "疑问语气",
+      "强烈感情",
+      "并列词语之间的停顿",
+      "句子之间的停顿"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "一年级",
+   "subject": "英语",
+   "edition": "通用",
+   "unit": "字母与发音",
+   "questions": [
+    {
+     "title": "字母 A 的小写形式是？",
+     "options": [
+      "o",
+      "i",
+      "e",
+      "a"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "字母 C 的大写形式是？",
+     "options": [
+      "C",
+      "O",
+      "c",
+      "G"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "字母 E 后面的字母是？",
+     "options": [
+      "G",
+      "D",
+      "F",
+      "A"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "英语字母一共有多少个？",
+     "options": [
+      "24 个",
+      "20 个",
+      "26 个",
+      "25 个"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "元音字母 A、E、I、O、U 一共有几个？",
+     "options": [
+      "4 个",
+      "3 个",
+      "5 个",
+      "6 个"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "单词 dog 的首字母是？",
+     "options": [
+      "d",
+      "g",
+      "b",
+      "o"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "一年级",
+   "subject": "英语",
+   "edition": "通用",
+   "unit": "颜色（低年级）",
+   "questions": [
+    {
+     "title": "“红色”用英语怎么说？",
+     "options": [
+      "green",
+      "yellow",
+      "red",
+      "blue"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "“蓝色”用英语怎么说？",
+     "options": [
+      "pink",
+      "blue",
+      "red",
+      "orange"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "“绿色”用英语怎么说？",
+     "options": [
+      "green",
+      "black",
+      "yellow",
+      "white"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "“黄色”用英语怎么说？",
+     "options": [
+      "orange",
+      "green",
+      "purple",
+      "yellow"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "“橙色”用英语怎么说？",
+     "options": [
+      "orange",
+      "brown",
+      "red",
+      "pink"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "“粉色”用英语怎么说？",
+     "options": [
+      "grey",
+      "pink",
+      "gold",
+      "purple"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "一年级",
+   "subject": "英语",
+   "edition": "通用",
+   "unit": "动物（低年级）",
+   "questions": [
+    {
+     "title": "“猫”用英语怎么说？",
+     "options": [
+      "fish",
+      "bird",
+      "cat",
+      "dog"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "“狗”用英语怎么说？",
+     "options": [
+      "duck",
+      "cat",
+      "dog",
+      "pig"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "“鸟”用英语怎么说？",
+     "options": [
+      "bird",
+      "fish",
+      "duck",
+      "cat"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "“鱼”用英语怎么说？",
+     "options": [
+      "pig",
+      "bird",
+      "dog",
+      "fish"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "“鸭子”用英语怎么说？",
+     "options": [
+      "cat",
+      "duck",
+      "bird",
+      "pig"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "“猪”用英语怎么说？",
+     "options": [
+      "pig",
+      "fish",
+      "dog",
+      "duck"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "一年级",
+   "subject": "英语",
+   "edition": "通用",
+   "unit": "数字 1-5",
+   "questions": [
+    {
+     "title": "“一”用英语怎么说？",
+     "options": [
+      "on",
+      "one",
+      "two",
+      "ten"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "“二”用英语怎么说？",
+     "options": [
+      "to",
+      "two",
+      "too",
+      "ten"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "“三”用英语怎么说？",
+     "options": [
+      "three",
+      "there",
+      "third",
+      "tree"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "“四”用英语怎么说？",
+     "options": [
+      "four",
+      "fore",
+      "for",
+      "five"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "“五”用英语怎么说？",
+     "options": [
+      "five",
+      "fine",
+      "fifth",
+      "four"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "one, two, three, ___",
+     "options": [
+      "six",
+      "two",
+      "four",
+      "five"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "一年级",
+   "subject": "英语",
+   "edition": "通用",
+   "unit": "简单问候",
+   "questions": [
+    {
+     "title": "Hello 的意思是？",
+     "options": [
+      "再见",
+      "你好",
+      "对不起",
+      "谢谢"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "Good morning 的意思是？",
+     "options": [
+      "晚上好",
+      "晚安",
+      "下午好",
+      "早上好"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "Bye 的意思是？",
+     "options": [
+      "你好",
+      "请",
+      "再见",
+      "谢谢"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "Thank you 的意思是？",
+     "options": [
+      "你好",
+      "再见",
+      "谢谢",
+      "对不起"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "What's your name? 的意思是？",
+     "options": [
+      "你几岁了？",
+      "你叫什么名字？",
+      "你好吗？",
+      "你在哪里？"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "I'm Amy. 的意思是？",
+     "options": [
+      "艾米好吗？",
+      "你好，艾米。",
+      "这是艾米。",
+      "我是艾米。"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "二年级",
+   "subject": "英语",
+   "edition": "通用",
+   "unit": "字母表",
+   "questions": [
+    {
+     "title": "字母 Q 后面的字母是？",
+     "options": [
+      "P",
+      "O",
+      "S",
+      "R"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "英语字母表中最后一个字母是？",
+     "options": [
+      "X",
+      "Z",
+      "A",
+      "Y"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "小写字母 y 的大写形式是？",
+     "options": [
+      "W",
+      "V",
+      "Y",
+      "U"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "26 个字母中第 5 个是？",
+     "options": [
+      "D",
+      "C",
+      "F",
+      "E"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "字母 M 和 N 的顺序是？",
+     "options": [
+      "无法确定",
+      "两个相同",
+      "M 在 N 前面",
+      "N 在 M 前面"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "下面哪个字母是元音字母？",
+     "options": [
+      "b",
+      "i",
+      "g",
+      "d"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "二年级",
+   "subject": "英语",
+   "edition": "通用",
+   "unit": "水果",
+   "questions": [
+    {
+     "title": "“苹果”用英语怎么说？",
+     "options": [
+      "pear",
+      "apple",
+      "orange",
+      "banana"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "“香蕉”用英语怎么说？",
+     "options": [
+      "apple",
+      "peach",
+      "grape",
+      "banana"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "“橙子”用英语怎么说？",
+     "options": [
+      "orange",
+      "apple",
+      "lemon",
+      "pear"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "“梨”用英语怎么说？",
+     "options": [
+      "apple",
+      "peach",
+      "pear",
+      "grape"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "“葡萄”用英语怎么说？",
+     "options": [
+      "pear",
+      "banana",
+      "grape",
+      "mango"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "“西瓜”用英语怎么说？",
+     "options": [
+      "watermelon",
+      "orange",
+      "peach",
+      "apple"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "二年级",
+   "subject": "英语",
+   "edition": "通用",
+   "unit": "数字 6-10",
+   "questions": [
+    {
+     "title": "“六”用英语怎么说？",
+     "options": [
+      "seven",
+      "sit",
+      "six",
+      "sick"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "“七”用英语怎么说？",
+     "options": [
+      "six",
+      "eleven",
+      "seven",
+      "seventh"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "“八”用英语怎么说？",
+     "options": [
+      "ate",
+      "eighty",
+      "eighteen",
+      "eight"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "“九”用英语怎么说？",
+     "options": [
+      "night",
+      "nineteen",
+      "ninth",
+      "nine"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "“十”用英语怎么说？",
+     "options": [
+      "teen",
+      "ten",
+      "tent",
+      "tan"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "seven, eight, nine, ___",
+     "options": [
+      "eleven",
+      "ten",
+      "twelve",
+      "six"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "二年级",
+   "subject": "英语",
+   "edition": "通用",
+   "unit": "身体部位",
+   "questions": [
+    {
+     "title": "“头”用英语怎么说？",
+     "options": [
+      "hat",
+      "hair",
+      "head",
+      "hand"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "“手”用英语怎么说？",
+     "options": [
+      "head",
+      "foot",
+      "arm",
+      "hand"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "“眼睛”用英语怎么说？",
+     "options": [
+      "nose",
+      "ear",
+      "eye",
+      "mouth"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "“耳朵”用英语怎么说？",
+     "options": [
+      "hair",
+      "face",
+      "ear",
+      "eye"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "“鼻子”用英语怎么说？",
+     "options": [
+      "neck",
+      "mouth",
+      "knee",
+      "nose"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "“嘴”用英语怎么说？",
+     "options": [
+      "ear",
+      "nose",
+      "mouth",
+      "face"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "二年级",
+   "subject": "英语",
+   "edition": "通用",
+   "unit": "课堂用语",
+   "questions": [
+    {
+     "title": "Stand up. 的意思是？",
+     "options": [
+      "起立",
+      "坐下",
+      "安静",
+      "举手"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "Sit down. 的意思是？",
+     "options": [
+      "离开",
+      "坐下",
+      "起立",
+      "站起来"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "Open your book. 的意思是？",
+     "options": [
+      "拿起书",
+      "合上书",
+      "打开你的书",
+      "放下书"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "Listen. 的意思是？",
+     "options": [
+      "看",
+      "听",
+      "读",
+      "说"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "Look at me. 的意思是？",
+     "options": [
+      "听我说",
+      "看我",
+      "过来",
+      "跟我读"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "Good job! 的意思是？",
+     "options": [
+      "加油！",
+      "再见！",
+      "做得好！",
+      "对不起！"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "三年级",
+   "subject": "英语",
+   "edition": "通用",
+   "unit": "字母与语音",
+   "questions": [
+    {
+     "title": "字母 B 的小写形式是？",
+     "options": [
+      "d",
+      "p",
+      "q",
+      "b"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "英语中元音字母一共有几个？",
+     "options": [
+      "5 个",
+      "26 个",
+      "6 个",
+      "3 个"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "字母 A 后面的字母是？",
+     "options": [
+      "E",
+      "B",
+      "C",
+      "Z"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "单词 apple 的首字母是？",
+     "options": [
+      "e",
+      "b",
+      "a",
+      "p"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "单词 cat 由几个字母组成？",
+     "options": [
+      "4 个",
+      "3 个",
+      "2 个",
+      "5 个"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "下面哪个是元音字母？",
+     "options": [
+      "b",
+      "k",
+      "t",
+      "e"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "三年级",
+   "subject": "英语",
+   "edition": "通用",
+   "unit": "颜色",
+   "questions": [
+    {
+     "title": "“红色”用英语怎么说？",
+     "options": [
+      "blue",
+      "green",
+      "red",
+      "yellow"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "“蓝色”用英语怎么说？",
+     "options": [
+      "black",
+      "white",
+      "brown",
+      "blue"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "“绿色”用英语怎么说？",
+     "options": [
+      "green",
+      "grey",
+      "grass",
+      "gold"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "“黄色”用英语怎么说？",
+     "options": [
+      "pink",
+      "yellow",
+      "orange",
+      "purple"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "“黑色”用英语怎么说？",
+     "options": [
+      "blue",
+      "white",
+      "brown",
+      "black"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "“白色”用英语怎么说？",
+     "options": [
+      "grey",
+      "red",
+      "black",
+      "white"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "三年级",
+   "subject": "英语",
+   "edition": "通用",
+   "unit": "数字",
+   "questions": [
+    {
+     "title": "“三”用英语怎么说？",
+     "options": [
+      "tree",
+      "third",
+      "three",
+      "there"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "“五”用英语怎么说？",
+     "options": [
+      "five",
+      "fifth",
+      "four",
+      "fine"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "“八”用英语怎么说？",
+     "options": [
+      "eighteen",
+      "ate",
+      "eight",
+      "eighty"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "“十”用英语怎么说？",
+     "options": [
+      "ten",
+      "teen",
+      "tan",
+      "tent"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "“十二”用英语怎么说？",
+     "options": [
+      "twelve",
+      "twelfth",
+      "two",
+      "twenty"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "“二十”用英语怎么说？",
+     "options": [
+      "twenty",
+      "two ten",
+      "twelfth",
+      "twelve"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "三年级",
+   "subject": "英语",
+   "edition": "通用",
+   "unit": "日常问候",
+   "questions": [
+    {
+     "title": "“早上好”用英语怎么说？",
+     "options": [
+      "Good morning",
+      "Good evening",
+      "Good night",
+      "Good afternoon"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "“你好吗？”用英语怎么说？",
+     "options": [
+      "Who are you?",
+      "How old are you?",
+      "What's this?",
+      "How are you?"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "“我叫小明”用英语怎么说？",
+     "options": [
+      "My name is Xiaoming.",
+      "I am fine.",
+      "He is Xiaoming.",
+      "This is Xiaoming."
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "“再见”用英语怎么说？",
+     "options": [
+      "Sorry",
+      "Please",
+      "Hello",
+      "Goodbye"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "“谢谢”用英语怎么说？",
+     "options": [
+      "Thank you",
+      "Excuse me",
+      "Sorry",
+      "Hello"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "“很高兴见到你”用英语怎么说？",
+     "options": [
+      "How are you?",
+      "See you.",
+      "Nice to meet you.",
+      "I'm sorry."
+     ],
+     "answer": 2,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "三年级",
+   "subject": "英语",
+   "edition": "通用",
+   "unit": "常见单词",
+   "questions": [
+    {
+     "title": "“书”用英语怎么说？",
+     "options": [
+      "back",
+      "look",
+      "box",
+      "book"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "“铅笔”用英语怎么说？",
+     "options": [
+      "pencil case",
+      "pencil",
+      "pen",
+      "paper"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "“学校”用英语怎么说？",
+     "options": [
+      "home",
+      "shop",
+      "park",
+      "school"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "“老师”用英语怎么说？",
+     "options": [
+      "driver",
+      "student",
+      "teacher",
+      "doctor"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "“朋友”用英语怎么说？",
+     "options": [
+      "family",
+      "friend",
+      "father",
+      "find"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "“苹果”用英语怎么说？",
+     "options": [
+      "apple",
+      "banana",
+      "orange",
+      "pear"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "三年级",
+   "subject": "英语",
+   "edition": "人教版",
+   "unit": "词汇（人教版 PEP）",
+   "questions": [
+    {
+     "title": "人教版三年级上册 Unit 1 的主题是？",
+     "options": [
+      "Animals",
+      "Hello（问候）",
+      "Colours",
+      "Food"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "“ruler”的意思是？",
+     "options": [
+      "铅笔",
+      "书包",
+      "橡皮",
+      "尺子"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "“eraser”的意思是？",
+     "options": [
+      "橡皮",
+      "蜡笔",
+      "尺子",
+      "钢笔"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "三年级",
+   "subject": "英语",
+   "edition": "外研版",
+   "unit": "词汇（外研版）",
+   "questions": [
+    {
+     "title": "“Good morning, Sam.” 中 Sam 是？",
+     "options": [
+      "物品",
+      "人名",
+      "地点",
+      "时间"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "外研版三起点第一模块的主题是？",
+     "options": [
+      "问候与自我介绍",
+      "颜色",
+      "动物",
+      "天气"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "四年级",
+   "subject": "英语",
+   "edition": "通用",
+   "unit": "家庭成员",
+   "questions": [
+    {
+     "title": "“父亲”用英语怎么说？",
+     "options": [
+      "sister",
+      "father",
+      "brother",
+      "mother"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "“母亲”用英语怎么说？",
+     "options": [
+      "aunt",
+      "grandma",
+      "mother",
+      "father"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "“哥哥/弟弟”用英语怎么说？",
+     "options": [
+      "father",
+      "sister",
+      "brother",
+      "uncle"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "“姐姐/妹妹”用英语怎么说？",
+     "options": [
+      "aunt",
+      "brother",
+      "sister",
+      "mother"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "“爷爷/外公”用英语怎么说？",
+     "options": [
+      "father",
+      "grandpa",
+      "uncle",
+      "grandma"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "“奶奶/外婆”用英语怎么说？",
+     "options": [
+      "aunt",
+      "grandpa",
+      "grandma",
+      "mother"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "四年级",
+   "subject": "英语",
+   "edition": "通用",
+   "unit": "学校科目",
+   "questions": [
+    {
+     "title": "“语文”用英语怎么说？",
+     "options": [
+      "Maths",
+      "English",
+      "Music",
+      "Chinese"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "“英语”用英语怎么说？",
+     "options": [
+      "PE",
+      "Art",
+      "English",
+      "Chinese"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "“数学”用英语怎么说？",
+     "options": [
+      "Chinese",
+      "Music",
+      "Science",
+      "Maths"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "“音乐”用英语怎么说？",
+     "options": [
+      "PE",
+      "Music",
+      "Art",
+      "Maths"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "“美术”用英语怎么说？",
+     "options": [
+      "English",
+      "Science",
+      "Art",
+      "Music"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "“体育”用英语怎么说？",
+     "options": [
+      "Music",
+      "Art",
+      "PE",
+      "Maths"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "四年级",
+   "subject": "英语",
+   "edition": "通用",
+   "unit": "天气",
+   "questions": [
+    {
+     "title": "“晴朗的”用英语怎么说？",
+     "options": [
+      "sunny",
+      "rainy",
+      "cloudy",
+      "windy"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "“下雨的”用英语怎么说？",
+     "options": [
+      "sunny",
+      "snowy",
+      "rainy",
+      "windy"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "“多云的”用英语怎么说？",
+     "options": [
+      "sunny",
+      "cloudy",
+      "hot",
+      "rainy"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "“有风的”用英语怎么说？",
+     "options": [
+      "snowy",
+      "cloudy",
+      "windy",
+      "cold"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "“下雪的”用英语怎么说？",
+     "options": [
+      "snowy",
+      "rainy",
+      "warm",
+      "sunny"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "“热的”用英语怎么说？",
+     "options": [
+      "warm",
+      "cold",
+      "cool",
+      "hot"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "四年级",
+   "subject": "英语",
+   "edition": "通用",
+   "unit": "can 句型",
+   "questions": [
+    {
+     "title": "I ___ swim. （我会游泳）",
+     "options": [
+      "can",
+      "am",
+      "do",
+      "is"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "___ you play football? （你会踢足球吗）",
+     "options": [
+      "Can",
+      "Do",
+      "Are",
+      "Is"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "She can ___ . （她会跳舞）",
+     "options": [
+      "dance",
+      "dances",
+      "danced",
+      "dancing"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "He ___ swim. （他不会游泳）",
+     "options": [
+      "isn't",
+      "can",
+      "can't",
+      "don't"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "— Can you sing? — Yes, I ___ .",
+     "options": [
+      "can",
+      "will",
+      "do",
+      "am"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "can 的否定形式是？",
+     "options": [
+      "doesn't can",
+      "no can",
+      "can not to",
+      "cannot / can't"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "四年级",
+   "subject": "英语",
+   "edition": "通用",
+   "unit": "时间表达",
+   "questions": [
+    {
+     "title": "“七点整”用英语怎么说？",
+     "options": [
+      "seven time",
+      "seven hour",
+      "seven clock",
+      "seven o'clock"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "“八点半”用英语怎么说？",
+     "options": [
+      "eight past half",
+      "eight half",
+      "half eight",
+      "half past eight"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "“九点一刻”用英语怎么说？",
+     "options": [
+      "half past nine",
+      "a quarter to nine",
+      "nine quarter",
+      "a quarter past nine"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "“十点四十五”用英语怎么说？",
+     "options": [
+      "a quarter past ten",
+      "a quarter to eleven",
+      "half past ten",
+      "ten forty-five past"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "“现在几点？”用英语怎么说？",
+     "options": [
+      "What is time?",
+      "What time is it?",
+      "How time is it?",
+      "When is it?"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "“十二点整”用英语怎么说？",
+     "options": [
+      "twelve o'clock",
+      "twelfth o'clock",
+      "twelve hour",
+      "twelve clock"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "五年级",
+   "subject": "英语",
+   "edition": "通用",
+   "unit": "星期与月份",
+   "questions": [
+    {
+     "title": "“星期一”用英语怎么说？",
+     "options": [
+      "Monday",
+      "Friday",
+      "Tuesday",
+      "Sunday"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "“星期三”用英语怎么说？",
+     "options": [
+      "Wednesday",
+      "Thursday",
+      "Monday",
+      "Tuesday"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "“星期五”用英语怎么说？",
+     "options": [
+      "Friday",
+      "Saturday",
+      "Sunday",
+      "Thursday"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "“一月”用英语怎么说？",
+     "options": [
+      "March",
+      "June",
+      "January",
+      "July"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "“五月”用英语怎么说？",
+     "options": [
+      "March",
+      "April",
+      "June",
+      "May"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "“十二月”用英语怎么说？",
+     "options": [
+      "October",
+      "September",
+      "November",
+      "December"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "五年级",
+   "subject": "英语",
+   "edition": "通用",
+   "unit": "一般现在时",
+   "questions": [
+    {
+     "title": "He ___ to school every day.",
+     "options": [
+      "went",
+      "go",
+      "goes",
+      "going"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "She ___ English very much.",
+     "options": [
+      "likes",
+      "liking",
+      "liked",
+      "like"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "It ___ two big eyes.",
+     "options": [
+      "having",
+      "has",
+      "have",
+      "had"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "They ___ football on Sundays.",
+     "options": [
+      "plays",
+      "playing",
+      "played",
+      "play"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "第三人称单数动词一般要？",
+     "options": [
+      "加 -ed",
+      "加 -s 或 -es",
+      "加 -ing",
+      "不变"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "I ___ a student.",
+     "options": [
+      "is",
+      "are",
+      "am",
+      "be"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "五年级",
+   "subject": "英语",
+   "edition": "通用",
+   "unit": "there be 句型",
+   "questions": [
+    {
+     "title": "There ___ a book on the desk.",
+     "options": [
+      "be",
+      "am",
+      "is",
+      "are"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "There ___ two books on the desk.",
+     "options": [
+      "are",
+      "am",
+      "be",
+      "is"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "There ___ some water in the bottle.",
+     "options": [
+      "am",
+      "is",
+      "be",
+      "are"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "There ___ many students in the classroom.",
+     "options": [
+      "be",
+      "am",
+      "is",
+      "are"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "there be 句型表示？",
+     "options": [
+      "某处有某物",
+      "某物属于某人",
+      "某人做某事",
+      "某时发生某事"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "There is a cat ___ the chair.",
+     "options": [
+      "of",
+      "at",
+      "in",
+      "on"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "五年级",
+   "subject": "英语",
+   "edition": "通用",
+   "unit": "频度副词",
+   "questions": [
+    {
+     "title": "“总是”用英语怎么说？",
+     "options": [
+      "never",
+      "always",
+      "usually",
+      "often"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "“通常”用英语怎么说？",
+     "options": [
+      "sometimes",
+      "usually",
+      "never",
+      "always"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "“经常”用英语怎么说？",
+     "options": [
+      "always",
+      "never",
+      "sometimes",
+      "often"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "“有时”用英语怎么说？",
+     "options": [
+      "usually",
+      "sometimes",
+      "always",
+      "often"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "“从不”用英语怎么说？",
+     "options": [
+      "always",
+      "never",
+      "often",
+      "usually"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "频度从高到低排列正确的是？",
+     "options": [
+      "always > usually > often > sometimes > never",
+      "never > always > often > usually > sometimes",
+      "often > always > usually > never > sometimes",
+      "sometimes > never > always > usually > often"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "五年级",
+   "subject": "英语",
+   "edition": "通用",
+   "unit": "常用介词",
+   "questions": [
+    {
+     "title": "“在早上”用哪个介词？",
+     "options": [
+      "of the morning",
+      "in the morning",
+      "at the morning",
+      "on the morning"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "“在星期一”用哪个介词？",
+     "options": [
+      "in Monday",
+      "to Monday",
+      "at Monday",
+      "on Monday"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "“在七点”用哪个介词？",
+     "options": [
+      "for seven",
+      "at seven",
+      "in seven",
+      "on seven"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "“在教室里”用哪个介词？",
+     "options": [
+      "in the classroom",
+      "at the classroom",
+      "on the classroom",
+      "to the classroom"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "“在墙上”用哪个介词？",
+     "options": [
+      "of the wall",
+      "on the wall",
+      "at the wall",
+      "in the wall"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "“在……下面”用英语怎么说？",
+     "options": [
+      "between",
+      "under",
+      "behind",
+      "beside"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "六年级",
+   "subject": "英语",
+   "edition": "通用",
+   "unit": "一般过去时",
+   "questions": [
+    {
+     "title": "go 的过去式是？",
+     "options": [
+      "goed",
+      "going",
+      "went",
+      "gone"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "play 的过去式是？",
+     "options": [
+      "played",
+      "playd",
+      "plaied",
+      "playing"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "is 的过去式是？",
+     "options": [
+      "was",
+      "being",
+      "were",
+      "been"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "are 的过去式是？",
+     "options": [
+      "been",
+      "was",
+      "being",
+      "were"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "I ___ to Beijing last year.",
+     "options": [
+      "go",
+      "going",
+      "goes",
+      "went"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "一般过去时表示？",
+     "options": [
+      "将来要做",
+      "过去发生的动作",
+      "经常发生",
+      "现在正在进行"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "六年级",
+   "subject": "英语",
+   "edition": "通用",
+   "unit": "形容词比较级",
+   "questions": [
+    {
+     "title": "tall 的比较级是？",
+     "options": [
+      "more tall",
+      "tallest",
+      "talls",
+      "taller"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "big 的比较级是？",
+     "options": [
+      "bigger",
+      "biggest",
+      "more big",
+      "biger"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "good 的比较级是？",
+     "options": [
+      "gooder",
+      "best",
+      "better",
+      "more good"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "beautiful 的比较级是？",
+     "options": [
+      "more beautiful",
+      "beautifuler",
+      "most beautiful",
+      "beautifulest"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "“A 比 B 高”用英语怎么说？",
+     "options": [
+      "A is taller B.",
+      "A is taller than B.",
+      "A is tall than B.",
+      "A taller than B is."
+     ],
+     "answer": 1,
+     "difficulty": 1
+    },
+    {
+     "title": "比较级常与哪个词连用？",
+     "options": [
+      "then",
+      "than",
+      "as",
+      "that"
+     ],
+     "answer": 1,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "六年级",
+   "subject": "英语",
+   "edition": "通用",
+   "unit": "一般将来时",
+   "questions": [
+    {
+     "title": "I ___ visit my grandma tomorrow.",
+     "options": [
+      "did",
+      "do",
+      "am",
+      "will"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "be going to 表示？",
+     "options": [
+      "打算做某事",
+      "经常做某事",
+      "已经做完",
+      "正在做某事"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "They ___ going to have a party.",
+     "options": [
+      "are",
+      "is",
+      "be",
+      "am"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "She will ___ to school tomorrow.",
+     "options": [
+      "going",
+      "went",
+      "go",
+      "goes"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "“明天”用英语怎么说？",
+     "options": [
+      "tonight",
+      "today",
+      "yesterday",
+      "tomorrow"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "will 后面的动词用什么形式？",
+     "options": [
+      "动词过去式",
+      "动词加 -s",
+      "动词原形",
+      "动词加 -ing"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "六年级",
+   "subject": "英语",
+   "edition": "通用",
+   "unit": "常用动词短语",
+   "questions": [
+    {
+     "title": "“起床”用英语怎么说？",
+     "options": [
+      "get up",
+      "get in",
+      "get on",
+      "get off"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "“去上学”用英语怎么说？",
+     "options": [
+      "go to school",
+      "go school",
+      "going school",
+      "go to the school"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "“做作业”用英语怎么说？",
+     "options": [
+      "do homework",
+      "take homework",
+      "play homework",
+      "make homework"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "“看电视”用英语怎么说？",
+     "options": [
+      "watch TV",
+      "see TV",
+      "read TV",
+      "look TV"
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "“做运动”用英语怎么说？",
+     "options": [
+      "get sports",
+      "make sports",
+      "play sports",
+      "take sports"
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "“吃早饭”用英语怎么说？",
+     "options": [
+      "play breakfast",
+      "do breakfast",
+      "take breakfast",
+      "have breakfast"
+     ],
+     "answer": 3,
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "grade": "六年级",
+   "subject": "英语",
+   "edition": "通用",
+   "unit": "情景交际",
+   "questions": [
+    {
+     "title": "— How do you go to school? — ___",
+     "options": [
+      "By bike.",
+      "I am bike.",
+      "Yes, I do.",
+      "It's a bike."
+     ],
+     "answer": 0,
+     "difficulty": 1
+    },
+    {
+     "title": "— What did you do yesterday? — ___",
+     "options": [
+      "I go swimming.",
+      "I am swimming.",
+      "I will swim.",
+      "I went swimming."
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "— Where is the library? — ___",
+     "options": [
+      "It's sunny.",
+      "It's Monday.",
+      "It's mine.",
+      "It's next to the bank."
+     ],
+     "answer": 3,
+     "difficulty": 1
+    },
+    {
+     "title": "— How much is it? — ___",
+     "options": [
+      "It's ten years.",
+      "It's ten o'clock.",
+      "It's ten yuan.",
+      "It's ten kilos."
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "— Happy birthday! — ___",
+     "options": [
+      "Sorry.",
+      "You're welcome.",
+      "Thank you.",
+      "Me too."
+     ],
+     "answer": 2,
+     "difficulty": 1
+    },
+    {
+     "title": "— What's your favourite season? — ___",
+     "options": [
+      "Chinese.",
+      "Ten.",
+      "Monday.",
+      "Autumn."
+     ],
+     "answer": 3,
+     "difficulty": 1
+    }
+   ]
   }
-]
+ ]
+}
